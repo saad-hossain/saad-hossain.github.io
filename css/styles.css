@@ -106,9 +106,9 @@ h2 {
 }
 
 .profile-picture {
-    width: 300px;
+    width: 30%;
     height: auto;
-    border-radius: 40px;
+    border-radius: 10%;
     flex-shrink: 0; /* Prevents image from shrinking */
 }
 
