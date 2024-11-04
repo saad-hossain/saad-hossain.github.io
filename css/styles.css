@@ -59,22 +59,10 @@ h2 {
 }
 
 .publication-item img, .talk-item img {
-    width: 120px;
+    width: 160px;
     height: auto;
     margin-right: 1rem;
     border-radius: 5px;
-}
-
-.experience-icon {
-    width: 10%;
-    height: 10%;
-    margin-right: 1rem;
-    border-radius: 50%;
-    background-color: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
 }
 
 .publication-title, .experience-title, .talk-title {
@@ -95,7 +83,6 @@ h2 {
     color: white;
     margin-top: 2rem;
 }
-
 
 /* About Section */
 .about-intro {
@@ -161,4 +148,16 @@ h2 {
     line-height: 1.5;
 }
 
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .about-intro {
+        flex-direction: column; /* Stacks image above text on small screens */
+        align-items: center;
+        text-align: center;
+    }
 
+    .profile-picture {
+        width: 50%; /* Reduces image size on smaller screens */
+        margin-bottom: 1rem; /* Adds space below the image */
+    }
+}
