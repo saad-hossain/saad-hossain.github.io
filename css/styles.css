@@ -66,8 +66,8 @@ h2 {
 }
 
 .experience-icon {
-    width: 50px;
-    height: 50px;
+    width: 10%;
+    height: 10%;
     margin-right: 1rem;
     border-radius: 50%;
     background-color: #eee;
@@ -160,3 +160,5 @@ h2 {
     margin: 0; /* Ensures no extra spacing */
     line-height: 1.5;
 }
+
+
