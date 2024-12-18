@@ -142,6 +142,7 @@ h2 {
 
 .news-content {
     font-size: 0.9rem;
+    color: #222;
 }
 
 /* Links */
@@ -162,7 +163,23 @@ a:hover {
     }
 
     .profile-picture {
-        width: 50%;
-        margin-bottom: 1rem;
+        width: 70%;
+        margin: 1rem 0;
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navbar elements */
+        align-items: center; /* Center align */
+    }
+
+    .navbar a {
+        font-size: 0.9rem; /* Reduce font size for smaller screens */
+        margin: 2px 0; /* Add vertical margin */
+        padding: 0 5px;
+    }
+
+    .navbar-name {
+        font-size: 1rem; /* Reduce size of navbar name */
+        margin-bottom: 10px; /* Add space below name */
     }
 }

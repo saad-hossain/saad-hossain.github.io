@@ -1,54 +1,104 @@
 /* Navbar */
 .navbar {
     display: flex;
-    justify-content: center;
-    background-color: #003366;
-    padding: 1rem;
+    justify-content: right;
     position: sticky;
     top: 0;
     z-index: 1000;
+    max-width: 770px;
+    margin: 0 auto;
+    padding: 1rem 0; /* Padding for spacing */
+    background-color: transparent; /* Keep content transparent; fill done by pseudo-element */
+}
+
+.navbar::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100%; /* Matches the navbar height */
+    background-color: #000; /* Black fill */
+    z-index: -1; /* Places the fill behind the navbar content */
+}
+
+.navbar::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1;
+    width: 100vw; /* Full viewport width */
+    height: 100%; /* Matches the navbar height */
+    background-color: #000; /* Black fill */
+    z-index: -1; /* Places the fill behind the navbar content */
 }
 
 .navbar a {
-    color: white;
+    color: #fff; /* White text */
     margin: 0 15px;
     text-decoration: none;
-    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #00aaff;
+    color: #888; /* Gray hover effect */
+}
+
+/* Navbar Name */
+.navbar-left {
+    flex: 1; /* Take up available space */
+    padding-left: 1rem; /* Add a little padding */
+}
+
+.navbar-name {
+    color: #fff; /* White text */
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Navbar Links */
+.navbar-right {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1; /* Keep right-aligned links */
+    padding-right: 1rem; /* Add a little padding */
 }
 
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f5f5f5;
+    font-family: sans-serif;
+    color: #222; /* Dark gray for text */
+    background-color: #fff; /* White background */
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 750px;
     margin: 2rem auto;
-    padding: 1rem;
+    padding: 0 1rem;
+    padding-bottom: 1rem; /* Add space at the bottom */
 }
 
 h2.experience-heading {
-    color: #003366;
+    color: #000; /* Pure black headings */
     margin-bottom: 1rem;
-    border-bottom: 1px solid #003366;
+    /* border-bottom: 1px solid #003366; */
     padding-bottom: 5px;
     text-align: left;
+    font-weight: normal;
+    font-size: 1.5rem;
 }
 
 /* Timeline Styling */
 .timeline {
     position: relative;
     padding: 2rem 2;
-    border-left: 2px solid #003366;
-    margin-left: 100px;
+    border-left: 1.5px solid #000;
+    margin-left: 82.5px;
 }
 
 .timeline-item {
@@ -66,26 +116,27 @@ h2.experience-heading {
 /* Timeline Dot */
 .timeline-dot {
     position: absolute;
-    left: -6px;
+    left: -4.5px;
     top: 18px; /* Adjust this to align with the icon */
-    width: 10px;
-    height: 10px;
-    background-color: #003366;
-    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    background-color: #000;
+    border-radius: 30%;
 }
 
 /* Timeline Icon and Date */
 .timeline-icon {
     position: absolute;
-    left: -90px;
+    left: -80px;
     top: 0;
     text-align: center;
 }
 
 
 .timeline-icon img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    margin-top: 8px;
     margin-bottom: 5px;
     border-radius: 20%;
 }
@@ -102,7 +153,7 @@ h2.experience-heading {
 .timeline-content {
     background-color: #fff;
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: 1px;
     border: 1px solid #ddd;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -110,21 +161,16 @@ h2.experience-heading {
 
 h3 {
     margin: 0;
-    font-size: 1.1rem;
-    color: #003366;
+    font-size: 1rem;
+    color: #000;;
+    font-weight: bold;
 }
 
 .company-info {
     font-size: 0.9rem;
     color: #555;
     margin-top: 0.2rem;
-    font-style: italic;
-}
-
-.experience-summary {
-    font-size: 0.95rem;
-    margin-top: 0.5rem;
-    color: #333;
+    font-style: normal;
 }
 
 /* Collapsible Details */
@@ -134,8 +180,9 @@ details {
 }
 
 summary {
-    color: #333;
-    padding: 0.3rem 0;
+    color: #222;
+    padding: 0 0;
+    font-size: 0.9rem;
 }
 
 summary:hover {
@@ -145,8 +192,8 @@ summary:hover {
 .responsibilities-list {
     margin-top: 0.5rem;
     padding-left: 1.5rem;
-    font-size: 0.9rem;
-    color: #333;
+    font-size: 0.8rem;
+    color: #222;
     line-height: 1.5;
 }
 
@@ -162,4 +209,106 @@ summary:hover {
     color: white;
     margin-top: 2rem;
 }
+
+
+@media (max-width: 768px) {
+    h2.experience-heading {
+        color: #000; /* Pure black headings */
+        margin-bottom: 1rem;
+        /* border-bottom: 1px solid #003366; */
+        padding-bottom: 5px;
+        text-align: left;
+        font-weight: normal;
+        font-size: 1.2rem;
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navbar elements */
+        align-items: center; /* Center align */
+    }
+
+    .navbar a {
+        font-size: 0.9rem; /* Reduce font size for smaller screens */
+        margin: 2px 0; /* Add vertical margin */
+        padding: 0 5px;
+    }
+
+    .navbar-name {
+        font-size: 1rem; /* Reduce size of navbar name */
+        margin-bottom: 10px; /* Add space below name */
+    }
+
+    .timeline {
+        position: relative;
+        padding: 2rem 2;
+        border-left: 1.5px solid #000;
+        margin-left: 50px;
+    }
+
+    .timeline-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+        padding-left: 1rem;
+        position: relative;
+    }
+
+    .timeline-icon img {
+        width: 35px;
+        height: 35px;
+        margin-top: 8px;
+        margin-bottom: 5px;
+        border-radius: 20%;
+    }
+
+    .timeline-icon {
+        position: absolute;
+        left: -55px;
+        top: 0;
+        text-align: center;
+    }
+
+    .timeline-date {
+        font-size: 0.6rem; /* Smaller text for dates */
+        text-align: center; /* Align text to the left */
+    }
+
+    .timeline-content {
+        background-color: #fff;
+        padding: 1rem;
+        border-radius: 1px;
+        border: 1px solid #ddd;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    h3 {
+        margin: 0;
+        font-size: 0.8rem;
+        color: #000;;
+        font-weight: bold;
+    }
+    
+    .company-info {
+        font-size: 0.7rem;
+        color: #555;
+        margin-top: 0.2rem;
+        font-style: normal;
+    }
+    
+    summary {
+        color: #222;
+        padding: 0 0;
+        font-size: 0.7rem;
+    }
+    
+    .responsibilities-list {
+        margin-top: 0.5rem;
+        padding-left: 1.5rem;
+        font-size: 0.6rem;
+        color: #222;
+        line-height: 1.5;
+    }
+}
+
 
