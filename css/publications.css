@@ -5,81 +5,179 @@
 
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f5f5f5;
+    font-family: sans-serif;
+    color: #222; /* Dark gray for text */
+    background-color: #fff; /* White background */
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 750px;
     margin: 2rem auto;
-    padding: 1rem;
+    padding: 0 1rem;
+    padding-bottom: 1rem; /* Add space at the bottom */
 }
 
 h2 {
-    color: #003366;
+    color: #000; /* Pure black headings */
     margin-bottom: 1rem;
-    border-bottom: 2px solid #003366;
+    /* border-bottom: 1px solid #003366; */
     padding-bottom: 5px;
+    text-align: left;
+    font-weight: normal;
+    font-size: 1.5rem;
 }
 
 /* Navbar */
 .navbar {
     display: flex;
-    justify-content: center;
-    background-color: #003366;
-    padding: 1rem;
+    justify-content: right;
     position: sticky;
     top: 0;
     z-index: 1000;
+    max-width: 770px;
+    margin: 0 auto;
+    padding: 1rem 0; /* Padding for spacing */
+    background-color: transparent; /* Keep content transparent; fill done by pseudo-element */
+}
+
+.navbar::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100%; /* Matches the navbar height */
+    background-color: #000; /* Black fill */
+    z-index: -1; /* Places the fill behind the navbar content */
+}
+
+.navbar::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1;
+    width: 100vw; /* Full viewport width */
+    height: 100%; /* Matches the navbar height */
+    background-color: #000; /* Black fill */
+    z-index: -1; /* Places the fill behind the navbar content */
 }
 
 .navbar a {
-    color: white;
+    color: #fff; /* White text */
     margin: 0 15px;
     text-decoration: none;
-    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #00aaff;
+    color: #888; /* Gray hover effect */
+}
+
+/* Navbar Name */
+.navbar-left {
+    flex: 1; /* Take up available space */
+    padding-left: 1rem; /* Add a little padding */
+}
+
+.navbar-name {
+    color: #fff; /* White text */
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Navbar Links */
+.navbar-right {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1; /* Keep right-aligned links */
+    padding-right: 1rem; /* Add a little padding */
 }
 
 /* Publication, Experience, and Talks styling */
 .publication-item, .experience-item, .talk-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Aligns items to the top */
+    position: relative; /* Enables positioning children relative to this */
     padding: 1rem;
     margin-bottom: 1.5rem;
     background-color: #fff;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+    border-radius: 4px;
+    border: 1px solid rgb(128, 128, 128);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevents ribbon overflow */
+}
+
+.ribbon {
+    position: absolute; /* Position relative to the .publication-item */
+    top: 0; /* Align at the top */
+    left: 0; /* Align to the left */
+    background-color: #222; /* Blue background */
+    color: #fff; /* White text */
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0.5rem;
+    padding: 5px 10px;
+    border-bottom-right-radius: 5px; /* Rounded corner */
+    z-index: 2; /* Ensure it appears above the image */
+    width: 160px;
 }
 
 .publication-item img, .talk-item img {
-    width: 160px;
+    width: 150px;
     height: auto;
-    margin-right: 1rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
     border-radius: 5px;
+    display: block;
 }
 
 .publication-title, .experience-title, .talk-title {
+    margin: 0;
+    margin-bottom: -0.1rem;
+    font-size: 1rem;
+    color: #000;;
     font-weight: bold;
-    color: #003366;
-    margin-bottom: -0.5rem; /* Adjusts space below the title */
+    /* font-style: unset; */
+}
+
+.publication-links .button {
+    margin-top: 1.5rem;
+    display: inline-block; /* Makes it behave like a button */
+    text-decoration: none; /* Removes default underline */
+    color: #222; /* White text */
+    background-color: #fff; /* Black background */
+    border: 1.5px solid #000; /* White border */
+    font-size: 0.7rem; /* Slightly smaller text */
+    font-weight: normal;
+    padding: 5px 10px; /* Padding for the box */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect */
+.publication-links .button:hover {
+    background-color: #000; /* White background on hover */
+    color: #fff; /* Black text on hover */
+    border: 1.5px solid #000; /* Black border on hover */
 }
 
 .publication-authors {
-    margin-bottom: -0.7rem;
+    margin-bottom: -0.4rem;
+    font-size: 0.9rem;
 }
 
 .publication-conference {
     color: #666;
-    font-size: 1em;
+    font-size: 0.85rem;
     font-style: italic;
-    margin-bottom: 0.2rem; /* Adjusts space below the title */
+    margin-bottom: 0rem; /* Adjusts space below the title */
     line-height: 1.5;
 }
 
