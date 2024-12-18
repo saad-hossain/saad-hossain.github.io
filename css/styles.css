@@ -1,87 +1,97 @@
-/* Reset */
-* {
-    box-sizing: border-box;
-}
-
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f5f5f5;
+    font-family: sans-serif;
+    color: #222; /* Dark gray for text */
+    background-color: #fff; /* White background */
     margin: 0;
     padding: 0;
+    padding-bottom: 60px; /* Add padding equal to footer height */
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 750px;
     margin: 2rem auto;
-    padding: 1rem;
+    padding: 0 1rem;
+    padding-bottom: 4rem; /* Add space at the bottom */
 }
 
+
 h2 {
-    color: #003366;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #003366;
+    color: #000; /* Pure black headings */
+    margin-bottom: 0.5rem;
+    /* border-bottom: 2px solid #000; */
     padding-bottom: 5px;
+    font-weight: normal;
+    font-size: 2rem;
 }
 
 /* Navbar */
 .navbar {
     display: flex;
-    justify-content: center;
-    background-color: #003366;
-    padding: 1rem;
+    justify-content: right;
     position: sticky;
     top: 0;
     z-index: 1000;
+    max-width: 770px;
+    margin: 0 auto;
+    padding: 1rem 0; /* Padding for spacing */
+    background-color: transparent; /* Keep content transparent; fill done by pseudo-element */
+}
+
+.navbar::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100%; /* Matches the navbar height */
+    background-color: #000; /* Black fill */
+    z-index: -1; /* Places the fill behind the navbar content */
+}
+
+.navbar::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1;
+    width: 100vw; /* Full viewport width */
+    height: 100%; /* Matches the navbar height */
+    background-color: #000; /* Black fill */
+    z-index: -1; /* Places the fill behind the navbar content */
 }
 
 .navbar a {
-    color: white;
+    color: #fff; /* White text */
     margin: 0 15px;
     text-decoration: none;
-    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #00aaff;
+    color: #888; /* Gray hover effect */
 }
 
-/* Publication, Experience, and Talks styling */
-.publication-item, .experience-item, .talk-item {
+/* Navbar Name */
+.navbar-left {
+    flex: 1; /* Take up available space */
+    padding-left: 1rem; /* Add a little padding */
+}
+
+.navbar-name {
+    color: #fff; /* White text */
+    font-size: 1.1rem;
     display: flex;
-    align-items: center;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    background-color: #fff;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+    justify-content: flex-start;
 }
 
-.publication-item img, .talk-item img {
-    width: 160px;
-    height: auto;
-    margin-right: 1rem;
-    border-radius: 5px;
-}
-
-.publication-title, .experience-title, .talk-title {
-    font-weight: bold;
-    color: #003366;
-}
-
-.publication-conference, .talk-details, .experience-details {
-    color: #666;
-    font-size: 0.9em;
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #003366;
-    color: white;
-    margin-top: 2rem;
+/* Navbar Links */
+.navbar-right {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1; /* Keep right-aligned links */
+    padding-right: 1rem; /* Add a little padding */
 }
 
 /* About Section */
@@ -93,71 +103,66 @@ h2 {
 }
 
 .profile-picture {
-    width: 30%;
+    width: 35%;
     height: auto;
-    border-radius: 10%;
-    flex-shrink: 0; /* Prevents image from shrinking */
+    border-radius: 2px; /* Subtle rounding */
+    flex-shrink: 0;
+    border: 2px solid rgb(37, 37, 37); /* Light gray border around image */
 }
 
 .about-intro p {
     margin: 0;
+    color: #222; /* Slightly dark text for readability */
     line-height: 1.6;
-}
-
-/* Areas of Interest Boxes */
-.areas-of-interest {
-    display: flex;
-    flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
-    gap: 1rem;       /* Space between boxes */
-    margin-bottom: 2rem;
-}
-
-.interest-box {
-    padding: 0.5rem 0.5rem;
-    background-color: #f0f0f0;
-    border: 1px solid #000000;
-    border-radius: 8px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: #333;
-    flex: 1 1 calc(15%); /* Flex properties for responsive sizing */
-    text-align: center;
+    text-align: left;
 }
 
 /* News Section */
-.news-item {
-    display: flex;
-    align-items: flex-start; /* Aligns date and content at the top */
-    margin-bottom: 0.5rem; /* Adjusts space between news items */
-    padding: 0.6rem;
-    background-color: #fff;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+.news-section ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0;
 }
 
-.news-date {
+.news-section li {
+    margin-bottom: 0.8rem; /* Spacing between list items */
+    line-height: 1.6;
+    color: #222; /* Dark gray text */
+    display: flex; /* Align date and content */
+    align-items: flex-start;
+}
+
+.news-section .news-date {
     font-weight: bold;
-    margin-right: 1rem; /* Adds space between the date and content */
-    white-space: nowrap; /* Prevents date from wrapping */
-    color: #333;
+    color: #000; /* Black for dates */
+    margin-right: 0.5rem; /* Space between date and content */
+    white-space: nowrap;
+    font-size: 0.9rem;
 }
 
 .news-content {
-    flex: 1; /* Allows content to take up remaining space */
-    margin: 0; /* Ensures no extra spacing */
-    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+/* Links */
+a {
+    color: #000; /* Black for links */
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #555; /* Dark gray on hover */
 }
 
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
     .about-intro {
-        flex-direction: column; /* Stacks image above text on small screens */
-        align-items: center;
+        flex-direction: column;
         text-align: center;
     }
 
     .profile-picture {
-        width: 50%; /* Reduces image size on smaller screens */
-        margin-bottom: 1rem; /* Adds space below the image */
+        width: 50%;
+        margin-bottom: 1rem;
     }
 }
