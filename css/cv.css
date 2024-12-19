@@ -121,34 +121,6 @@ h2 {
     text-align: left;
 }
 
-/* News Section */
-.news-section ul {
-    list-style: none; /* Remove default bullet points */
-    padding: 0; /* Remove padding */
-    margin: 0;
-}
-
-.news-section li {
-    margin-bottom: 0.8rem; /* Spacing between list items */
-    line-height: 1.6;
-    color: #222; /* Dark gray text */
-    display: flex; /* Align date and content */
-    align-items: flex-start;
-}
-
-.news-section .news-date {
-    font-weight: bold;
-    color: #000; /* Black for dates */
-    margin-right: 0.5rem; /* Space between date and content */
-    white-space: nowrap;
-    font-size: 0.9rem;
-}
-
-.news-content {
-    font-size: 0.9rem;
-    color: #222;
-}
-
 /* Links */
 a {
     color: #000; /* Black for links */
@@ -171,6 +143,7 @@ a:hover {
         color: #222; /* Slightly dark text for readability */
         line-height: 1.6;
         text-align: left;
+        font-size: 0.9rem
     }
 
     .profile-picture {
@@ -192,5 +165,15 @@ a:hover {
     .navbar-name {
         font-size: 1rem; /* Reduce size of navbar name */
         margin-bottom: 10px; /* Add space below name */
+    }
+
+    h2 {
+        color: #000; /* Pure black headings */
+        margin-bottom: 1rem;
+        /* border-bottom: 1px solid #003366; */
+        padding-bottom: 5px;
+        text-align: left;
+        font-weight: normal;
+        font-size: 1.2rem;
     }
 }

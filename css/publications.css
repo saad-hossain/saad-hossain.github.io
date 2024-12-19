@@ -191,3 +191,72 @@ h2 {
 }
 
 
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar elements */
+        align-items: center; /* Center align */
+    }
+
+    .navbar a {
+        font-size: 0.9rem; /* Reduce font size for smaller screens */
+        margin: 2px 0; /* Add vertical margin */
+        padding: 0 5px;
+    }
+
+    .navbar-name {
+        font-size: 1rem; /* Reduce size of navbar name */
+        margin-bottom: 10px; /* Add space below name */
+    }
+
+    .publication-item, .experience-item, .talk-item {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align the items */
+        text-align: center; /* Center align the text */
+    }
+
+    .ribbon {
+        position: static; /* Move it into normal document flow */
+        margin: 0.5rem 0; /* Reset margin */
+        width: 89%; /* Let it resize dynamically */
+        padding: 5px 10px;
+        border-bottom-right-radius: 0; /* Remove corner rounding */
+        border-bottom-left-radius: 0; /* Remove corner rounding */
+    }
+
+    .publication-item img, .talk-item img {
+        margin: 0 auto 1rem auto; /* Center align the image and add spacing below it */
+        width: 90%; /* Make the image responsive */
+        /* max-width: 300px; */
+    }
+
+    .publication-links .button {
+        margin-top: 1rem; /* Add space above the button */
+        font-size: 0.6rem;
+    }
+
+    h2 {
+        color: #000; /* Pure black headings */
+        margin-bottom: 1rem;
+        /* border-bottom: 1px solid #003366; */
+        padding-bottom: 5px;
+        text-align: left;
+        font-weight: normal;
+        font-size: 1.2rem;
+    }
+    .publication-title, .experience-title, .talk-title {
+        margin: 0;
+        margin-bottom: -0.1rem;
+        font-size: 0.9rem;
+        color: #000;;
+        font-weight: bold;
+        /* font-style: unset; */
+    }
+    .publication-authors {
+        margin-bottom: -0.4rem;
+        /* margin-left: 0.6rem;
+        margin-right: 0.6rem; */
+        font-size: 0.8rem;
+        /* width: 95%; */
+    }
+}

@@ -219,7 +219,7 @@ summary:hover {
         padding-bottom: 5px;
         text-align: left;
         font-weight: normal;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .navbar {
@@ -284,13 +284,13 @@ summary:hover {
     
     h3 {
         margin: 0;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         color: #000;;
         font-weight: bold;
     }
     
     .company-info {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
         color: #555;
         margin-top: 0.2rem;
         font-style: normal;
@@ -299,7 +299,7 @@ summary:hover {
     summary {
         color: #222;
         padding: 0 0;
-        font-size: 0.7rem;
+        font-size: 0.75rem;
     }
     
     .responsibilities-list {
