@@ -67,6 +67,10 @@
     padding-right: 1rem; /* Add a little padding */
 }
 
+.navbar-right .boxed {
+    border-bottom: 0.1px solid white;
+}
+
 /* General Styles */
 body {
     font-family: sans-serif;

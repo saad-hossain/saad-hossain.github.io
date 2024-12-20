@@ -1,7 +1,3 @@
-/* Reset */
-* {
-    box-sizing: border-box;
-}
 
 /* General Styles */
 body {
@@ -98,6 +94,10 @@ h2 {
     padding-right: 1rem; /* Add a little padding */
 }
 
+.navbar-right .boxed {
+    border-bottom: 0.1px solid white;
+}
+
 /* Publication, Experience, and Talks styling */
 .publication-item, .experience-item, .talk-item {
     display: flex;
@@ -121,11 +121,10 @@ h2 {
     font-size: 0.7rem;
     font-weight: bold;
     text-align: center;
-    margin: 1rem 0.5rem;
+    margin: 1rem 0.85rem;
     padding: 5px 10px;
-    border-bottom-right-radius: 5px; /* Rounded corner */
     z-index: 2; /* Ensure it appears above the image */
-    width: 160px;
+    width: 135px;
 }
 
 .publication-item img, .talk-item img {
@@ -218,7 +217,7 @@ h2 {
     .ribbon {
         position: static; /* Move it into normal document flow */
         margin: 0.5rem 0; /* Reset margin */
-        width: 89%; /* Let it resize dynamically */
+        width: 83%; /* Let it resize dynamically */
         padding: 5px 10px;
         border-bottom-right-radius: 0; /* Remove corner rounding */
         border-bottom-left-radius: 0; /* Remove corner rounding */
@@ -242,7 +241,7 @@ h2 {
         padding-bottom: 5px;
         text-align: left;
         font-weight: normal;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     .publication-title, .experience-title, .talk-title {
         margin: 0;

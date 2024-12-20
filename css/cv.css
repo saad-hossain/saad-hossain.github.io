@@ -94,20 +94,16 @@ h2 {
     padding-right: 1rem; /* Add a little padding */
 }
 
+.navbar-right .boxed {
+    border-bottom: 0.1px solid white;
+}
+
 /* About Section */
 .about-intro {
     display: flex;
     align-items: left;
     gap: 1rem; /* Space between image and text */
     margin-bottom: 2rem;
-}
-
-.profile-picture {
-    width: 35%;
-    height: auto;
-    border-radius: 2px; /* Subtle rounding */
-    flex-shrink: 0;
-    border: 2px solid rgb(37, 37, 37); /* Light gray border around image */
 }
 
 .cv-link {
@@ -174,6 +170,6 @@ a:hover {
         padding-bottom: 5px;
         text-align: left;
         font-weight: normal;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 }
