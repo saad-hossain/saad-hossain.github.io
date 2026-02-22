@@ -16,7 +16,7 @@
   --transition: 0.2s ease;
 
   /* Index page layout locks — sidebar & content share these so alignment never drifts */
-  --index-content-top: 10rem;
+  --index-content-top: 7rem;
   --profile-pic-size: 250px;
   --h1-font-size: 1.75rem;
   --h1-line-height: 1.2;
@@ -187,6 +187,9 @@ a:hover {
   }
 
   .sidebar a.active {
+    border-right: none;
+    margin-right: 0;
+    padding-right: 0;
     border-bottom: 2px solid var(--color-heading);
     padding-bottom: calc(0.25rem - 2px);
   }
