@@ -14,7 +14,7 @@
     { "icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/s42hossa/", "label": "LinkedIn" },
     { "icon": "fab fa-github", "url": "https://github.com/sdhossain", "label": "GitHub" },
     { "icon": "fas fa-graduation-cap", "url": "https://scholar.google.com/citations?user=9_oziQ0AAAAJ&hl=en&oi=sra", "label": "Google Scholar" },
-    { "icon": "fas fa-file-alt", "url": "assets/CV.pdf", "label": "CV" }
+    { "icon": "fas fa-file-alt", "url": "assets/cv.pdf", "label": "CV" }
   ],
   "otherLinks": [
     { "url": "https://www.linkedin.com/in/s42hossa/", "label": "LinkedIn" },
