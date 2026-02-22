@@ -35,6 +35,7 @@
   height: var(--profile-pic-size);
   object-fit: cover;
   object-position: center 20%;
+  border: 5px solid #222;
 }
 
 .about-photo .social-icons {
