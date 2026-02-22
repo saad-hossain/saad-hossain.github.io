@@ -1,0 +1,146 @@
+{
+  "publications": [
+    {
+      "title": "TamperBench: Systematically Stress-Testing LLM Safety Under Fine-Tuning and Tampering",
+      "authors": "<u>S. Hossain</u>, T. Tseng, P. Pandey, S. Vajpayee, N. Nonta, M. Kowal, S. Simko, S. Casper, Z. Jin, K. Pelrine, S. Rambhatla",
+      "venue": "Preprint, 2026",
+      "thumbnail": "images/tamperbench_fig.png",
+      "links": [
+        { "label": "PAPER", "url": "https://arxiv.org/abs/2602.06911" },
+        { "label": "CODE", "url": "https://github.com/criticalml-uw/TamperBench" }
+      ]
+    },
+    {
+      "title": "Bringing Equity to Classification: Domain Generalization for Domain-Linked Classes",
+      "authors": "K. Kaai, <u>S. Hossain</u>, S. Rambhatla",
+      "venue": "T-PAMI, 2025",
+      "thumbnail": "images/fond.png",
+      "links": [
+        { "label": "PAPER", "url": "https://ieeexplore.ieee.org/document/11121886" },
+        { "label": "CODE", "url": "https://github.com/kimathikaai/DomainBed" }
+      ]
+    },
+    {
+      "title": "SafeTuneBed: A Safety Assessment Framework for Harmful Finetuning Defenses",
+      "authors": "<u>S. Hossain</u>, S. Vajpayee, S. Rambhatla",
+      "venue": "IJCAI Workshop, 2025",
+      "thumbnail": "images/safetunebed.png",
+      "links": [
+        { "label": "PAPER", "url": "https://openreview.net/forum?id=yKetbTItcu" },
+        { "label": "CODE", "url": "https://github.com/jmpark0808/Ego-STAN" }
+      ]
+    },
+    {
+      "title": "Diagnostic Accuracy of an Automated Classifier for the Detection of Pleural Effusions in Patients Undergoing Lung Ultrasound",
+      "authors": "R. Chaudhary, J. Ho, D. Smith, <u>S. Hossain</u>, J. Hargun, B. VanBerlo, N. Murphy, R. Prager, K. Rikhraj, J. Tschirhart, R. Arntfield",
+      "venue": "AJEM, 2025",
+      "thumbnail": "images/pleffnet.png",
+      "links": [
+        { "label": "PAPER", "url": "https://www.sciencedirect.com/science/article/abs/pii/S0735675725300476" }
+      ]
+    },
+    {
+      "title": "LangDA: Language-guided Domain Adaptive Semantic Segmentation",
+      "authors": "C. Liu, <u>S. Hossain</u>, C. Thomas, K. Lai, R. Vemulapalli, S. Rambhatla, A. Wong",
+      "venue": "AFM @ NeurIPS 2024",
+      "thumbnail": "images/langda.png",
+      "links": [
+        { "label": "PAPER", "url": "https://openreview.net/forum?id=iyULilaeYx" }
+      ]
+    },
+    {
+      "title": "Domain-Guided Spatio-Temporal Self-Attention for Egocentric 3D Pose Estimation",
+      "authors": "J. Park, K. Kaai, <u>S. Hossain</u>, N. Sumi, S. Rambhatla, P. Fieguth",
+      "venue": "KDD 2023",
+      "thumbnail": "images/egostan.gif",
+      "links": [
+        { "label": "PAPER", "url": "https://dl.acm.org/doi/10.1145/3580305.3599312" },
+        { "label": "CODE", "url": "https://github.com/jmpark0808/Ego-STAN" }
+      ]
+    },
+    {
+      "title": "Are all classes created equal? Domain Generalization for Domain-Linked Classes",
+      "authors": "K. Kaai, <u>S. Hossain</u>, S. Rambhatla",
+      "venue": "DistShift @ NeurIPS 2023",
+      "thumbnail": "images/domainlinked.png",
+      "links": [
+        { "label": "PAPER", "url": "https://openreview.net/forum?id=Zz7eZoR1VN" },
+        { "label": "CODE", "url": "https://github.com/kimathikaai/DomainBed" }
+      ]
+    },
+    {
+      "title": "Implicit Stylization for Domain Adaptation",
+      "authors": "J. Park, F. Barnard, <u>S. Hossain</u>, S. Rambhatla",
+      "venue": "DG @ ICLR 2023",
+      "thumbnail": "images/imsty.jpeg",
+      "links": [
+        { "label": "PAPER", "url": "https://openreview.net/forum?id=fkFFh4fAbH&" }
+      ]
+    },
+    {
+      "title": "Building Spatio-temporal Transformers for Egocentric 3D Pose Estimation",
+      "authors": "J. Park, K. Kaai, <u>S. Hossain</u>, N. Sumi, S. Rambhatla, P. Fieguth",
+      "venue": "EGO4D @ CVPR 2022",
+      "thumbnail": "images/ego-stan.png",
+      "links": [
+        { "label": "PAPER", "url": "https://arxiv.org/abs/2206.04785" }
+      ]
+    }
+  ],
+  "panelsAndMedia": [
+    {
+      "title": "Translational Pathways in Biomedical Engineering: From Lab to Clinic",
+      "role": "Panelist",
+      "venue": "CUBEC, 2026",
+      "thumbnail": "images/cubec.png",
+      "links": [
+        { "label": "EVENT", "url": "https://site.pheedloop.com/event/CUBEC/sessions/SESKWCJ55CESKVEFD" }
+      ]
+    },
+    {
+      "title": "Featured in News Article: BME Undergraduate Student Received Honorable Mention for Outstanding Undergraduate Researcher Award",
+      "role": "Featured",
+      "venue": "University of Waterloo SYDE News, 2025",
+      "thumbnail": "images/uw_news_headshot.jpg",
+      "links": [
+        { "label": "ARTICLE", "url": "https://uwaterloo.ca/systems-design-engineering/news/bme-undergraduate-student-received-honorable-mention" }
+      ]
+    },
+    {
+      "title": "Augmented Reality for Guided Lung Ultrasound Acquisition",
+      "role": "Guest Speaker",
+      "venue": "Ibtikar Seminar Series, 2025",
+      "thumbnail": "images/ibtikar_talk.jpg",
+      "links": [
+        { "label": "TALK", "url": "https://youtu.be/ZhHr8K19RLM" }
+      ]
+    },
+    {
+      "title": "Enhancing AI Testing: The Power of Metadata Hydration",
+      "role": "Key Speaker",
+      "venue": "Live Webinar, Kolena, 2024",
+      "thumbnail": "images/ai_testing_webinar_thumbnail.jpg",
+      "links": [
+        { "label": "WEBINAR", "url": "https://www.youtube.com/watch?v=E-eTSJNgOHw" }
+      ]
+    },
+    {
+      "title": "Mastering RAG Systems for LLMs: From Pitfalls to Performance",
+      "role": "Panelist",
+      "venue": "Live Webinar, Kolena, 2024",
+      "thumbnail": "images/rag_webinar_thumbnail.jpg",
+      "links": [
+        { "label": "WEBINAR", "url": "https://www.youtube.com/watch?v=SGlEoihccW0" }
+      ]
+    },
+    {
+      "title": "Inertial Measurement Unit (IMU) Feature Extraction",
+      "role": "Presenter",
+      "venue": "Crash Workshop on Physiological Computing, Waterloo, 2022",
+      "thumbnail": "images/imu_feature_extraction_talk.jpg",
+      "links": [
+        { "label": "WORKSHOP", "url": "https://www.youtube.com/watch?v=kk_tSTKnFXk&t=80s" }
+      ]
+    }
+  ]
+}

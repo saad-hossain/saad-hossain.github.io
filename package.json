@@ -1,0 +1,14 @@
+{
+  "name": "saad-hossain-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website",
+  "scripts": {
+    "build": "npx ts-node src/build.ts",
+    "watch": "npx ts-node src/build.ts --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "ts-node": "^10.9.0",
+    "@types/node": "^20.10.0"
+  }
+}

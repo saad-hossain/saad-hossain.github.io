@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> head}}
+    <link rel="stylesheet" href="css/pages/publications.css">
+</head>
+<body>
+    <div class="page">
+        {{> navbar}}
+        <main class="content">
+            <h2>Publications</h2>
+
+            {{#each publications}}
+            <div class="pub-row">
+                {{#if thumbnail}}
+                <img src="{{thumbnail}}" alt="{{title}}" class="pub-thumb">
+                {{/if}}
+                <div class="pub-body">
+                    <h3 class="pub-title">{{title}}</h3>
+                    <p class="pub-authors">{{authors}}</p>
+                    <div class="pub-meta">
+                        <span class="pub-venue">{{venue}}</span>
+                        <div class="pub-links">
+                            {{#each links}}
+                            <a href="{{url}}" target="_blank" class="pub-link">{{label}}</a>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+
+            <h2>Panels and Media</h2>
+
+            {{#each panelsAndMedia}}
+            <div class="pub-row">
+                {{#if thumbnail}}
+                <img src="{{thumbnail}}" alt="{{title}}" class="pub-thumb">
+                {{/if}}
+                <div class="pub-body">
+                    <h3 class="pub-title">{{title}}</h3>
+                    <p class="pub-authors">{{venue}}</p>
+                    <div class="pub-meta">
+                        <span class="pub-venue">{{role}}</span>
+                        <div class="pub-links">
+                            {{#each links}}
+                            <a href="{{url}}" target="_blank" class="pub-link">{{label}}</a>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </main>
+    </div>
+</body>
+</html>

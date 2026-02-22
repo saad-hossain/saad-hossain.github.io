@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "label": "About", "href": "index.html", "id": "about" },
+    { "label": "Experience", "href": "experience.html", "id": "experience" },
+    { "label": "Publications", "href": "publications.html", "id": "publications" },
+    { "label": "Resume", "href": "cv.html", "id": "cv" }
+  ]
+}

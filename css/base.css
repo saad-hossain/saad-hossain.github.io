@@ -1,0 +1,201 @@
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+:root {
+  --color-text: #222;
+  --color-text-secondary: #666;
+  --color-heading: #222;
+  --color-bg: #fff;
+  --color-border: #ddd;
+
+  --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --sidebar-width: 140px;
+  --content-max-width: 720px;
+  --transition: 0.2s ease;
+
+  /* Index page layout locks — sidebar & content share these so alignment never drifts */
+  --index-content-top: 10rem;
+  --profile-pic-size: 250px;
+  --h1-font-size: 1.75rem;
+  --h1-line-height: 1.2;
+  --about-name-pad-bottom: 0.6rem;
+  /* Sidebar bottom = image bottom. Image bottom = content-top + name-height + pic-size */
+  --sidebar-top: calc(
+    var(--index-content-top)
+    + var(--h1-font-size) * var(--h1-line-height)
+    + var(--about-name-pad-bottom)
+    + var(--profile-pic-size)
+  );
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: var(--font-family);
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================
+   LAYOUT — sidebar + content
+   ============================================ */
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: fixed;
+  top: var(--sidebar-top);
+  left: max(0px, calc(50% - 480px));
+  width: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 1.5rem;
+  border-right: 1px solid var(--color-border);
+  transform: translateY(-100%);
+}
+
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.35rem 0;
+  transition: color var(--transition);
+  text-align: right;
+}
+
+.sidebar a:hover {
+  color: var(--color-heading);
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  color: #000;
+  font-weight: 600;
+  border-right: 3px solid #000;
+  margin-right: -1.5rem;
+  padding-right: calc(1.5rem - 3px);
+}
+
+.content {
+  max-width: var(--content-max-width);
+  margin-left: var(--sidebar-width);
+  padding: 5rem 1.5rem 3rem;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: 600;
+  color: var(--color-heading);
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+  line-height: var(--h1-line-height);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  margin: 2.5rem 0 0.5rem;
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-heading);
+  letter-spacing: -0.015em;
+}
+
+h2:first-child { margin-top: 0; }
+
+h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  margin: 0;
+  line-height: 1.35;
+}
+
+p { margin: 0 0 0.75rem; }
+
+a {
+  color: var(--color-heading);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--color-text-secondary);
+}
+
+/* ============================================
+   SOCIAL ICONS (below profile pic)
+   ============================================ */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0.75rem 0 0.5rem;
+}
+
+.social-icons a {
+  color: var(--color-text-secondary);
+  font-size: 2rem;
+  transition: color var(--transition);
+}
+
+.social-icons a:hover {
+  color: var(--color-heading);
+  text-decoration: none;
+}
+
+/* ============================================
+   MOBILE — sidebar becomes top bar
+   ============================================ */
+@media (max-width: 720px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    left: auto;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0.75rem 1rem;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .sidebar a {
+    padding: 0.25rem 0;
+    font-size: 0.82rem;
+  }
+
+  .sidebar a.active {
+    border-bottom: 2px solid var(--color-heading);
+    padding-bottom: calc(0.25rem - 2px);
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 1.5rem 1.25rem 2rem;
+  }
+
+  h1 { font-size: 1.35rem; }
+  h2 { font-size: 1rem; }
+}

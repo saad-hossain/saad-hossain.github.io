@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> head}}
+    <link rel="stylesheet" href="css/pages/experience.css">
+</head>
+<body>
+    <div class="page">
+        {{> navbar}}
+        <main class="content">
+            <h2>Professional Experience</h2>
+
+            {{#each professional}}
+            <div class="exp-card">
+                <div class="exp-header">
+                    <img src="{{logo}}" alt="{{company}}" class="exp-logo">
+                    <div class="exp-header-text">
+                        <h3 class="exp-title">{{title}}</h3>
+                        <p class="exp-company">{{company}}</p>
+                    </div>
+                    <div class="exp-meta">
+                        <span class="exp-date">{{startDate}} – {{endDate}}</span>
+                        <span class="exp-location">{{location}}</span>
+                    </div>
+                </div>
+                <details class="exp-details">
+                    <summary>{{summary}}</summary>
+                    <ul class="exp-bullets">
+                        {{#each bullets}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </details>
+            </div>
+            {{/each}}
+
+            <h2>Research Experience</h2>
+
+            {{#each research}}
+            <div class="exp-card">
+                <div class="exp-header">
+                    <img src="{{logo}}" alt="{{company}}" class="exp-logo">
+                    <div class="exp-header-text">
+                        <h3 class="exp-title">{{title}}</h3>
+                        <p class="exp-company">{{company}}</p>
+                    </div>
+                    <div class="exp-meta">
+                        <span class="exp-date">{{startDate}} – {{endDate}}</span>
+                        <span class="exp-location">{{location}}</span>
+                    </div>
+                </div>
+                <details class="exp-details">
+                    <summary>{{summary}}</summary>
+                    <ul class="exp-bullets">
+                        {{#each bullets}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </details>
+            </div>
+            {{/each}}
+        </main>
+    </div>
+</body>
+</html>

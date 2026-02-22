@@ -1,0 +1,103 @@
+{
+  "professional": [
+    {
+      "title": "Machine Learning Intern",
+      "company": "Kolena Inc.",
+      "location": "Vancouver, BC",
+      "startDate": "Jan 2024",
+      "endDate": "Aug 2024",
+      "logo": "images/kolena.webp",
+      "summary": "Enhancing the way Machine Learning systems are evaluated.",
+      "bullets": [
+        "Automated evaluation of Gen-AI by fine-tuning Vision-Language models to model human preference.",
+        "Improved RAG Generator accuracy by 8% on finance data through improved PDF-parsing & LLM-prompting.",
+        "Accelerated creation of textual datasets by 15x by building an LLM powered web-application using Streamlit.",
+        "Enhanced detection of AI model errors for users by building data analysis pipeline identifying edge cases."
+      ]
+    },
+    {
+      "title": "Machine Learning Developer",
+      "company": "Deep Breathe",
+      "location": "London, ON",
+      "startDate": "Sep 2022",
+      "endDate": "Aug 2024",
+      "logo": "images/deepbreathe-icon.jfif",
+      "summary": "Built AI-powered systems to automate the diagnosis of lung ultrasound scans.",
+      "bullets": [
+        "Developed AI based screening tool confirming with 96% certainty the presence of fluid in lung ultrasound scans.",
+        "Achieved 80% accuracy (IoU) in segmenting effusions and consolidations in lung-ultrasound using TensorFlow.",
+        "Implemented MLOps pipeline using Azure, SQL & OpenCV to process, ingest & version data for FDA approval.",
+        "Integrated WandB into ML projects for dash-boarding and logging visuals during training and evaluation.",
+        "Reduced dataset fetching time by 91% through cross-platform deployment of pipeline producing 7.8 million M-Mode images from 140,000 B-Mode videos per version, automated through Unix & Shell scripting."
+      ]
+    },
+    {
+      "title": "Software Engineering Intern",
+      "company": "IntelliSports",
+      "location": "Montreal, QC",
+      "startDate": "Sep 2022",
+      "endDate": "Aug 2024",
+      "logo": "images/playfitt.png",
+      "summary": "Developed activity recognition pipelines and modeled user application usage.",
+      "bullets": [
+        "Boosted cheat-detection accuracy by 30% by feature engineering IMU Sensor data using Scikit-learn & SciPy",
+        "Optimized inference speed on CPU machine to 1.8x original by leveraging light-weight sklearn models.",
+        "Elevated mission count by 2.3x by deploying detection pipelines on EC2 for punch, crunch, high-knee, & jump.",
+        "Identified onboarding flow with +50% retention by conducting decision-tree & SVM analysis on early user data.",
+        "Built data visualization platform, showcasing user physical activity growth of 300%, employed in pitches that secured $1.4 million in funding using PHP and MySQL."
+      ]
+    }
+  ],
+  "research": [
+    {
+      "title": "Research Assistant",
+      "company": "Critical Machine Learning Lab",
+      "location": "Waterloo, ON",
+      "startDate": "Sep 2023",
+      "endDate": "Present",
+      "logo": "images/criticalml.png",
+      "summary": "Investigating ways on how AI models can adapt to new environments.",
+      "bullets": [
+        "Achieved State of the Art results in Domain Adaptive Semantic Segmentation using Vision-Language models."
+      ]
+    },
+    {
+      "title": "Research Assistant",
+      "company": "Vision and Image Processing Lab",
+      "location": "Waterloo, ON",
+      "startDate": "Jan 2022",
+      "endDate": "Apr 2023",
+      "logo": "images/vip.jpg",
+      "summary": "Researched ego-centric pose estimation techniques using spatio-temporal analysis.",
+      "bullets": [
+        "Outperformed Egocentric HPE State of the Art by 38% via insertion of spatio-temporal data using Transformers."
+      ]
+    },
+    {
+      "title": "Research Assistant",
+      "company": "Social and intelligent Robotics Research Lab",
+      "location": "Waterloo, ON",
+      "startDate": "Sep 2021",
+      "endDate": "Dec 2021",
+      "logo": "images/sirrl.png",
+      "summary": "Implemented suite of (IMU) feature extraction algorithms for Human Robot Interaction.",
+      "bullets": [
+        "Researched and implemented suite of feature extraction algorithms relevant to singla detection for AI."
+      ]
+    },
+    {
+      "title": "Research Intern",
+      "company": "Human Centered Robotics and Machine Intelligence Lab",
+      "location": "Waterloo, ON",
+      "startDate": "May 2021",
+      "endDate": "Aug 2021",
+      "logo": "images/robohub.jfif",
+      "summary": "Developed and deployed facial and emotion recognition pipeline on humanoid robot.",
+      "bullets": [
+        "Delivered 99.3% on LFW (Face ID) and 72.7% on FER2013 (Emotion) benchmarks using DLIB and Tensorflow.",
+        "Designed multi-input Keras model using pybind11 bindings of a C++ toolkit, informed by t-SNE data analysis.",
+        "Deployed facial identity and emotion recognition pipeline using ROS, Flask and PostgresSQL on the Reem-C robot, highlighted by researchers in International Robotics conferences."
+      ]
+    }
+  ]
+}

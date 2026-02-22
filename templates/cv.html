@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> head}}
+    <link rel="stylesheet" href="css/pages/cv.css">
+</head>
+<body>
+    <div class="page">
+        {{> navbar}}
+        <main class="content">
+            <h2>Resume</h2>
+            <div class="cv-actions">
+                <a href="assets/CV.pdf" target="_blank" class="cv-download"><i class="fas fa-download"></i> Download PDF</a>
+            </div>
+            <iframe src="assets/CV.pdf" class="cv-viewer" title="Resume"></iframe>
+        </main>
+    </div>
+</body>
+</html>

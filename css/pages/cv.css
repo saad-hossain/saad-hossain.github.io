@@ -1,0 +1,42 @@
+/* ============================================
+   CV PAGE
+   ============================================ */
+
+.cv-actions {
+  margin-bottom: 1rem;
+}
+
+.cv-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  border: 1px solid #ccc;
+  padding: 4px 12px;
+  border-radius: 4px;
+  transition: all var(--transition);
+}
+
+.cv-download:hover {
+  background-color: var(--color-heading);
+  color: var(--color-bg);
+  border-color: var(--color-heading);
+  text-decoration: none;
+}
+
+.cv-viewer {
+  width: 100%;
+  height: 80vh;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 640px) {
+  .cv-viewer {
+    height: 60vh;
+  }
+}

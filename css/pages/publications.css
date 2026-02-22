@@ -1,0 +1,99 @@
+/* ============================================
+   PUBLICATIONS PAGE
+   ============================================ */
+
+/* Publication / talk rows */
+.pub-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pub-row:last-child {
+  border-bottom: none;
+}
+
+.pub-thumb {
+  width: 130px;
+  height: 85px;
+  object-fit: contain;
+  border-radius: 4px;
+  flex-shrink: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.pub-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.pub-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.pub-authors {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  margin: 0.2rem 0 0;
+  line-height: 1.5;
+}
+
+/* Venue badge + paper link */
+.pub-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.pub-links {
+  display: flex;
+  gap: 0.6rem;
+  margin-left: auto;
+}
+
+.pub-venue {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background-color: #f5f5f5;
+  padding: 2px 8px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.pub-link {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  border: 1px solid #ccc;
+  padding: 2px 8px;
+  border-radius: 3px;
+  transition: all var(--transition);
+}
+
+.pub-link:hover {
+  background-color: var(--color-heading);
+  color: var(--color-bg);
+  text-decoration: none;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 640px) {
+  .pub-row { gap: 0.75rem; }
+  .pub-thumb { width: 72px; height: 50px; }
+  .pub-title { font-size: 0.86rem; }
+  .pub-authors { font-size: 0.76rem; }
+  .pub-meta { flex-wrap: wrap; gap: 0.4rem; }
+  .pub-venue, .pub-link { font-size: 0.65rem; }
+}

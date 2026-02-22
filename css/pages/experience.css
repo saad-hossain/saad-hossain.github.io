@@ -1,0 +1,128 @@
+/* ============================================
+   EXPERIENCE PAGE
+   ============================================ */
+
+/* Experience rows */
+.exp-card {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.exp-card:last-child {
+  border-bottom: none;
+}
+
+/* Header: logo + text + date */
+.exp-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.exp-logo {
+  width: 48px;
+  min-width: 48px;
+  height: 40px;
+  border-radius: 6px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 2px;
+  margin-left: 0.75rem;
+}
+
+.exp-header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.exp-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.exp-company {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin: 0.1rem 0 0;
+}
+
+.exp-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.exp-date {
+  font-size: 0.8rem;
+  color: #888;
+  white-space: nowrap;
+  line-height: 1.3;
+}
+
+.exp-location {
+  font-size: 0.8rem;
+  color: #888;
+  white-space: nowrap;
+  margin-top: 0.1rem;
+  line-height: 1.3;
+}
+
+.exp-date i,
+.exp-location i {
+  font-size: 0.65rem;
+  color: #aaa;
+  margin-right: 0.35rem;
+}
+
+/* Expandable details — aligned with text */
+.exp-details {
+  margin-top: 0.35rem;
+  padding-left: 80px; /* 12px margin + 48px logo + 20px gap */
+}
+
+.exp-details summary {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.exp-details summary:hover {
+  color: var(--color-heading);
+}
+
+.exp-bullets {
+  margin: 0.35rem 0 0;
+  padding-left: 1.25rem;
+  font-size: 0.84rem;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.exp-bullets li {
+  margin-bottom: 0.2rem;
+}
+
+/* Per-logo height overrides (width stays 48px for alignment) */
+.exp-logo[src*="criticalml"] { height: 48px; }
+.exp-logo[src*="playfitt"]   { height: 48px; }
+.exp-logo[src*="vip"]        { height: 35px; }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 640px) {
+  .exp-header { flex-wrap: wrap; }
+
+  .exp-date,
+  .exp-location {
+    font-size: 0.78rem;
+  }
+
+  .exp-title { font-size: 0.9rem; }
+  .exp-company { font-size: 0.8rem; }
+  .exp-details summary { font-size: 0.8rem; }
+  .exp-bullets { font-size: 0.78rem; }
+}

@@ -1,0 +1,24 @@
+{
+  "name": {
+    "first": "Saad",
+    "last": "Hossain"
+  },
+  "bio": [
+    "I am a Machine Learning Engineer at <a href=\"https://deepbreathe.ai/\" target=\"_blank\">Deep Breathe</a>. I am also involved in research at the <a href=\"https://sirisharambhatla.com/criticalml/\" target=\"_blank\">Critical ML Lab</a>, where I have worked on research collaborations with Apple, Nissan, and <a href=\"https://www.far.ai/\" target=\"_blank\">FAR.AI</a> on LLM safety, domain adaptation, and other computer vision applications.",
+    "During my undergraduate studies at <a href=\"https://uwaterloo.ca\" target=\"_blank\">Waterloo Engineering</a>, I was a finalist for the <a href=\"https://uwaterloo.ca/alumni/alumni-gold-medals\" target=\"_blank\">Alumni Gold Medal</a>, received the Best Design Award and <a href=\"https://uwaterloo.ca/student-awards-financial-aid/awards/yuen-family-foundation-award-healthy-aging\" target=\"_blank\">Yuen Family Foundation Award</a> for my capstone, and Honorable Mention for the <a href=\"https://cra.org/about/awards/outstanding-undergraduate-researcher-award/\" target=\"_blank\">CRA Outstanding Undergraduate Researcher Award</a>."
+  ],
+  "bioFooter": "My research interests primarily center around building robust and safe AI systems and also advancing the frontiers of medical AI.",
+  "profileImage": "images/profile-pic.jpg",
+  "socialLinks": [
+    { "icon": "fas fa-envelope", "url": "mailto:s42hossa@uwaterloo.ca", "label": "Email" },
+    { "icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/s42hossa/", "label": "LinkedIn" },
+    { "icon": "fab fa-github", "url": "https://github.com/sdhossain", "label": "GitHub" },
+    { "icon": "fas fa-graduation-cap", "url": "https://scholar.google.com/citations?user=9_oziQ0AAAAJ&hl=en&oi=sra", "label": "Google Scholar" },
+    { "icon": "fas fa-file-alt", "url": "assets/CV.pdf", "label": "CV" }
+  ],
+  "otherLinks": [
+    { "url": "https://www.linkedin.com/in/s42hossa/", "label": "LinkedIn" },
+    { "url": "https://github.com/sdhossain", "label": "GitHub" },
+    { "url": "https://scholar.google.com/citations?user=9_oziQ0AAAAJ&hl=en&oi=sra", "label": "Google Scholar" }
+  ]
+}

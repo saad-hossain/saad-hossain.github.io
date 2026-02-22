@@ -1,0 +1,5 @@
+<nav class="sidebar">
+    {{#each navigation}}
+    <a href="{{href}}"{{#if isActive}} class="active"{{/if}}>{{label}}</a>
+    {{/each}}
+</nav>

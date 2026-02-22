@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> head}}
+    <link rel="stylesheet" href="css/pages/index.css">
+</head>
+<body>
+    <div class="page">
+        {{> navbar}}
+        <main class="content">
+            <h1 class="about-name">{{profile.name.first}} {{profile.name.last}}</h1>
+            <div class="about-intro">
+                <div class="about-photo">
+                    <img src="{{profile.profileImage}}" alt="Saad Hossain" class="profile-pic">
+                    <div class="social-icons">
+                        {{#each profile.socialLinks}}
+                        <a href="{{url}}" target="_blank" aria-label="{{label}}"><i class="{{icon}}"></i></a>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="about-text">
+                    {{#each profile.bio}}
+                    <p class="bio">{{this}}</p>
+                    {{/each}}
+                </div>
+            </div>
+            <p class="bio bio-footer">{{profile.bioFooter}}</p>
+            <p class="contact">Feel free to reach out — <a href="mailto:s42hossa@uwaterloo.ca">s42hossa@uwaterloo.ca</a></p>
+        </main>
+    </div>
+</body>
+</html>

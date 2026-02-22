@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "date": "12/18/24",
+      "content": "Selected as an <i>Honourable Mention</i> for <u>CRA Outstanding Undergraduate Researcher Award</u>."
+    },
+    {
+      "date": "12/04/24",
+      "content": "Our paper gets <u>Best Vision Paper Award</u> at the 10th Annual Conference on Vision and Intelligent Systems."
+    },
+    {
+      "date": "12/03/24",
+      "content": "Our final year design project wins the <u>Yuen Family Foundation Award for Healthy Aging</u>."
+    },
+    {
+      "date": "10/31/24",
+      "content": "Our work <i>Language-guided Domain Adaptive Semantic Segmentation</i> is accepted to AFM @ <u>NeurIPS '24</u>."
+    },
+    {
+      "date": "08/10/23",
+      "content": "Our work \"<i>Spatio-Temporal Self-Attention for Egocentric 3D Pose Estimation</i>\" is accepted to <u>KDD '23</u>."
+    }
+  ]
+}

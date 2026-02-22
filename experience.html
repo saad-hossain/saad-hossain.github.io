@@ -2,184 +2,220 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience - Saad Hossain</title>
-    <link rel="stylesheet" href="css/experience.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience - Saad Hossain</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+
+    <link rel="stylesheet" href="css/pages/experience.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="navbar-left">
-            <span class="navbar-name"><b>Saad</b> &hairsp; Hossain</span>
-        </div>
-        <div class="navbar-right">
-            <a href="index.html">About</a>
-            <a href="experience.html" class="boxed">Experience</a>
-            <a href="publications.html">Publications</a>
-            <a href="cv.html">Resume</a>
-        </div>
-    </div>
+    <div class="page">
+        <nav class="sidebar">
+    
+    <a href="index.html">About</a>
+    
+    <a href="experience.html" class="active">Experience</a>
+    
+    <a href="publications.html">Publications</a>
+    
+    <a href="cv.html">Resume</a>
+    
+</nav>
 
-    <!-- Experience Section -->
-    <div class="container">
-        <h2 class="experience-heading">Professional Experience</h2>
-        
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <img src="images/kolena.webp" alt="Experience Icon">
-                    <p class="timeline-date">Jan 2024<br>|<br>Aug 2024</p>
-                </div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Machine Learning Intern</h3>
-                    <p class="company-info">Kolena Inc. | Vancouver, BC</p>
-                    <details>
-                        <summary>Enhancing the way Machine Learning systems are evaluated.</summary>
-                        <ul class="responsibilities-list">
-                            <li>Automated evaluation of Gen-AI by fine-tuning Vision-Language models to model human preference.</li>
-                            <li>Improved RAG Generator accuracy by 8% on finance data through improved PDF-parsing & LLM-prompting.</li>
-                            <li>Accelerated creation of textual datasets by 15x by building an LLM powered web-application using Streamlit.</li>
-                            <li>Enhanced detection of AI model errors for users by building data analysis pipeline identifying edge cases.</li>
-                        </ul>
-                    </details>
-                </div>
-            </div>
+        <main class="content">
+            <h2>Professional Experience</h2>
 
-            <!-- Additional timeline items can be added here -->
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <img src="images/deepbreathe-icon.jfif" alt="Experience Icon">
-                    <p class="timeline-date">Sep 2022<br>|<br>Aug 2024</p>
+            
+            <div class="exp-card">
+                <div class="exp-header">
+                    <img src="images/kolena.webp" alt="Kolena Inc." class="exp-logo">
+                    <div class="exp-header-text">
+                        <h3 class="exp-title">Machine Learning Intern</h3>
+                        <p class="exp-company">Kolena Inc.</p>
+                    </div>
+                    <div class="exp-meta">
+                        <span class="exp-date">Jan 2024 – Aug 2024</span>
+                        <span class="exp-location">Vancouver, BC</span>
+                    </div>
                 </div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Machine Learning Developer</h3>
-                    <p class="company-info">Deep Breathe | London, ON</p>
-                    <details>
-                        <summary>Built AI-powered systems to automate the diagnosis of lung ultrasound scans.</summary>
-                        <ul class="responsibilities-list">
-                            <li>Developed AI based screening tool confirming with 96% certainty the presence of fluid in lung ultrasound scans.</li>
-                            <li>Achieved 80% accuracy (IoU) in segmenting effusions and consolidations in lung-ultrasound using TensorFlow.</li>
-                            <li>Implemented MLOps pipeline using Azure, SQL & OpenCV to process, ingest & version data for FDA approval.</li>
-                            <li>Integrated WandB into ML projects for dash-boarding and logging visuals during training and evaluation.</li>
-                            <li>Reduced dataset fetching time by 91% through cross-platform deployment of pipeline producing 7.8 million
-                                M-Mode images from 140,000 B-Mode videos per version, automated through Unix & Shell scripting.</li>
-                        </ul>
-                    </details>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <img src="images/playfitt.png" alt="Experience Icon">
-                    <p class="timeline-date">Sep 2022<br>|<br>Aug 2024</p>
-                </div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Software Engineering Intern</h3>
-                    <p class="company-info">IntelliSports | Montreal, QC</p>
-                    <details>
-                        <summary>Developed activity recognition pipelines and modeled user application usage.</summary>
-                        <ul class="responsibilities-list">
-                            <li>Boosted cheat-detection accuracy by 30% by feature engineering IMU Sensor data using Scikit-learn & SciPy</li>
-                            <li>Optimized inference speed on CPU machine to 1.8x original by leveraging light-weight sklearn models.</li>
-                            <li>Elevated mission count by 2.3x by deploying detection pipelines on EC2 for punch, crunch, high-knee, & jump.</li>
-                            <li>Identified onboarding flow with +50% retention by conducting decision-tree & SVM analysis on early user data.</li>
-                            <li>Built data visualization platform, showcasing user physical activity growth of 300%, employed in pitches that
-                                secured $1.4 million in funding using PHP and MySQL.</li>
-                        </ul>
-                    </details>
-                </div>
+                <details class="exp-details">
+                    <summary>Enhancing the way Machine Learning systems are evaluated.</summary>
+                    <ul class="exp-bullets">
+                        
+                        <li>Automated evaluation of Gen-AI by fine-tuning Vision-Language models to model human preference.</li>
+                        
+                        <li>Improved RAG Generator accuracy by 8% on finance data through improved PDF-parsing & LLM-prompting.</li>
+                        
+                        <li>Accelerated creation of textual datasets by 15x by building an LLM powered web-application using Streamlit.</li>
+                        
+                        <li>Enhanced detection of AI model errors for users by building data analysis pipeline identifying edge cases.</li>
+                        
+                    </ul>
+                </details>
             </div>
             
-        </div>
-    </div>
-
-    <!-- Experience Section -->
-    <div class="container">
-        <h2 class="experience-heading">Research Experience</h2>
-        
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <img src="images/criticalml.png" alt="Experience Icon">
-                    <p class="timeline-date">Sep 2023<br>|<br>Present</p>
+            <div class="exp-card">
+                <div class="exp-header">
+                    <img src="images/deepbreathe-icon.jfif" alt="Deep Breathe" class="exp-logo">
+                    <div class="exp-header-text">
+                        <h3 class="exp-title">Machine Learning Developer</h3>
+                        <p class="exp-company">Deep Breathe</p>
+                    </div>
+                    <div class="exp-meta">
+                        <span class="exp-date">Sep 2022 – Aug 2024</span>
+                        <span class="exp-location">London, ON</span>
+                    </div>
                 </div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Research Assistant</h3>
-                    <p class="company-info">Critical Machine Learning Lab | Waterloo, ON</p>
-                    <details>
-                        <summary>Investigating ways on how AI models can adapt to new environments.</summary>
-                        <ul class="responsibilities-list">
-                            <li>Achieved State of the Art results in Domain Adaptive Semantic Segmentation using Vision-Language models.</li>
-                        </ul>
-                    </details>
-                </div>
-            </div>
-
-            <!-- Additional timeline items can be added here -->
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <img src="images/vip.jpg" alt="Experience Icon">
-                    <p class="timeline-date">Jan 2022<br>|<br>Apr 2023</p>
-                </div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Research Assistant</h3>
-                    <p class="company-info">Vision and Image Processing Lab | Waterloo, ON</p>
-                    <details>
-                        <summary>Researched ego-centric pose estimation techniques using spatio-temporal analysis.</summary>
-                        <ul class="responsibilities-list">
-                            <li>Outperformed Egocentric HPE State of the Art by 38% via insertion of spatio-temporal data using Transformers.</li>
-                        </ul>
-                    </details>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <img src="images/sirrl.png" alt="Experience Icon">
-                    <p class="timeline-date">Sep 2021<br>|<br>Dec 2021</p>
-                </div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Research Assistant</h3>
-                    <p class="company-info">Social and intelligent Robotics Research Lab | Waterloo, ON</p>
-                    <details>
-                        <summary>Implemented suite of (IMU) feature extraction algorithms for Human Robot Interaction.</summary>
-                        <ul class="responsibilities-list">
-                            <li>Researched and implemented suite of feature extraction algorithms relevant to singla detection for AI.</li>
-                        </ul>
-                    </details>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <img src="images/robohub.jfif" alt="Experience Icon">
-                    <p class="timeline-date">May 2021<br>|<br>Aug 2021</p>
-                </div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Research Intern</h3>
-                    <p class="company-info">Human Centered Robotics and Machine Intelligence Lab | Waterloo, ON</p>
-                    <details>
-                        <summary>Developed and deployed facial and emotion recognition pipeline on humanoid robot.</summary>
-                        <ul class="responsibilities-list">
-                            <li>Delivered 99.3% on LFW (Face ID) and 72.7% on FER2013 (Emotion) benchmarks using DLIB and Tensorflow.</li>
-                            <li>Designed multi-input Keras model using pybind11 bindings of a C++ toolkit, informed by t-SNE data analysis.</li>
-                            <li>Deployed facial identity and emotion recognition pipeline using ROS, Flask and PostgresSQL on the Reem-C robot,
-                                highlighted by researchers in International Robotics conferences.</li>
-                        </ul>
-                    </details>
-                </div>
+                <details class="exp-details">
+                    <summary>Built AI-powered systems to automate the diagnosis of lung ultrasound scans.</summary>
+                    <ul class="exp-bullets">
+                        
+                        <li>Developed AI based screening tool confirming with 96% certainty the presence of fluid in lung ultrasound scans.</li>
+                        
+                        <li>Achieved 80% accuracy (IoU) in segmenting effusions and consolidations in lung-ultrasound using TensorFlow.</li>
+                        
+                        <li>Implemented MLOps pipeline using Azure, SQL & OpenCV to process, ingest & version data for FDA approval.</li>
+                        
+                        <li>Integrated WandB into ML projects for dash-boarding and logging visuals during training and evaluation.</li>
+                        
+                        <li>Reduced dataset fetching time by 91% through cross-platform deployment of pipeline producing 7.8 million M-Mode images from 140,000 B-Mode videos per version, automated through Unix & Shell scripting.</li>
+                        
+                    </ul>
+                </details>
             </div>
             
-        </div>
-    </div>
+            <div class="exp-card">
+                <div class="exp-header">
+                    <img src="images/playfitt.png" alt="IntelliSports" class="exp-logo">
+                    <div class="exp-header-text">
+                        <h3 class="exp-title">Software Engineering Intern</h3>
+                        <p class="exp-company">IntelliSports</p>
+                    </div>
+                    <div class="exp-meta">
+                        <span class="exp-date">Sep 2022 – Aug 2024</span>
+                        <span class="exp-location">Montreal, QC</span>
+                    </div>
+                </div>
+                <details class="exp-details">
+                    <summary>Developed activity recognition pipelines and modeled user application usage.</summary>
+                    <ul class="exp-bullets">
+                        
+                        <li>Boosted cheat-detection accuracy by 30% by feature engineering IMU Sensor data using Scikit-learn & SciPy</li>
+                        
+                        <li>Optimized inference speed on CPU machine to 1.8x original by leveraging light-weight sklearn models.</li>
+                        
+                        <li>Elevated mission count by 2.3x by deploying detection pipelines on EC2 for punch, crunch, high-knee, & jump.</li>
+                        
+                        <li>Identified onboarding flow with +50% retention by conducting decision-tree & SVM analysis on early user data.</li>
+                        
+                        <li>Built data visualization platform, showcasing user physical activity growth of 300%, employed in pitches that secured $1.4 million in funding using PHP and MySQL.</li>
+                        
+                    </ul>
+                </details>
+            </div>
+            
 
+            <h2>Research Experience</h2>
+
+            
+            <div class="exp-card">
+                <div class="exp-header">
+                    <img src="images/criticalml.png" alt="Critical Machine Learning Lab" class="exp-logo">
+                    <div class="exp-header-text">
+                        <h3 class="exp-title">Research Assistant</h3>
+                        <p class="exp-company">Critical Machine Learning Lab</p>
+                    </div>
+                    <div class="exp-meta">
+                        <span class="exp-date">Sep 2023 – Present</span>
+                        <span class="exp-location">Waterloo, ON</span>
+                    </div>
+                </div>
+                <details class="exp-details">
+                    <summary>Investigating ways on how AI models can adapt to new environments.</summary>
+                    <ul class="exp-bullets">
+                        
+                        <li>Achieved State of the Art results in Domain Adaptive Semantic Segmentation using Vision-Language models.</li>
+                        
+                    </ul>
+                </details>
+            </div>
+            
+            <div class="exp-card">
+                <div class="exp-header">
+                    <img src="images/vip.jpg" alt="Vision and Image Processing Lab" class="exp-logo">
+                    <div class="exp-header-text">
+                        <h3 class="exp-title">Research Assistant</h3>
+                        <p class="exp-company">Vision and Image Processing Lab</p>
+                    </div>
+                    <div class="exp-meta">
+                        <span class="exp-date">Jan 2022 – Apr 2023</span>
+                        <span class="exp-location">Waterloo, ON</span>
+                    </div>
+                </div>
+                <details class="exp-details">
+                    <summary>Researched ego-centric pose estimation techniques using spatio-temporal analysis.</summary>
+                    <ul class="exp-bullets">
+                        
+                        <li>Outperformed Egocentric HPE State of the Art by 38% via insertion of spatio-temporal data using Transformers.</li>
+                        
+                    </ul>
+                </details>
+            </div>
+            
+            <div class="exp-card">
+                <div class="exp-header">
+                    <img src="images/sirrl.png" alt="Social and intelligent Robotics Research Lab" class="exp-logo">
+                    <div class="exp-header-text">
+                        <h3 class="exp-title">Research Assistant</h3>
+                        <p class="exp-company">Social and intelligent Robotics Research Lab</p>
+                    </div>
+                    <div class="exp-meta">
+                        <span class="exp-date">Sep 2021 – Dec 2021</span>
+                        <span class="exp-location">Waterloo, ON</span>
+                    </div>
+                </div>
+                <details class="exp-details">
+                    <summary>Implemented suite of (IMU) feature extraction algorithms for Human Robot Interaction.</summary>
+                    <ul class="exp-bullets">
+                        
+                        <li>Researched and implemented suite of feature extraction algorithms relevant to singla detection for AI.</li>
+                        
+                    </ul>
+                </details>
+            </div>
+            
+            <div class="exp-card">
+                <div class="exp-header">
+                    <img src="images/robohub.jfif" alt="Human Centered Robotics and Machine Intelligence Lab" class="exp-logo">
+                    <div class="exp-header-text">
+                        <h3 class="exp-title">Research Intern</h3>
+                        <p class="exp-company">Human Centered Robotics and Machine Intelligence Lab</p>
+                    </div>
+                    <div class="exp-meta">
+                        <span class="exp-date">May 2021 – Aug 2021</span>
+                        <span class="exp-location">Waterloo, ON</span>
+                    </div>
+                </div>
+                <details class="exp-details">
+                    <summary>Developed and deployed facial and emotion recognition pipeline on humanoid robot.</summary>
+                    <ul class="exp-bullets">
+                        
+                        <li>Delivered 99.3% on LFW (Face ID) and 72.7% on FER2013 (Emotion) benchmarks using DLIB and Tensorflow.</li>
+                        
+                        <li>Designed multi-input Keras model using pybind11 bindings of a C++ toolkit, informed by t-SNE data analysis.</li>
+                        
+                        <li>Deployed facial identity and emotion recognition pipeline using ROS, Flask and PostgresSQL on the Reem-C robot, highlighted by researchers in International Robotics conferences.</li>
+                        
+                    </ul>
+                </details>
+            </div>
+            
+        </main>
+    </div>
 </body>
 </html>
-
