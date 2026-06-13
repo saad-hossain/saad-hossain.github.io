@@ -11,17 +11,18 @@
   align-items: center;
   gap: 0.4rem;
   font-size: 0.82rem;
+  font-weight: 500;
   color: var(--color-text-secondary);
-  border: 1px solid #ccc;
-  padding: 4px 12px;
-  border-radius: 4px;
+  border: 1px solid var(--color-border-soft);
+  padding: 4px 14px;
+  border-radius: 9999px;
   transition: all var(--transition);
 }
 
 .cv-download:hover {
-  background-color: var(--color-heading);
-  color: var(--color-bg);
-  border-color: var(--color-heading);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background-color: rgba(55, 65, 81, 0.04);
   text-decoration: none;
 }
 

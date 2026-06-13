@@ -2,31 +2,76 @@
 <html lang="en">
 <head>
     {{> head}}
+    <link rel="stylesheet" href="css/pages/publications.css">
     <link rel="stylesheet" href="css/pages/index.css">
 </head>
 <body>
-    <div class="page">
-        {{> navbar}}
-        <main class="content">
-            <h1 class="about-name">{{profile.name.first}} {{profile.name.last}}</h1>
-            <div class="about-intro">
-                <div class="about-photo">
-                    <img src="{{profile.profileImage}}" alt="Saad Hossain" class="profile-pic">
-                    <div class="social-icons">
+    {{> navbar}}
+    <main>
+        <section class="band band--shade">
+            <div class="band__inner hero">
+                <div class="hero__content">
+                    <h1 class="hero__name">{{profile.name.first}} {{profile.name.last}}</h1>
+                    <p class="hero__role">{{profile.title}}</p>
+                    {{#each profile.bio}}
+                    <p class="hero__bio">{{this}}</p>
+                    {{/each}}
+                    <div class="social-icons hero__social">
                         {{#each profile.socialLinks}}
-                        <a href="{{url}}" target="_blank" aria-label="{{label}}"><i class="{{icon}}"></i></a>
+                        <a href="{{url}}" target="_blank" rel="noopener" class="social-link" aria-label="{{label}}"><i class="{{icon}}"></i><span>{{label}}</span></a>
                         {{/each}}
                     </div>
                 </div>
-                <div class="about-text">
-                    {{#each profile.bio}}
-                    <p class="bio">{{this}}</p>
-                    {{/each}}
+                <div class="hero__photo-wrapper">
+                    <img src="{{profile.profileImage}}" alt="Saad Hossain" class="hero__photo">
                 </div>
             </div>
-            <p class="bio bio-footer">{{profile.bioFooter}}</p>
-            <p class="contact">Feel free to reach out — <a href="mailto:s42hossa@uwaterloo.ca">s42hossa@uwaterloo.ca</a></p>
-        </main>
-    </div>
+        </section>
+
+        <section class="band">
+            <div class="band__inner">
+                <h2>Research</h2>
+                <div class="pub-list stagger">
+                    {{#each featuredPublications}}
+                    <article class="card pub-card">
+                        {{#if thumbnail}}
+                        <div class="pub-thumb-wrap">
+                            <img src="{{thumbnail}}" alt="{{title}}" class="pub-thumb" loading="lazy">
+                        </div>
+                        {{/if}}
+                        <div class="pub-body">
+                            <div class="pub-meta">
+                                <span class="pub-venue pub-venue--{{venueClass}}">{{venue}}</span>
+                                {{#if note}}<span class="badge-note">{{note}}</span>{{/if}}
+                            </div>
+                            <h3 class="pub-title">{{title}}</h3>
+                            {{#if tldr}}<p class="pub-tldr">{{tldr}}</p>{{/if}}
+                            <div class="pub-links">
+                                {{#each links}}
+                                <a href="{{url}}" target="_blank" rel="noopener" class="link-pill"><i class="{{icon}}"></i>{{label}}</a>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </article>
+                    {{/each}}
+                </div>
+                <a href="publications.html" class="section-more">View all publications <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="band band--shade">
+            <div class="band__inner">
+                <h2>News</h2>
+                <ul class="news-timeline">
+                    {{#each news}}
+                    <li class="news-item">
+                        <span class="news-date">{{date}}</span>
+                        <span class="news-text">{{content}}</span>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

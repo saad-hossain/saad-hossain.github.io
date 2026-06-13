@@ -3,120 +3,169 @@
    ============================================ */
 
 :root {
-  --color-text: #222;
-  --color-text-secondary: #666;
-  --color-heading: #222;
-  --color-bg: #fff;
-  --color-border: #ddd;
+  /* Monochrome palette (Matt's exact grays — text/secondary/muted/border) */
+  --color-text: #1F2937;
+  --color-text-secondary: #6B7280;
+  --color-heading: #1F2937;
+  --color-bg: #ffffff;
+  --color-bg-alt: #F9FAFB;
+  --color-border: #E5E7EB;
+  --color-border-soft: #E5E7EB;
+  --color-muted: #9CA3AF;
+  /* Slate "accent" — the monochrome stand-in for Matt's amber */
+  --color-accent: #374151;
+  --color-accent-dark: #111827;
 
-  --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-  --sidebar-width: 140px;
-  --content-max-width: 720px;
+  --content-max-width: 56rem;   /* centered column width (matches Matt's $width-wide) */
+  --nav-max-width: 72rem;       /* frosted nav inner container */
+  --nav-height: 4rem;
+  --profile-pic-size: 220px;
   --transition: 0.2s ease;
-
-  /* Index page layout locks — sidebar & content share these so alignment never drifts */
-  --index-content-top: 7rem;
-  --profile-pic-size: 250px;
-  --h1-font-size: 1.75rem;
-  --h1-line-height: 1.2;
-  --about-name-pad-bottom: 0.6rem;
-  /* Sidebar bottom = image bottom. Image bottom = content-top + name-height + pic-size */
-  --sidebar-top: calc(
-    var(--index-content-top)
-    + var(--h1-font-size) * var(--h1-line-height)
-    + var(--about-name-pad-bottom)
-    + var(--profile-pic-size)
-  );
+  --transition-fast: 0.15s ease;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
 
+html, body { overflow-x: hidden; }
+
 body {
-  font-family: var(--font-family);
+  font-family: var(--font-sans);
   font-weight: 400;
   color: var(--color-text);
   background-color: var(--color-bg);
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.7;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ============================================
-   LAYOUT — sidebar + content
+   FROSTED STICKY TOP NAV
    ============================================ */
-.page {
-  max-width: 960px;
-  margin: 0 auto;
-  min-height: 100vh;
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.6);
 }
 
-.sidebar {
-  position: fixed;
-  top: var(--sidebar-top);
-  left: max(0px, calc(50% - 480px));
-  width: var(--sidebar-width);
+.nav__inner {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding-right: 1.5rem;
-  border-right: 1px solid var(--color-border);
-  transform: translateY(-100%);
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: var(--nav-max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-.sidebar a {
-  display: block;
+.nav__logo {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-heading);
   text-decoration: none;
-  color: var(--color-text-secondary);
-  font-size: 1rem;
-  font-weight: 400;
-  padding: 0.35rem 0;
-  transition: color var(--transition);
-  text-align: right;
+  transition: color var(--transition-fast);
 }
 
-.sidebar a:hover {
+.nav__logo:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav__link {
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  transition: color var(--transition-fast);
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 9999px;
+  background-color: var(--color-accent);
+  transition: width var(--transition);
+}
+
+.nav__link:hover {
   color: var(--color-heading);
   text-decoration: none;
 }
 
-.sidebar a.active {
-  color: #000;
-  font-weight: 600;
-  border-right: 3px solid #000;
-  margin-right: -1.5rem;
-  padding-right: calc(1.5rem - 3px);
+.nav__link:hover::after,
+.nav__link.active::after {
+  width: 100%;
 }
 
+.nav__link.active {
+  color: var(--color-heading);
+  font-weight: 600;
+}
+
+/* ============================================
+   LAYOUT — centered content column
+   ============================================ */
 .content {
   max-width: var(--content-max-width);
-  margin-left: var(--sidebar-width);
-  padding: 5rem 1.5rem 3rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4.5rem;
 }
 
 /* ============================================
    TYPOGRAPHY
    ============================================ */
 h1 {
-  font-size: var(--h1-font-size);
-  font-weight: 600;
+  font-size: 2.25rem;
+  font-weight: 800;
   color: var(--color-heading);
-  margin: 0 0 1rem;
+  margin: 0 0 0.75rem;
   letter-spacing: -0.02em;
-  line-height: var(--h1-line-height);
+  line-height: 1.15;
 }
 
+/* Section heading with a short accent bar underneath (Matt style) */
 h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
+  display: inline-block;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 700;
   color: var(--color-heading);
-  margin: 2.5rem 0 0.5rem;
-  padding-bottom: 0.4rem;
-  margin-bottom: 0.5rem;
-  border-bottom: 2px solid var(--color-heading);
-  letter-spacing: -0.015em;
+  margin: 3rem 0 1.75rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.4rem;
+  width: 2.5rem;
+  height: 3px;
+  border-radius: 9999px;
+  background-color: var(--color-accent);
 }
 
 h2:first-child { margin-top: 0; }
@@ -139,66 +188,61 @@ a {
 
 a:hover {
   text-decoration: underline;
-  color: var(--color-text-secondary);
+  color: var(--color-accent);
+}
+
+::selection {
+  background-color: rgba(55, 65, 81, 0.15);
+  color: var(--color-text);
 }
 
 /* ============================================
-   SOCIAL ICONS (below profile pic)
+   SOCIAL LINKS (icon + label, Matt style)
    ============================================ */
 .social-icons {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 0.75rem 0 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.4rem;
 }
 
-.social-icons a {
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.92rem;
+  font-weight: 500;
   color: var(--color-text-secondary);
-  font-size: 2rem;
+  text-decoration: none;
   transition: color var(--transition);
 }
 
-.social-icons a:hover {
-  color: var(--color-heading);
+.social-link i {
+  font-size: 1.15rem;
+}
+
+.social-link:hover {
+  color: var(--color-accent);
   text-decoration: none;
 }
 
 /* ============================================
-   MOBILE — sidebar becomes top bar
+   MOBILE
    ============================================ */
-@media (max-width: 720px) {
-  .sidebar {
-    position: static;
-    width: 100%;
-    left: auto;
-    transform: none;
-    flex-direction: row;
+@media (max-width: 640px) {
+  .nav__logo { display: none; }
+
+  .nav__inner {
     justify-content: center;
-    align-items: center;
-    gap: 1.25rem;
-    padding: 0.75rem 1rem;
-    border-right: none;
-    border-bottom: 1px solid var(--color-border);
+    padding: 0 0.9rem;
   }
 
-  .sidebar a {
-    padding: 0.25rem 0;
-    font-size: 0.82rem;
-  }
+  .nav__links { gap: 0.85rem; }
 
-  .sidebar a.active {
-    border-right: none;
-    margin-right: 0;
-    padding-right: 0;
-    border-bottom: 2px solid var(--color-heading);
-    padding-bottom: calc(0.25rem - 2px);
-  }
+  .nav__link { font-size: 0.78rem; }
 
-  .content {
-    margin-left: 0;
-    padding: 1.5rem 1.25rem 2rem;
-  }
+  .content { padding: 2rem 1.25rem 3rem; }
 
-  h1 { font-size: 1.35rem; }
-  h2 { font-size: 1rem; }
+  h1 { font-size: 1.85rem; }
+  h2 { font-size: 1.35rem; }
 }

@@ -5,61 +5,67 @@
     <link rel="stylesheet" href="css/pages/experience.css">
 </head>
 <body>
-    <div class="page">
-        {{> navbar}}
-        <main class="content">
-            <h2>Professional Experience</h2>
+    {{> navbar}}
+    <main class="content">
+        <h2>Professional Experience</h2>
 
-            {{#each professional}}
-            <div class="exp-card">
-                <div class="exp-header">
-                    <img src="{{logo}}" alt="{{company}}" class="exp-logo">
-                    <div class="exp-header-text">
-                        <h3 class="exp-title">{{title}}</h3>
-                        <p class="exp-company">{{company}}</p>
+            <div class="exp-list stagger">
+                {{#each professional}}
+                <article class="card exp-card">
+                    <div class="exp-header">
+                        <div class="exp-logo-wrap">
+                            <img src="{{logo}}" alt="{{company}}" class="exp-logo">
+                        </div>
+                        <div class="exp-header-text">
+                            <h3 class="exp-title">{{title}}</h3>
+                            <p class="exp-company">{{company}}</p>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-date"><i class="far fa-calendar"></i>{{startDate}} – {{endDate}}</span>
+                            <span class="exp-location"><i class="fas fa-location-dot"></i>{{location}}</span>
+                        </div>
                     </div>
-                    <div class="exp-meta">
-                        <span class="exp-date">{{startDate}} – {{endDate}}</span>
-                        <span class="exp-location">{{location}}</span>
-                    </div>
-                </div>
-                <details class="exp-details">
-                    <summary>{{summary}}</summary>
-                    <ul class="exp-bullets">
-                        {{#each bullets}}
-                        <li>{{this}}</li>
-                        {{/each}}
-                    </ul>
-                </details>
+                    <details class="exp-details">
+                        <summary><span class="exp-summary-text">{{summary}}</span><i class="fas fa-chevron-down exp-chevron"></i></summary>
+                        <ul class="exp-bullets">
+                            {{#each bullets}}
+                            <li>{{this}}</li>
+                            {{/each}}
+                        </ul>
+                    </details>
+                </article>
+                {{/each}}
             </div>
-            {{/each}}
 
             <h2>Research Experience</h2>
 
-            {{#each research}}
-            <div class="exp-card">
-                <div class="exp-header">
-                    <img src="{{logo}}" alt="{{company}}" class="exp-logo">
-                    <div class="exp-header-text">
-                        <h3 class="exp-title">{{title}}</h3>
-                        <p class="exp-company">{{company}}</p>
+            <div class="exp-list stagger">
+                {{#each research}}
+                <article class="card exp-card">
+                    <div class="exp-header">
+                        <div class="exp-logo-wrap">
+                            <img src="{{logo}}" alt="{{company}}" class="exp-logo">
+                        </div>
+                        <div class="exp-header-text">
+                            <h3 class="exp-title">{{title}}</h3>
+                            <p class="exp-company">{{company}}</p>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-date"><i class="far fa-calendar"></i>{{startDate}} – {{endDate}}</span>
+                            <span class="exp-location"><i class="fas fa-location-dot"></i>{{location}}</span>
+                        </div>
                     </div>
-                    <div class="exp-meta">
-                        <span class="exp-date">{{startDate}} – {{endDate}}</span>
-                        <span class="exp-location">{{location}}</span>
-                    </div>
-                </div>
-                <details class="exp-details">
-                    <summary>{{summary}}</summary>
-                    <ul class="exp-bullets">
-                        {{#each bullets}}
-                        <li>{{this}}</li>
-                        {{/each}}
-                    </ul>
-                </details>
+                    <details class="exp-details">
+                        <summary><span class="exp-summary-text">{{summary}}</span><i class="fas fa-chevron-down exp-chevron"></i></summary>
+                        <ul class="exp-bullets">
+                            {{#each bullets}}
+                            <li>{{this}}</li>
+                            {{/each}}
+                        </ul>
+                    </details>
+                </article>
+                {{/each}}
             </div>
-            {{/each}}
-        </main>
-    </div>
+    </main>
 </body>
 </html>

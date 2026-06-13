@@ -36,6 +36,80 @@ summary::marker {
   white-space: nowrap;
 }
 
+/* Muted note next to a badge (e.g. Oral, Spotlight) */
+.badge-note {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
+/* Bordered card with soft accent-tinted hover */
+.card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border-soft);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(55, 65, 81, 0.35);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Outlined pill link (Paper / Code / Talk ...) */
+.link-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid var(--color-border-soft);
+  border-radius: 9999px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.link-pill i {
+  font-size: 0.62rem;
+  color: var(--color-muted);
+  transition: color 0.15s ease;
+}
+
+.link-pill:hover i {
+  color: var(--color-accent);
+}
+
+.link-pill:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background-color: rgba(55, 65, 81, 0.04);
+  text-decoration: none;
+}
+
+/* Staggered entrance for card lists */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .stagger > * { animation: fadeInUp 0.5s ease both; }
+  .stagger > *:nth-child(1)  { animation-delay: 0.04s; }
+  .stagger > *:nth-child(2)  { animation-delay: 0.08s; }
+  .stagger > *:nth-child(3)  { animation-delay: 0.12s; }
+  .stagger > *:nth-child(4)  { animation-delay: 0.16s; }
+  .stagger > *:nth-child(5)  { animation-delay: 0.20s; }
+  .stagger > *:nth-child(6)  { animation-delay: 0.24s; }
+  .stagger > *:nth-child(7)  { animation-delay: 0.28s; }
+  .stagger > *:nth-child(8)  { animation-delay: 0.32s; }
+  .stagger > *:nth-child(9)  { animation-delay: 0.36s; }
+  .stagger > *:nth-child(n+10) { animation-delay: 0.40s; }
+}
+
 /* Small button link */
 .btn-sm {
   display: inline-block;

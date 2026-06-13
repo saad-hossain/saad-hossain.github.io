@@ -1,6 +1,30 @@
 {
   "items": [
     {
+      "date": "05/20/26",
+      "content": "Our work <i>TamperBench</i> is accepted to <u>KDD 2026</u> with an oral presentation (top 4.5% of papers)."
+    },
+    {
+      "date": "04/15/26",
+      "content": "Our work on LLM safety under fine-tuning is presented at the AIWILD, CAO, and RSI workshops at <u>ICLR 2026</u>."
+    },
+    {
+      "date": "07/15/25",
+      "content": "Our work <i>FOND: Domain Generalization for Domain-Linked Classes</i> is accepted to <u>TPAMI</u>."
+    },
+    {
+      "date": "05/15/25",
+      "content": "Graduated from <u>Waterloo Engineering</u> and transitioned to full-time as a Machine Learning Engineer at <u>Deep Breathe</u>."
+    },
+    {
+      "date": "04/15/25",
+      "content": "Received the <u>Best Design Award</u> for our final year design project, <i>Augmented Reality to Improve Ultrasound Acquisition</i>."
+    },
+    {
+      "date": "01/15/25",
+      "content": "Our work on <i>automated detection of pleural effusions</i> is accepted to the <u>American Journal of Emergency Medicine</u>."
+    },
+    {
       "date": "12/18/24",
       "content": "Selected as an <i>Honourable Mention</i> for <u>CRA Outstanding Undergraduate Researcher Award</u>."
     },
@@ -14,11 +38,15 @@
     },
     {
       "date": "10/31/24",
-      "content": "Our work <i>Language-guided Domain Adaptive Semantic Segmentation</i> is accepted to AFM @ <u>NeurIPS '24</u>."
+      "content": "Our work <i>Language-guided Domain Adaptive Semantic Segmentation</i> is accepted to AFM at <u>NeurIPS 2024</u>."
+    },
+    {
+      "date": "08/30/24",
+      "content": "Completed an 8-month co-op as a Machine Learning Intern at <u>Kolena</u>."
     },
     {
       "date": "08/10/23",
-      "content": "Our work \"<i>Spatio-Temporal Self-Attention for Egocentric 3D Pose Estimation</i>\" is accepted to <u>KDD '23</u>."
+      "content": "Our work <i>Spatio-Temporal Self-Attention for Egocentric 3D Pose Estimation</i> is accepted to <u>KDD 2023</u>."
     }
   ]
 }

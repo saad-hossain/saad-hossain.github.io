@@ -6,7 +6,7 @@
 <title>Publications - Saad Hossain</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/components.css">
@@ -14,308 +14,354 @@
     <link rel="stylesheet" href="css/pages/publications.css">
 </head>
 <body>
-    <div class="page">
-        <nav class="sidebar">
-    
-    <a href="index.html">About</a>
-    
-    <a href="experience.html">Experience</a>
-    
-    <a href="publications.html" class="active">Publications</a>
-    
-    <a href="cv.html">Resume</a>
-    
+    <nav class="nav">
+    <div class="nav__inner">
+        <a href="index.html" class="nav__logo">Saad Hossain</a>
+        <div class="nav__links">
+            
+            <a href="index.html" class="nav__link">About</a>
+            
+            <a href="experience.html" class="nav__link">Experience</a>
+            
+            <a href="publications.html" class="nav__link active">Publications</a>
+            
+            <a href="cv.html" class="nav__link">Resume</a>
+            
+        </div>
+    </div>
 </nav>
 
-        <main class="content">
-            <h2>Publications</h2>
+    <main class="content">
+        <h2>Publications</h2>
 
-            
-            <div class="pub-row">
+            <div class="pub-list stagger">
                 
-                <img src="images/tamperbench_fig.png" alt="TamperBench: Systematically Stress-Testing LLM Safety Under Fine-Tuning and Tampering" class="pub-thumb">
-                
-                <div class="pub-body">
-                    <h3 class="pub-title">TamperBench: Systematically Stress-Testing LLM Safety Under Fine-Tuning and Tampering</h3>
-                    <p class="pub-authors"><u>S. Hossain</u>, T. Tseng, P. Pandey, S. Vajpayee, N. Nonta, M. Kowal, S. Simko, S. Casper, Z. Jin, K. Pelrine, S. Rambhatla</p>
-                    <div class="pub-meta">
-                        <span class="pub-venue">Preprint, 2026</span>
+                <article class="card pub-card">
+                    
+                    <div class="pub-thumb-wrap">
+                        <img src="images/thumbs/tamperbench.png" alt="TamperBench: Systematically Stress-Testing LLM Safety Under Fine-Tuning and Tampering" class="pub-thumb" loading="lazy">
+                    </div>
+                    
+                    <div class="pub-body">
+                        <div class="pub-meta">
+                            <span class="pub-venue pub-venue--conference">KDD 2026</span>
+                            <span class="badge-note">Oral</span>
+                        </div>
+                        <h3 class="pub-title">TamperBench: Systematically Stress-Testing LLM Safety Under Fine-Tuning and Tampering</h3>
+                        <p class="pub-tldr">Stress-testing how easily fine-tuning and tampering can strip safety from open LLMs.</p>
                         <div class="pub-links">
                             
-                            <a href="https://arxiv.org/abs/2602.06911" target="_blank" class="pub-link">PAPER</a>
+                            <a href="https://arxiv.org/abs/2602.06911" target="_blank" rel="noopener" class="link-pill"><i class="fas fa-file-lines"></i>PAPER</a>
                             
-                            <a href="https://github.com/criticalml-uw/TamperBench" target="_blank" class="pub-link">CODE</a>
+                            <a href="https://github.com/criticalml-uw/TamperBench" target="_blank" rel="noopener" class="link-pill"><i class="fab fa-github"></i>CODE</a>
                             
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="pub-row">
+                </article>
                 
-                <img src="images/fond.png" alt="Bringing Equity to Classification: Domain Generalization for Domain-Linked Classes" class="pub-thumb">
-                
-                <div class="pub-body">
-                    <h3 class="pub-title">Bringing Equity to Classification: Domain Generalization for Domain-Linked Classes</h3>
-                    <p class="pub-authors">K. Kaai, <u>S. Hossain</u>, S. Rambhatla</p>
-                    <div class="pub-meta">
-                        <span class="pub-venue">T-PAMI, 2025</span>
+                <article class="card pub-card">
+                    
+                    <div class="pub-thumb-wrap">
+                        <img src="images/thumbs/fond.png" alt="Bringing Equity to Classification: Domain Generalization for Domain-Linked Classes" class="pub-thumb" loading="lazy">
+                    </div>
+                    
+                    <div class="pub-body">
+                        <div class="pub-meta">
+                            <span class="pub-venue pub-venue--journal">TPAMI 2025</span>
+                            
+                        </div>
+                        <h3 class="pub-title">Bringing Equity to Classification: Domain Generalization for Domain-Linked Classes</h3>
+                        <p class="pub-tldr">Fairer domain generalization for classes that appear in only one training domain.</p>
                         <div class="pub-links">
                             
-                            <a href="https://ieeexplore.ieee.org/document/11121886" target="_blank" class="pub-link">PAPER</a>
+                            <a href="https://ieeexplore.ieee.org/document/11121886" target="_blank" rel="noopener" class="link-pill"><i class="fas fa-file-lines"></i>PAPER</a>
                             
-                            <a href="https://github.com/kimathikaai/DomainBed" target="_blank" class="pub-link">CODE</a>
+                            <a href="https://github.com/kimathikaai/DomainBed" target="_blank" rel="noopener" class="link-pill"><i class="fab fa-github"></i>CODE</a>
                             
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="pub-row">
+                </article>
                 
-                <img src="images/safetunebed.png" alt="SafeTuneBed: A Safety Assessment Framework for Harmful Finetuning Defenses" class="pub-thumb">
-                
-                <div class="pub-body">
-                    <h3 class="pub-title">SafeTuneBed: A Safety Assessment Framework for Harmful Finetuning Defenses</h3>
-                    <p class="pub-authors"><u>S. Hossain</u>, S. Vajpayee, S. Rambhatla</p>
-                    <div class="pub-meta">
-                        <span class="pub-venue">IJCAI Workshop, 2025</span>
+                <article class="card pub-card">
+                    
+                    <div class="pub-thumb-wrap">
+                        <img src="images/thumbs/pleffnet.png" alt="Diagnostic Accuracy of an Automated Classifier for the Detection of Pleural Effusions in Patients Undergoing Lung Ultrasound" class="pub-thumb" loading="lazy">
+                    </div>
+                    
+                    <div class="pub-body">
+                        <div class="pub-meta">
+                            <span class="pub-venue pub-venue--journal">AJEM 2025</span>
+                            
+                        </div>
+                        <h3 class="pub-title">Diagnostic Accuracy of an Automated Classifier for the Detection of Pleural Effusions in Patients Undergoing Lung Ultrasound</h3>
+                        <p class="pub-tldr">AI that detects fluid around the lungs on ultrasound, tuned for different clinical settings.</p>
                         <div class="pub-links">
                             
-                            <a href="https://openreview.net/forum?id=yKetbTItcu" target="_blank" class="pub-link">PAPER</a>
-                            
-                            <a href="https://github.com/jmpark0808/Ego-STAN" target="_blank" class="pub-link">CODE</a>
+                            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0735675725000476?CMX_ID=&SIS_ID=&dgcid=STMJ_219742_AUTH_SERV_PA&utm_acid=296467436&utm_campaign=STMJ_219742_AUTH_SERV_PA&utm_in=DM537714&utm_medium=email&utm_source=AC_" target="_blank" rel="noopener" class="link-pill"><i class="fas fa-file-lines"></i>PAPER</a>
                             
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="pub-row">
+                </article>
                 
-                <img src="images/pleffnet.png" alt="Diagnostic Accuracy of an Automated Classifier for the Detection of Pleural Effusions in Patients Undergoing Lung Ultrasound" class="pub-thumb">
-                
-                <div class="pub-body">
-                    <h3 class="pub-title">Diagnostic Accuracy of an Automated Classifier for the Detection of Pleural Effusions in Patients Undergoing Lung Ultrasound</h3>
-                    <p class="pub-authors">R. Chaudhary, J. Ho, D. Smith, <u>S. Hossain</u>, J. Hargun, B. VanBerlo, N. Murphy, R. Prager, K. Rikhraj, J. Tschirhart, R. Arntfield</p>
-                    <div class="pub-meta">
-                        <span class="pub-venue">AJEM, 2025</span>
+                <article class="card pub-card">
+                    
+                    <div class="pub-thumb-wrap">
+                        <img src="images/thumbs/safetunebed.png" alt="SafeTuneBed: A Safety Assessment Framework for Harmful Finetuning Defenses" class="pub-thumb" loading="lazy">
+                    </div>
+                    
+                    <div class="pub-body">
+                        <div class="pub-meta">
+                            <span class="pub-venue pub-venue--workshop">AIA @ IJCAI 2025</span>
+                            
+                        </div>
+                        <h3 class="pub-title">SafeTuneBed: A Safety Assessment Framework for Harmful Finetuning Defenses</h3>
+                        <p class="pub-tldr">A unified benchmark for fairly comparing defenses against harmful LLM fine-tuning.</p>
                         <div class="pub-links">
                             
-                            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0735675725300476" target="_blank" class="pub-link">PAPER</a>
+                            <a href="https://openreview.net/forum?id=yKetbTItcu" target="_blank" rel="noopener" class="link-pill"><i class="fas fa-file-lines"></i>PAPER</a>
+                            
+                            <a href="https://github.com/criticalml-uw/SafeTuneBed" target="_blank" rel="noopener" class="link-pill"><i class="fab fa-github"></i>CODE</a>
                             
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="pub-row">
+                </article>
                 
-                <img src="images/langda.png" alt="LangDA: Language-guided Domain Adaptive Semantic Segmentation" class="pub-thumb">
-                
-                <div class="pub-body">
-                    <h3 class="pub-title">LangDA: Language-guided Domain Adaptive Semantic Segmentation</h3>
-                    <p class="pub-authors">C. Liu, <u>S. Hossain</u>, C. Thomas, K. Lai, R. Vemulapalli, S. Rambhatla, A. Wong</p>
-                    <div class="pub-meta">
-                        <span class="pub-venue">AFM @ NeurIPS 2024</span>
+                <article class="card pub-card">
+                    
+                    <div class="pub-thumb-wrap">
+                        <img src="images/thumbs/langda.png" alt="LangDA: Language-guided Domain Adaptive Semantic Segmentation" class="pub-thumb" loading="lazy">
+                    </div>
+                    
+                    <div class="pub-body">
+                        <div class="pub-meta">
+                            <span class="pub-venue pub-venue--workshop">AFM @ NeurIPS 2024</span>
+                            
+                        </div>
+                        <h3 class="pub-title">LangDA: Language-guided Domain Adaptive Semantic Segmentation</h3>
+                        <p class="pub-tldr">Adapting image segmentation models to new domains using language descriptions of scenes.</p>
                         <div class="pub-links">
                             
-                            <a href="https://openreview.net/forum?id=iyULilaeYx" target="_blank" class="pub-link">PAPER</a>
+                            <a href="https://openreview.net/forum?id=iyULilaeYx" target="_blank" rel="noopener" class="link-pill"><i class="fas fa-file-lines"></i>PAPER</a>
                             
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="pub-row">
+                </article>
                 
-                <img src="images/egostan.gif" alt="Domain-Guided Spatio-Temporal Self-Attention for Egocentric 3D Pose Estimation" class="pub-thumb">
-                
-                <div class="pub-body">
-                    <h3 class="pub-title">Domain-Guided Spatio-Temporal Self-Attention for Egocentric 3D Pose Estimation</h3>
-                    <p class="pub-authors">J. Park, K. Kaai, <u>S. Hossain</u>, N. Sumi, S. Rambhatla, P. Fieguth</p>
-                    <div class="pub-meta">
-                        <span class="pub-venue">KDD 2023</span>
+                <article class="card pub-card">
+                    
+                    <div class="pub-thumb-wrap">
+                        <img src="images/thumbs/egostan-kdd.gif" alt="Domain-Guided Spatio-Temporal Self-Attention for Egocentric 3D Pose Estimation" class="pub-thumb" loading="lazy">
+                    </div>
+                    
+                    <div class="pub-body">
+                        <div class="pub-meta">
+                            <span class="pub-venue pub-venue--conference">KDD 2023</span>
+                            
+                        </div>
+                        <h3 class="pub-title">Domain-Guided Spatio-Temporal Self-Attention for Egocentric 3D Pose Estimation</h3>
+                        <p class="pub-tldr">Estimating 3D body pose from head-mounted camera video despite fisheye distortion and self-occlusion.</p>
                         <div class="pub-links">
                             
-                            <a href="https://dl.acm.org/doi/10.1145/3580305.3599312" target="_blank" class="pub-link">PAPER</a>
+                            <a href="https://dl.acm.org/doi/10.1145/3580305.3599312" target="_blank" rel="noopener" class="link-pill"><i class="fas fa-file-lines"></i>PAPER</a>
                             
-                            <a href="https://github.com/jmpark0808/Ego-STAN" target="_blank" class="pub-link">CODE</a>
+                            <a href="https://github.com/jmpark0808/Ego-STAN" target="_blank" rel="noopener" class="link-pill"><i class="fab fa-github"></i>CODE</a>
                             
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="pub-row">
+                </article>
                 
-                <img src="images/domainlinked.png" alt="Are all classes created equal? Domain Generalization for Domain-Linked Classes" class="pub-thumb">
-                
-                <div class="pub-body">
-                    <h3 class="pub-title">Are all classes created equal? Domain Generalization for Domain-Linked Classes</h3>
-                    <p class="pub-authors">K. Kaai, <u>S. Hossain</u>, S. Rambhatla</p>
-                    <div class="pub-meta">
-                        <span class="pub-venue">DistShift @ NeurIPS 2023</span>
+                <article class="card pub-card">
+                    
+                    <div class="pub-thumb-wrap">
+                        <img src="images/thumbs/domainlinked.png" alt="Are all classes created equal? Domain Generalization for Domain-Linked Classes" class="pub-thumb" loading="lazy">
+                    </div>
+                    
+                    <div class="pub-body">
+                        <div class="pub-meta">
+                            <span class="pub-venue pub-venue--workshop">DistShift @ NeurIPS 2023</span>
+                            
+                        </div>
+                        <h3 class="pub-title">Are all classes created equal? Domain Generalization for Domain-Linked Classes</h3>
+                        <p class="pub-tldr">Generalizing classes seen in only one training domain to new, unseen domains.</p>
                         <div class="pub-links">
                             
-                            <a href="https://openreview.net/forum?id=Zz7eZoR1VN" target="_blank" class="pub-link">PAPER</a>
+                            <a href="https://openreview.net/forum?id=Zz7eZoR1VN" target="_blank" rel="noopener" class="link-pill"><i class="fas fa-file-lines"></i>PAPER</a>
                             
-                            <a href="https://github.com/kimathikaai/DomainBed" target="_blank" class="pub-link">CODE</a>
+                            <a href="https://github.com/kimathikaai/DomainBed" target="_blank" rel="noopener" class="link-pill"><i class="fab fa-github"></i>CODE</a>
                             
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="pub-row">
+                </article>
                 
-                <img src="images/imsty.jpeg" alt="Implicit Stylization for Domain Adaptation" class="pub-thumb">
-                
-                <div class="pub-body">
-                    <h3 class="pub-title">Implicit Stylization for Domain Adaptation</h3>
-                    <p class="pub-authors">J. Park, F. Barnard, <u>S. Hossain</u>, S. Rambhatla</p>
-                    <div class="pub-meta">
-                        <span class="pub-venue">DG @ ICLR 2023</span>
+                <article class="card pub-card">
+                    
+                    <div class="pub-thumb-wrap">
+                        <img src="images/thumbs/imsty.png" alt="Implicit Stylization for Domain Adaptation" class="pub-thumb" loading="lazy">
+                    </div>
+                    
+                    <div class="pub-body">
+                        <div class="pub-meta">
+                            <span class="pub-venue pub-venue--workshop">DG @ ICLR 2023</span>
+                            
+                        </div>
+                        <h3 class="pub-title">Implicit Stylization for Domain Adaptation</h3>
+                        <p class="pub-tldr">Adapting models to new domains via lightweight feature alignment instead of costly image stylization.</p>
                         <div class="pub-links">
                             
-                            <a href="https://openreview.net/forum?id=fkFFh4fAbH&" target="_blank" class="pub-link">PAPER</a>
+                            <a href="https://openreview.net/forum?id=fkFFh4fAbH&" target="_blank" rel="noopener" class="link-pill"><i class="fas fa-file-lines"></i>PAPER</a>
                             
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="pub-row">
+                </article>
                 
-                <img src="images/ego-stan.png" alt="Building Spatio-temporal Transformers for Egocentric 3D Pose Estimation" class="pub-thumb">
-                
-                <div class="pub-body">
-                    <h3 class="pub-title">Building Spatio-temporal Transformers for Egocentric 3D Pose Estimation</h3>
-                    <p class="pub-authors">J. Park, K. Kaai, <u>S. Hossain</u>, N. Sumi, S. Rambhatla, P. Fieguth</p>
-                    <div class="pub-meta">
-                        <span class="pub-venue">EGO4D @ CVPR 2022</span>
+                <article class="card pub-card">
+                    
+                    <div class="pub-thumb-wrap">
+                        <img src="images/thumbs/egostan-cvpr.png" alt="Building Spatio-temporal Transformers for Egocentric 3D Pose Estimation" class="pub-thumb" loading="lazy">
+                    </div>
+                    
+                    <div class="pub-body">
+                        <div class="pub-meta">
+                            <span class="pub-venue pub-venue--workshop">EGO4D @ CVPR 2022</span>
+                            <span class="badge-note">Oral</span>
+                        </div>
+                        <h3 class="pub-title">Building Spatio-temporal Transformers for Egocentric 3D Pose Estimation</h3>
+                        <p class="pub-tldr">Transformers that use past video frames to estimate 3D body pose from head-mounted cameras.</p>
                         <div class="pub-links">
                             
-                            <a href="https://arxiv.org/abs/2206.04785" target="_blank" class="pub-link">PAPER</a>
+                            <a href="https://arxiv.org/abs/2206.04785" target="_blank" rel="noopener" class="link-pill"><i class="fas fa-file-lines"></i>PAPER</a>
                             
                         </div>
                     </div>
-                </div>
+                </article>
+                
             </div>
-            
 
             <h2>Panels and Media</h2>
 
-            
-            <div class="pub-row">
+            <div class="pub-list stagger">
                 
-                <img src="images/cubec.png" alt="Translational Pathways in Biomedical Engineering: From Lab to Clinic" class="pub-thumb">
-                
-                <div class="pub-body">
-                    <h3 class="pub-title">Translational Pathways in Biomedical Engineering: From Lab to Clinic</h3>
-                    <p class="pub-authors">CUBEC, 2026</p>
-                    <div class="pub-meta">
-                        <span class="pub-venue">Panelist</span>
+                <article class="card pub-card pub-card--media">
+                    
+                    <div class="pub-thumb-wrap">
+                        <img src="images/thumbs/cubec.png" alt="Translational Pathways in Biomedical Engineering: From Lab to Clinic" class="pub-thumb" loading="lazy">
+                    </div>
+                    
+                    <div class="pub-body">
+                        <div class="pub-meta">
+                            <span class="pub-venue pub-venue--role">Panelist</span>
+                        </div>
+                        <h3 class="pub-title">Translational Pathways in Biomedical Engineering: From Lab to Clinic</h3>
+                        <p class="pub-authors">CUBEC, 2026</p>
                         <div class="pub-links">
                             
-                            <a href="https://site.pheedloop.com/event/CUBEC/sessions/SESKWCJ55CESKVEFD" target="_blank" class="pub-link">EVENT</a>
+                            <a href="https://site.pheedloop.com/event/CUBEC/sessions/SESKWCJ55CESKVEFD" target="_blank" rel="noopener" class="link-pill"><i class="fas fa-calendar-day"></i>EVENT</a>
                             
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="pub-row">
+                </article>
                 
-                <img src="images/uw_news_headshot.jpg" alt="Featured in News Article: BME Undergraduate Student Received Honorable Mention for Outstanding Undergraduate Researcher Award" class="pub-thumb">
-                
-                <div class="pub-body">
-                    <h3 class="pub-title">Featured in News Article: BME Undergraduate Student Received Honorable Mention for Outstanding Undergraduate Researcher Award</h3>
-                    <p class="pub-authors">University of Waterloo SYDE News, 2025</p>
-                    <div class="pub-meta">
-                        <span class="pub-venue">Featured</span>
+                <article class="card pub-card pub-card--media">
+                    
+                    <div class="pub-thumb-wrap">
+                        <img src="images/thumbs/cra-award.png" alt="Featured in News Article: BME Undergraduate Student Received Honorable Mention for Outstanding Undergraduate Researcher Award" class="pub-thumb" loading="lazy">
+                    </div>
+                    
+                    <div class="pub-body">
+                        <div class="pub-meta">
+                            <span class="pub-venue pub-venue--role">Featured</span>
+                        </div>
+                        <h3 class="pub-title">Featured in News Article: BME Undergraduate Student Received Honorable Mention for Outstanding Undergraduate Researcher Award</h3>
+                        <p class="pub-authors">University of Waterloo SYDE News, 2025</p>
                         <div class="pub-links">
                             
-                            <a href="https://uwaterloo.ca/systems-design-engineering/news/bme-undergraduate-student-received-honorable-mention" target="_blank" class="pub-link">ARTICLE</a>
+                            <a href="https://uwaterloo.ca/systems-design-engineering/news/bme-undergraduate-student-received-honorable-mention" target="_blank" rel="noopener" class="link-pill"><i class="fas fa-award"></i>ARTICLE</a>
                             
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="pub-row">
+                </article>
                 
-                <img src="images/ibtikar_talk.jpg" alt="Augmented Reality for Guided Lung Ultrasound Acquisition" class="pub-thumb">
-                
-                <div class="pub-body">
-                    <h3 class="pub-title">Augmented Reality for Guided Lung Ultrasound Acquisition</h3>
-                    <p class="pub-authors">Ibtikar Seminar Series, 2025</p>
-                    <div class="pub-meta">
-                        <span class="pub-venue">Guest Speaker</span>
+                <article class="card pub-card pub-card--media">
+                    
+                    <div class="pub-thumb-wrap">
+                        <img src="images/thumbs/ibtikar.png" alt="Augmented Reality for Guided Lung Ultrasound Acquisition" class="pub-thumb" loading="lazy">
+                    </div>
+                    
+                    <div class="pub-body">
+                        <div class="pub-meta">
+                            <span class="pub-venue pub-venue--role">Guest Speaker</span>
+                        </div>
+                        <h3 class="pub-title">Augmented Reality for Guided Lung Ultrasound Acquisition</h3>
+                        <p class="pub-authors">Ibtikar Seminar Series, 2025</p>
                         <div class="pub-links">
                             
-                            <a href="https://youtu.be/ZhHr8K19RLM" target="_blank" class="pub-link">TALK</a>
+                            <a href="https://youtu.be/ZhHr8K19RLM" target="_blank" rel="noopener" class="link-pill"><i class="fas fa-microphone"></i>TALK</a>
                             
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="pub-row">
+                </article>
                 
-                <img src="images/ai_testing_webinar_thumbnail.jpg" alt="Enhancing AI Testing: The Power of Metadata Hydration" class="pub-thumb">
-                
-                <div class="pub-body">
-                    <h3 class="pub-title">Enhancing AI Testing: The Power of Metadata Hydration</h3>
-                    <p class="pub-authors">Live Webinar, Kolena, 2024</p>
-                    <div class="pub-meta">
-                        <span class="pub-venue">Key Speaker</span>
+                <article class="card pub-card pub-card--media">
+                    
+                    <div class="pub-thumb-wrap">
+                        <img src="images/thumbs/ai-testing.png" alt="Enhancing AI Testing: The Power of Metadata Hydration" class="pub-thumb" loading="lazy">
+                    </div>
+                    
+                    <div class="pub-body">
+                        <div class="pub-meta">
+                            <span class="pub-venue pub-venue--role">Key Speaker</span>
+                        </div>
+                        <h3 class="pub-title">Enhancing AI Testing: The Power of Metadata Hydration</h3>
+                        <p class="pub-authors">Live Webinar, Kolena, 2024</p>
                         <div class="pub-links">
                             
-                            <a href="https://www.youtube.com/watch?v=E-eTSJNgOHw" target="_blank" class="pub-link">WEBINAR</a>
+                            <a href="https://www.youtube.com/watch?v=E-eTSJNgOHw" target="_blank" rel="noopener" class="link-pill"><i class="fas fa-video"></i>WEBINAR</a>
                             
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="pub-row">
+                </article>
                 
-                <img src="images/rag_webinar_thumbnail.jpg" alt="Mastering RAG Systems for LLMs: From Pitfalls to Performance" class="pub-thumb">
-                
-                <div class="pub-body">
-                    <h3 class="pub-title">Mastering RAG Systems for LLMs: From Pitfalls to Performance</h3>
-                    <p class="pub-authors">Live Webinar, Kolena, 2024</p>
-                    <div class="pub-meta">
-                        <span class="pub-venue">Panelist</span>
+                <article class="card pub-card pub-card--media">
+                    
+                    <div class="pub-thumb-wrap">
+                        <img src="images/thumbs/rag-webinar.png" alt="Mastering RAG Systems for LLMs: From Pitfalls to Performance" class="pub-thumb" loading="lazy">
+                    </div>
+                    
+                    <div class="pub-body">
+                        <div class="pub-meta">
+                            <span class="pub-venue pub-venue--role">Panelist</span>
+                        </div>
+                        <h3 class="pub-title">Mastering RAG Systems for LLMs: From Pitfalls to Performance</h3>
+                        <p class="pub-authors">Live Webinar, Kolena, 2024</p>
                         <div class="pub-links">
                             
-                            <a href="https://www.youtube.com/watch?v=SGlEoihccW0" target="_blank" class="pub-link">WEBINAR</a>
+                            <a href="https://www.youtube.com/watch?v=SGlEoihccW0" target="_blank" rel="noopener" class="link-pill"><i class="fas fa-video"></i>WEBINAR</a>
                             
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="pub-row">
+                </article>
                 
-                <img src="images/imu_feature_extraction_talk.jpg" alt="Inertial Measurement Unit (IMU) Feature Extraction" class="pub-thumb">
-                
-                <div class="pub-body">
-                    <h3 class="pub-title">Inertial Measurement Unit (IMU) Feature Extraction</h3>
-                    <p class="pub-authors">Crash Workshop on Physiological Computing, Waterloo, 2022</p>
-                    <div class="pub-meta">
-                        <span class="pub-venue">Presenter</span>
+                <article class="card pub-card pub-card--media">
+                    
+                    <div class="pub-thumb-wrap">
+                        <img src="images/thumbs/imu-talk.png" alt="Inertial Measurement Unit (IMU) Feature Extraction" class="pub-thumb" loading="lazy">
+                    </div>
+                    
+                    <div class="pub-body">
+                        <div class="pub-meta">
+                            <span class="pub-venue pub-venue--role">Presenter</span>
+                        </div>
+                        <h3 class="pub-title">Inertial Measurement Unit (IMU) Feature Extraction</h3>
+                        <p class="pub-authors">Crash Workshop on Physiological Computing, Waterloo, 2022</p>
                         <div class="pub-links">
                             
-                            <a href="https://www.youtube.com/watch?v=kk_tSTKnFXk&t=80s" target="_blank" class="pub-link">WORKSHOP</a>
+                            <a href="https://www.youtube.com/watch?v=kk_tSTKnFXk&t=80s" target="_blank" rel="noopener" class="link-pill"><i class="fas fa-chalkboard-user"></i>WORKSHOP</a>
                             
                         </div>
                     </div>
-                </div>
+                </article>
+                
             </div>
-            
-        </main>
-    </div>
+    </main>
 </body>
 </html>

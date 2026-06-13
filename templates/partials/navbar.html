@@ -1,5 +1,10 @@
-<nav class="sidebar">
-    {{#each navigation}}
-    <a href="{{href}}"{{#if isActive}} class="active"{{/if}}>{{label}}</a>
-    {{/each}}
+<nav class="nav">
+    <div class="nav__inner">
+        <a href="index.html" class="nav__logo">Saad Hossain</a>
+        <div class="nav__links">
+            {{#each navigation}}
+            <a href="{{href}}" class="nav__link{{#if isActive}} active{{/if}}">{{label}}</a>
+            {{/each}}
+        </div>
+    </div>
 </nav>

@@ -6,7 +6,7 @@
 <title>Resume - Saad Hossain</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/components.css">
@@ -14,26 +14,29 @@
     <link rel="stylesheet" href="css/pages/cv.css">
 </head>
 <body>
-    <div class="page">
-        <nav class="sidebar">
-    
-    <a href="index.html">About</a>
-    
-    <a href="experience.html">Experience</a>
-    
-    <a href="publications.html">Publications</a>
-    
-    <a href="cv.html" class="active">Resume</a>
-    
+    <nav class="nav">
+    <div class="nav__inner">
+        <a href="index.html" class="nav__logo">Saad Hossain</a>
+        <div class="nav__links">
+            
+            <a href="index.html" class="nav__link">About</a>
+            
+            <a href="experience.html" class="nav__link">Experience</a>
+            
+            <a href="publications.html" class="nav__link">Publications</a>
+            
+            <a href="cv.html" class="nav__link active">Resume</a>
+            
+        </div>
+    </div>
 </nav>
 
-        <main class="content">
-            <h2>Resume</h2>
+    <main class="content">
+        <h2>Resume</h2>
             <div class="cv-actions">
                 <a href="assets/cv.pdf" target="_blank" class="cv-download"><i class="fas fa-download"></i> Download PDF</a>
             </div>
             <iframe src="assets/cv.pdf" class="cv-viewer" title="Resume"></iframe>
-        </main>
-    </div>
+    </main>
 </body>
 </html>

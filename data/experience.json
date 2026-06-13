@@ -1,9 +1,25 @@
 {
   "professional": [
     {
+      "title": "Machine Learning Developer",
+      "company": "Deep Breathe",
+      "location": "London, ON",
+      "startDate": "Sep 2022",
+      "endDate": "Present",
+      "logo": "images/deepbreathe-icon.jfif",
+      "summary": "Built AI-powered systems to automate the diagnosis of lung ultrasound scans.",
+      "bullets": [
+        "Developed AI based screening tool confirming with 96% certainty the presence of fluid in lung ultrasound scans.",
+        "Achieved 80% accuracy (IoU) in segmenting effusions and consolidations in lung-ultrasound using TensorFlow.",
+        "Implemented MLOps pipeline using Azure, SQL & OpenCV to process, ingest & version data for FDA approval.",
+        "Integrated WandB into ML projects for dash-boarding and logging visuals during training and evaluation.",
+        "Reduced dataset fetching time by 91% through cross-platform deployment of pipeline producing 7.8 million M-Mode images from 140,000 B-Mode videos per version, automated through Unix & Shell scripting."
+      ]
+    },
+    {
       "title": "Machine Learning Intern",
       "company": "Kolena Inc.",
-      "location": "Vancouver, BC",
+      "location": "San Francisco, CA",
       "startDate": "Jan 2024",
       "endDate": "Aug 2024",
       "logo": "images/kolena.webp",
@@ -13,22 +29,6 @@
         "Improved RAG Generator accuracy by 8% on finance data through improved PDF-parsing & LLM-prompting.",
         "Accelerated creation of textual datasets by 15x by building an LLM powered web-application using Streamlit.",
         "Enhanced detection of AI model errors for users by building data analysis pipeline identifying edge cases."
-      ]
-    },
-    {
-      "title": "Machine Learning Developer",
-      "company": "Deep Breathe",
-      "location": "London, ON",
-      "startDate": "Sep 2022",
-      "endDate": "Aug 2024",
-      "logo": "images/deepbreathe-icon.jfif",
-      "summary": "Built AI-powered systems to automate the diagnosis of lung ultrasound scans.",
-      "bullets": [
-        "Developed AI based screening tool confirming with 96% certainty the presence of fluid in lung ultrasound scans.",
-        "Achieved 80% accuracy (IoU) in segmenting effusions and consolidations in lung-ultrasound using TensorFlow.",
-        "Implemented MLOps pipeline using Azure, SQL & OpenCV to process, ingest & version data for FDA approval.",
-        "Integrated WandB into ML projects for dash-boarding and logging visuals during training and evaluation.",
-        "Reduced dataset fetching time by 91% through cross-platform deployment of pipeline producing 7.8 million M-Mode images from 140,000 B-Mode videos per version, automated through Unix & Shell scripting."
       ]
     },
     {
@@ -50,7 +50,7 @@
   ],
   "research": [
     {
-      "title": "Research Assistant",
+      "title": "Student Researcher",
       "company": "Critical Machine Learning Lab",
       "location": "Waterloo, ON",
       "startDate": "Sep 2023",

@@ -29,6 +29,8 @@ interface Publication {
   title: string;
   authors: string;
   venue: string;
+  note?: string;
+  tldr?: string;
   thumbnail?: string;
   links: Array<{ label: string; url: string }>;
 }
@@ -58,6 +60,57 @@ const profile = loadJson<Profile>('profile.json');
 const news = loadJson<{ items: NewsItem[] }>('news.json');
 const experience = loadJson<{ professional: Experience[]; research: Experience[] }>('experience.json');
 const publications = loadJson<{ publications: Publication[]; panelsAndMedia: PanelMedia[] }>('publications.json');
+
+// Classify venues into badge color classes (see css/pages/publications.css):
+// workshops ("X @ Conf" or "Workshop"), journals, and conferences (default)
+const JOURNALS = /pami|ajem|ijcv|tmlr|journal/i;
+
+const venueClass = (venue: string): string => {
+  if (/@|workshop/i.test(venue)) return 'workshop';
+  if (JOURNALS.test(venue)) return 'journal';
+  return 'conference';
+};
+
+// Map link labels to Font Awesome icons shown inside the link pills
+const LINK_ICONS: Record<string, string> = {
+  PAPER: 'fas fa-file-lines',
+  CODE: 'fab fa-github',
+  EVENT: 'fas fa-calendar-day',
+  ARTICLE: 'fas fa-award',
+  TALK: 'fas fa-microphone',
+  WEBINAR: 'fas fa-video',
+  WORKSHOP: 'fas fa-chalkboard-user',
+};
+
+const withLinkIcons = <T extends { links: Array<{ label: string; url: string }> }>(item: T) => ({
+  ...item,
+  links: item.links.map(link => ({
+    ...link,
+    icon: LINK_ICONS[link.label.toUpperCase()] ?? 'fas fa-arrow-up-right-from-square',
+  })),
+});
+
+const publicationsWithClasses = publications.publications.map(pub => ({
+  ...withLinkIcons(pub),
+  venueClass: venueClass(pub.venue),
+}));
+
+const panelsWithIcons = publications.panelsAndMedia.map(withLinkIcons);
+
+// Featured subset shown on the homepage (full list lives on publications.html)
+const featuredPublications = publicationsWithClasses.slice(0, 3);
+
+// Format MM/DD/YY news dates as a clean "Mon YYYY" (no uppercase)
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const formatNewsDate = (d: string): string => {
+  const m = d.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/);
+  if (!m) return d;
+  const month = MONTHS[parseInt(m[1], 10) - 1] ?? '';
+  const yr = m[3].length === 2 ? `20${m[3]}` : m[3];
+  return `${month} ${yr}`.trim();
+};
+const newsFormatted = news.items.map(item => ({ ...item, date: formatNewsDate(item.date) }));
+
 const navigation = loadJson<{ items: NavItem[] }>('navigation.json');
 
 // Template engine
@@ -229,11 +282,12 @@ for (const page of pages) {
 
   const data = {
     profile,
-    news: news.items,
+    news: newsFormatted,
     professional: experience.professional,
     research: experience.research,
-    publications: publications.publications,
-    panelsAndMedia: publications.panelsAndMedia,
+    publications: publicationsWithClasses,
+    featuredPublications,
+    panelsAndMedia: panelsWithIcons,
     navigation: navItems,
     showSocialIcons: page.showSocialIcons,
     pageTitle: page.name === 'index' ? 'Saad Hossain' : `${navigation.items.find(n => n.id === page.activeNav)?.label} - Saad Hossain`
