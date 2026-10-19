@@ -1,102 +1,301 @@
 {
   "professional": [
     {
-      "title": "Machine Learning Developer",
+      "id": "deep-breathe",
       "company": "Deep Breathe",
+      "logo": "images/deepbreathe.png",
       "location": "London, ON",
-      "startDate": "Sep 2022",
-      "endDate": "Present",
-      "logo": "images/deepbreathe-icon.jfif",
-      "summary": "Built AI-powered systems to automate the diagnosis of lung ultrasound scans.",
-      "bullets": [
-        "Developed AI based screening tool confirming with 96% certainty the presence of fluid in lung ultrasound scans.",
-        "Achieved 80% accuracy (IoU) in segmenting effusions and consolidations in lung-ultrasound using TensorFlow.",
-        "Implemented MLOps pipeline using Azure, SQL & OpenCV to process, ingest & version data for FDA approval.",
-        "Integrated WandB into ML projects for dash-boarding and logging visuals during training and evaluation.",
-        "Reduced dataset fetching time by 91% through cross-platform deployment of pipeline producing 7.8 million M-Mode images from 140,000 B-Mode videos per version, automated through Unix & Shell scripting."
+      "layout": "multi",
+      "current": true,
+      "span": "Sep 2022 – Present",
+      "progression": "Co-op in 2022, full-time since May 2025",
+      "roles": [
+        {
+          "title": "Machine Learning Engineer",
+          "startDate": "May 2025",
+          "endDate": "Present",
+          "isCurrent": true,
+          "summary": "Spearheading development of multiple ML models for diagnostic lung ultrasound, and the labeling and training infrastructure behind them.",
+          "highlights": [
+            {
+              "value": "5x",
+              "label": "faster labeling per video (10 → 2 min) via a PyTorch annotation tracker"
+            },
+            {
+              "value": "500+",
+              "label": "training experiments on GCP Vertex AI and the team’s Slurm GPU server"
+            },
+            {
+              "value": "Millions",
+              "label": "of frames labeled on V7 Darwin infrastructure built from scratch"
+            }
+          ],
+          "tags": [
+            "PyTorch",
+            "Slurm",
+            "GCP Vertex AI",
+            "V7 Darwin",
+            "Labelbox",
+            "SQL"
+          ],
+          "bullets": [
+            "Spearheading development of multiple ML models for diagnostic ultrasound that run on-device in real time.",
+            "Set up Slurm on the team’s GPU server and ran 500+ training experiments across it and GCP Vertex AI.",
+            "Built and led the labeling infrastructure on V7 Darwin (GCP, SQL) from scratch, used to label millions of frames.",
+            "Automated clip ingestion into the training database, labeling-sprint setup and pre-label uploads through the V7 Darwin API.",
+            "Built a PyTorch tracker propagating Labelbox annotations across frames, cutting labeling time per video 5x (10 to 2 min)."
+          ]
+        },
+        {
+          "title": "Machine Learning Developer (Co-op &amp; Part-time)",
+          "startDate": "Sep 2022",
+          "endDate": "Apr 2025",
+          "isCurrent": false,
+          "summary": "Built AI systems and data pipelines to automate the diagnosis of lung ultrasound scans.",
+          "highlights": [
+            {
+              "value": "0.90 / 0.89",
+              "label": "sensitivity / specificity of the effusion classifier on a 2-hospital holdout"
+            },
+            {
+              "value": "7.8M",
+              "label": "M-mode images from 140K B-mode videos per dataset version"
+            },
+            {
+              "value": "Minutes",
+              "label": "to build a 1K-clip dataset, down from 1–2 hours"
+            }
+          ],
+          "papers": [
+            {
+              "venue": "AJEM 2025",
+              "name": "Pleural-effusion classifier",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S0735675725000476"
+            }
+          ],
+          "tags": [
+            "Python",
+            "Azure",
+            "SQL",
+            "OpenCV",
+            "Bash",
+            "Weights &amp; Biases"
+          ],
+          "bullets": [
+            "Led development of an effusion classifier: 0.90 sensitivity, 0.89 specificity on a 239-clip holdout from 2 hospitals (AJEM ’25).",
+            "Converted an earlier lung-ultrasound model for on-device inference in Deep Breathe’s mobile apps.",
+            "Built Azure/SQL data pipelines (Python, Bash, OpenCV) that ingest, process and version ultrasound data, generating 7.8M M-mode images from 140K B-mode videos per version.",
+            "Cut 1K-clip dataset builds from 1–2 hours to minutes: teams now download prebuilt, versioned datasets.",
+            "Integrated Weights &amp; Biases into ML projects for training dashboards and evaluation logging."
+          ]
+        }
       ]
     },
     {
-      "title": "Machine Learning Intern",
-      "company": "Kolena Inc.",
-      "location": "San Francisco, CA",
-      "startDate": "Jan 2024",
-      "endDate": "Aug 2024",
+      "id": "kolena",
+      "company": "Kolena",
       "logo": "images/kolena.webp",
-      "summary": "Enhancing the way Machine Learning systems are evaluated.",
-      "bullets": [
-        "Automated evaluation of Gen-AI by fine-tuning Vision-Language models to model human preference.",
-        "Improved RAG Generator accuracy by 8% on finance data through improved PDF-parsing & LLM-prompting.",
-        "Accelerated creation of textual datasets by 15x by building an LLM powered web-application using Streamlit.",
-        "Enhanced detection of AI model errors for users by building data analysis pipeline identifying edge cases."
+      "location": "San Francisco, CA",
+      "layout": "single",
+      "current": false,
+      "roles": [
+        {
+          "title": "Machine Learning Research Intern",
+          "startDate": "Jan 2024",
+          "endDate": "Aug 2024",
+          "isCurrent": false,
+          "summary": "LLM evaluation, RAG and test-data tooling around Kolena’s AI Quality Platform.",
+          "highlights": [
+            {
+              "value": "80% → 93%",
+              "label": "RAG answer accuracy on financial PDFs after rebuilt parsing and prompting"
+            },
+            {
+              "value": "3x",
+              "label": "less manual review with a fine-tuned LLM judge for Qwen-VL outputs"
+            },
+            {
+              "value": "5x",
+              "label": "faster text-dataset creation with a Q&amp;A-drafting tool"
+            }
+          ],
+          "tags": [
+            "LLM fine-tuning",
+            "RAG",
+            "LangChain",
+            "OpenAI SDK",
+            "Streamlit",
+            "OpenCV",
+            "spaCy"
+          ],
+          "links": [
+            {
+              "label": "Metadata webinar",
+              "kind": "WEBINAR",
+              "url": "https://www.youtube.com/watch?v=E-eTSJNgOHw"
+            },
+            {
+              "label": "RAG webinar",
+              "kind": "WEBINAR",
+              "url": "https://www.youtube.com/watch?v=SGlEoihccW0"
+            }
+          ],
+          "bullets": [
+            "Fine-tuned an LLM judge to rate Qwen-VL descriptions against human preferences, cutting manual review volume 3x.",
+            "Raised RAG answer accuracy on financial PDFs from 80% to 93% by rebuilding parsing and prompting (LangChain).",
+            "Built a Streamlit + OpenAI SDK tool that drafts Q&amp;A and similar test samples, making text-dataset creation 5x faster.",
+            "Shipped CV and NLP metadata extraction (OpenCV, NLTK, spaCy) in Kolena’s AI Quality Platform so users can stratify test sets and find model errors on edge cases; presented it in a webinar."
+          ]
+        }
       ]
     },
     {
-      "title": "Software Engineering Intern",
+      "id": "intellisports",
       "company": "IntelliSports",
-      "location": "Montreal, QC",
-      "startDate": "Sep 2022",
-      "endDate": "Aug 2024",
       "logo": "images/playfitt.png",
-      "summary": "Developed activity recognition pipelines and modeled user application usage.",
-      "bullets": [
-        "Boosted cheat-detection accuracy by 30% by feature engineering IMU Sensor data using Scikit-learn & SciPy",
-        "Optimized inference speed on CPU machine to 1.8x original by leveraging light-weight sklearn models.",
-        "Elevated mission count by 2.3x by deploying detection pipelines on EC2 for punch, crunch, high-knee, & jump.",
-        "Identified onboarding flow with +50% retention by conducting decision-tree & SVM analysis on early user data.",
-        "Built data visualization platform, showcasing user physical activity growth of 300%, employed in pitches that secured $1.4 million in funding using PHP and MySQL."
+      "location": "Montreal, QC",
+      "layout": "single",
+      "current": false,
+      "roles": [
+        {
+          "title": "Software Engineering Intern",
+          "startDate": "Jan 2022",
+          "endDate": "Apr 2022",
+          "isCurrent": false,
+          "summary": "Shipped activity-recognition models for a fitness app and analyzed user retention.",
+          "highlights": [
+            {
+              "value": "25% → 55%",
+              "label": "IMU cheat-detection sensitivity, via feature engineering"
+            },
+            {
+              "value": "2 → 5",
+              "label": "workout missions after deploying four motion detectors on AWS EC2"
+            },
+            {
+              "value": "1.8x",
+              "label": "faster CPU inference with lightweight scikit-learn models"
+            }
+          ],
+          "tags": [
+            "scikit-learn",
+            "SciPy",
+            "AWS EC2",
+            "PHP",
+            "MySQL"
+          ],
+          "bullets": [
+            "More than doubled IMU cheat-detection sensitivity (25% to 55%) via feature engineering with scikit-learn and SciPy.",
+            "Deployed punch, crunch, high-knee and jump detection on AWS EC2, growing the app’s workout missions from 2 to 5.",
+            "Sped up CPU inference 1.8x by switching to lightweight scikit-learn models.",
+            "Found, via decision-tree analysis of early user data, an onboarding path whose users were 1.5x likelier to be retained.",
+            "Built a PHP/MySQL analytics dashboard of user activity growth, used in pitches that secured $1.4M in funding."
+          ]
+        }
       ]
     }
   ],
   "research": [
     {
-      "title": "Student Researcher",
-      "company": "Critical Machine Learning Lab",
-      "location": "Waterloo, ON",
-      "startDate": "Sep 2023",
-      "endDate": "Present",
+      "id": "critical-ml-lab",
+      "company": "Critical ML Lab",
       "logo": "images/criticalml.png",
-      "summary": "Investigating ways on how AI models can adapt to new environments.",
-      "bullets": [
-        "Achieved State of the Art results in Domain Adaptive Semantic Segmentation using Vision-Language models."
+      "location": "Waterloo, ON",
+      "layout": "single",
+      "current": true,
+      "roles": [
+        {
+          "title": "Researcher",
+          "startDate": "Sep 2023",
+          "endDate": "Present",
+          "isCurrent": true,
+          "summary": "LLM safety under fine-tuning and domain generalization. An undergraduate research assistant until graduating in 2025, now a researcher in the lab.",
+          "highlights": [
+            {
+              "value": "10K+",
+              "label": "LoRA and full fine-tuning runs for TamperBench (20K GPU-hours)"
+            },
+            {
+              "value": "21",
+              "label": "open-weight LLMs stress-tested; safeguards fell on all 21"
+            },
+            {
+              "value": "KDD '26 Oral",
+              "label": "first-authored TamperBench, top 4.5% of papers"
+            }
+          ],
+          "papers": [
+            {
+              "venue": "KDD 2026",
+              "note": "Oral · first author",
+              "name": "TamperBench",
+              "url": "https://arxiv.org/abs/2602.06911"
+            },
+            {
+              "venue": "TPAMI 2025",
+              "name": "FOND",
+              "url": "https://ieeexplore.ieee.org/document/11121886"
+            },
+            {
+              "venue": "AIA @ IJCAI 2025",
+              "name": "SafeTuneBed",
+              "url": "https://openreview.net/forum?id=yKetbTItcu"
+            },
+            {
+              "venue": "AFM @ NeurIPS 2024",
+              "name": "LangDA",
+              "url": "https://openreview.net/forum?id=iyULilaeYx"
+            }
+          ],
+          "tags": [
+            "LoRA / full fine-tuning",
+            "Multi-GPU training",
+            "LLM safety evaluation",
+            "Domain generalization",
+            "Vision-language models"
+          ],
+          "showPress": true,
+          "bullets": [
+            "First-authored TamperBench with FAR.AI (KDD ’26 Oral, top 4.5%): stress-tested 21 open-weight LLMs against 9 tampering attacks in 10K+ LoRA/full fine-tuning runs (20K GPU-hours, up to 8 GPUs); safeguards fell on all 21.",
+            "Set TamperBench’s initial roadmap and task split for an 11-author team from 5 institutions.",
+            "Quoted in MIT Technology Review and University of Waterloo News (2026) as TamperBench’s lead author.",
+            "Created SafeTuneBed (IJCAI ’25 workshop), an open-source toolkit benchmarking LLM safety defenses under fine-tuning.",
+            "Built FOND’s training/eval pipelines (T-PAMI ’25); the method lifted tumor-detection accuracy 9% at unseen hospitals.",
+            "Co-authored Apple-funded LangDA: state-of-the-art domain-adaptive semantic segmentation with vision-language models (NeurIPS ’24 workshop; Best Vision Paper, CVIS ’24)."
+          ]
+        }
       ]
-    },
+    }
+  ],
+  "earlierResearch": [
     {
       "title": "Research Assistant",
       "company": "Vision and Image Processing Lab",
-      "location": "Waterloo, ON",
+      "logo": "images/vip.jpg",
       "startDate": "Jan 2022",
       "endDate": "Apr 2023",
-      "logo": "images/vip.jpg",
-      "summary": "Researched ego-centric pose estimation techniques using spatio-temporal analysis.",
-      "bullets": [
-        "Outperformed Egocentric HPE State of the Art by 38% via insertion of spatio-temporal data using Transformers."
+      "result": "Co-developed Nissan-funded Ego-STAN, spatio-temporal Transformers for egocentric 3D pose: <b>38% lower error</b> on hardest joints with <b>22% fewer parameters</b> (KDD ’23; CVPR ’22 workshop oral).",
+      "more": [
+        "Co-authored Implicit Stylization for Domain Adaptation (ICLR ’23 Domain Generalization workshop)."
       ]
     },
     {
       "title": "Research Assistant",
-      "company": "Social and intelligent Robotics Research Lab",
-      "location": "Waterloo, ON",
+      "company": "Social and Intelligent Robotics Research Lab",
+      "logo": "images/sirrl.png",
       "startDate": "Sep 2021",
       "endDate": "Dec 2021",
-      "logo": "images/sirrl.png",
-      "summary": "Implemented suite of (IMU) feature extraction algorithms for Human Robot Interaction.",
-      "bullets": [
-        "Researched and implemented suite of feature extraction algorithms relevant to singla detection for AI."
-      ]
+      "result": "Implemented IMU feature extraction for human-robot interaction and contributed it to the <b>HRI Physio Lib</b> toolkit."
     },
     {
       "title": "Research Intern",
-      "company": "Human Centered Robotics and Machine Intelligence Lab",
-      "location": "Waterloo, ON",
+      "company": "Human-Centred Robotics and Machine Intelligence Lab",
+      "logo": "images/robohub.jfif",
       "startDate": "May 2021",
       "endDate": "Aug 2021",
-      "logo": "images/robohub.jfif",
-      "summary": "Developed and deployed facial and emotion recognition pipeline on humanoid robot.",
-      "bullets": [
-        "Delivered 99.3% on LFW (Face ID) and 72.7% on FER2013 (Emotion) benchmarks using DLIB and Tensorflow.",
-        "Designed multi-input Keras model using pybind11 bindings of a C++ toolkit, informed by t-SNE data analysis.",
-        "Deployed facial identity and emotion recognition pipeline using ROS, Flask and PostgresSQL on the Reem-C robot, highlighted by researchers in International Robotics conferences."
+      "result": "Implemented face identification (dlib, 99.3% on LFW) and emotion recognition (72.7% on FER2013) on the <b>REEM-C humanoid robot</b> with ROS, Flask and PostgreSQL.",
+      "more": [
+        "Designed a multi-input Keras model for facial emotion recognition (pybind11 bindings of a C++ toolkit; t-SNE analysis)."
       ]
     }
   ]

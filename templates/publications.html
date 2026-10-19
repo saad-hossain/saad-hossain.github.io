@@ -50,6 +50,7 @@
                         </div>
                         <h3 class="pub-title">{{title}}</h3>
                         <p class="pub-authors">{{venue}}</p>
+                        {{#if quote}}<blockquote class="pub-quote">“{{quote}}”</blockquote>{{/if}}
                         <div class="pub-links">
                             {{#each links}}
                             <a href="{{url}}" target="_blank" rel="noopener" class="link-pill"><i class="{{icon}}"></i>{{label}}</a>

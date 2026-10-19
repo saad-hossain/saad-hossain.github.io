@@ -2,7 +2,7 @@
   "publications": [
     {
       "title": "TamperBench: Systematically Stress-Testing LLM Safety Under Fine-Tuning and Tampering",
-      "authors": "<u>S. Hossain</u>, T. Tseng, P. Pandey, S. Vajpayee, N. Nonta, M. Kowal, S. Simko, S. Casper, Z. Jin, K. Pelrine, S. Rambhatla",
+      "authors": "<u>S. Hossain</u>, T. Tseng, P. Pandey, S. Vajpayee, M. Kowal, N. Nonta, S. Simko, S. Casper, Z. Jin, K. Pelrine, S. Rambhatla",
       "venue": "KDD 2026",
       "note": "Oral",
       "tldr": "Stress-testing how easily fine-tuning and tampering can strip safety from open LLMs.",
@@ -44,7 +44,7 @@
       "links": [
         {
           "label": "PAPER",
-          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0735675725000476?CMX_ID=&SIS_ID=&dgcid=STMJ_219742_AUTH_SERV_PA&utm_acid=296467436&utm_campaign=STMJ_219742_AUTH_SERV_PA&utm_in=DM537714&utm_medium=email&utm_source=AC_"
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0735675725000476"
         }
       ]
     },
@@ -69,6 +69,7 @@
       "title": "LangDA: Language-guided Domain Adaptive Semantic Segmentation",
       "authors": "C. Liu, <u>S. Hossain</u>, C. Thomas, K. Lai, R. Vemulapalli, S. Rambhatla, A. Wong",
       "venue": "AFM @ NeurIPS 2024",
+      "note": "Best Vision Paper, CVIS 2024",
       "tldr": "Adapting image segmentation models to new domains using language descriptions of scenes.",
       "thumbnail": "images/thumbs/langda.png",
       "links": [
@@ -96,7 +97,7 @@
       ]
     },
     {
-      "title": "Are all classes created equal? Domain Generalization for Domain-Linked Classes",
+      "title": "Are All Classes Created Equal? Domain Generalization for Domain-Linked Classes",
       "authors": "K. Kaai, <u>S. Hossain</u>, S. Rambhatla",
       "venue": "DistShift @ NeurIPS 2023",
       "tldr": "Generalizing classes seen in only one training domain to new, unseen domains.",
@@ -121,14 +122,14 @@
       "links": [
         {
           "label": "PAPER",
-          "url": "https://openreview.net/forum?id=fkFFh4fAbH&"
+          "url": "https://openreview.net/forum?id=fkFFh4fAbH"
         }
       ]
     },
     {
       "title": "Building Spatio-temporal Transformers for Egocentric 3D Pose Estimation",
       "authors": "J. Park, K. Kaai, <u>S. Hossain</u>, N. Sumi, S. Rambhatla, P. Fieguth",
-      "venue": "EGO4D @ CVPR 2022",
+      "venue": "Ego4D @ CVPR 2022",
       "note": "Oral",
       "tldr": "Transformers that use past video frames to estimate 3D body pose from head-mounted cameras.",
       "thumbnail": "images/thumbs/egostan-cvpr.png",
@@ -142,6 +143,44 @@
   ],
   "panelsAndMedia": [
     {
+      "title": "Open models have real benefits. Do they outweigh the risks?",
+      "role": "Quoted",
+      "venue": "MIT Technology Review, 2026",
+      "quote": "My reason for optimism is that it’s a very active area of research, and a lot of people are trying to come up with new and better methods.",
+      "thumbnail": "images/thumbs/mit-tech-review.png",
+      "links": [
+        {
+          "label": "PRESS",
+          "url": "https://www.technologyreview.com/2026/10/13/1146366/open-models-have-real-benefits-do-they-outweigh-the-risks/"
+        }
+      ]
+    },
+    {
+      "title": "Major security weaknesses found in leading open AI models",
+      "role": "Quoted",
+      "venue": "University of Waterloo News, 2026",
+      "quote": "The defences available today don’t yet appear strong enough to guarantee that a publicly released model will remain safe once it’s in the hands of anyone who chooses to modify it.",
+      "thumbnail": "images/thumbs/uwaterloo.png",
+      "links": [
+        {
+          "label": "PRESS",
+          "url": "https://uwaterloo.ca/news/media/major-security-weaknesses-found-leading-open-ai-models"
+        }
+      ]
+    },
+    {
+      "title": "Tests raise fears open AI models could be ‘used at scale for harm’",
+      "role": "Research Featured",
+      "venue": "Waterloo Engineering News, 2026",
+      "thumbnail": "images/thumbs/uwaterloo.png",
+      "links": [
+        {
+          "label": "PRESS",
+          "url": "https://uwaterloo.ca/engineering/news/tests-raise-fears-open-ai-models-could-be-used-scale-harm"
+        }
+      ]
+    },
+    {
       "title": "Translational Pathways in Biomedical Engineering: From Lab to Clinic",
       "role": "Panelist",
       "venue": "CUBEC, 2026",
@@ -154,9 +193,9 @@
       ]
     },
     {
-      "title": "Featured in News Article: BME Undergraduate Student Received Honorable Mention for Outstanding Undergraduate Researcher Award",
+      "title": "BME undergraduate student received Honorable Mention for Outstanding Undergraduate Researcher Award",
       "role": "Featured",
-      "venue": "University of Waterloo SYDE News, 2025",
+      "venue": "University of Waterloo Systems Design Engineering News, 2025",
       "thumbnail": "images/thumbs/cra-award.png",
       "links": [
         {
@@ -180,7 +219,7 @@
     {
       "title": "Enhancing AI Testing: The Power of Metadata Hydration",
       "role": "Key Speaker",
-      "venue": "Live Webinar, Kolena, 2024",
+      "venue": "Kolena Webinar, 2024",
       "thumbnail": "images/thumbs/ai-testing.png",
       "links": [
         {
@@ -191,8 +230,8 @@
     },
     {
       "title": "Mastering RAG Systems for LLMs: From Pitfalls to Performance",
-      "role": "Panelist",
-      "venue": "Live Webinar, Kolena, 2024",
+      "role": "Panelist &amp; Slide Author",
+      "venue": "Kolena Webinar, 2024",
       "thumbnail": "images/thumbs/rag-webinar.png",
       "links": [
         {
@@ -204,7 +243,7 @@
     {
       "title": "Inertial Measurement Unit (IMU) Feature Extraction",
       "role": "Presenter",
-      "venue": "Crash Workshop on Physiological Computing, Waterloo, 2022",
+      "venue": "Physiological Computing Hands-On Workshop, Waterloo, 2022",
       "thumbnail": "images/thumbs/imu-talk.png",
       "links": [
         {

@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/components.css">
 
+    <link rel="stylesheet" href="css/pages/publications.css">
     <link rel="stylesheet" href="css/pages/experience.css">
 </head>
 <body>
@@ -32,211 +33,400 @@
 </nav>
 
     <main class="content">
-        <h2>Professional Experience</h2>
+        <!-- CSS-only filter: the radios must stay siblings that come before .track-bar and both sections -->
+        <input class="track-input" type="radio" name="track" id="track-all" checked>
+        <input class="track-input" type="radio" name="track" id="track-industry">
+        <input class="track-input" type="radio" name="track" id="track-research">
+        <div class="track-bar">
+            <span class="track-bar__label" aria-hidden="true">Show</span>
+            <div class="track-filter">
+                <label for="track-all">All</label>
+                <label for="track-industry">Industry</label>
+                <label for="track-research">Research</label>
+            </div>
+        </div>
 
-            <div class="exp-list stagger">
+        <section class="xp-track xp-track--industry">
+        <h2>Industry Experience</h2>
+
+        <div class="xp-list stagger">
+            
+            <article class="card xp xp--multi xp--current" id="deep-breathe">
+    <header class="xp-head">
+        <span class="xp-logo"><img src="images/deepbreathe.png" alt="" width="52" height="52"></span>
+        <div class="xp-head-text">
+            <h3 class="xp-company">Deep Breathe</h3>
+            <p class="xp-where">London, ON<span class="xp-sep" aria-hidden="true">·</span>Co-op in 2022, full-time since May 2025</p>
+        </div>
+        <p class="xp-span">Sep 2022 – Present</p>
+    </header>
+    <div class="xp-roles">
+        
+        <section class="xp-role" data-current="true">
+            <div class="xp-role-head">
+                <h4 class="xp-title">Machine Learning Engineer</h4>
+                <span class="xp-now">Current</span>
+                <span class="xp-dates">May 2025 – Present</span>
+            </div>
+            <p class="xp-summary">Spearheading development of multiple ML models for diagnostic lung ultrasound, and the labeling and training infrastructure behind them.</p>
+            <ul class="xp-metrics" aria-label="Key results">
                 
-                <article class="card exp-card">
-                    <div class="exp-header">
-                        <div class="exp-logo-wrap">
-                            <img src="images/deepbreathe-icon.jfif" alt="Deep Breathe" class="exp-logo">
-                        </div>
-                        <div class="exp-header-text">
-                            <h3 class="exp-title">Machine Learning Developer</h3>
-                            <p class="exp-company">Deep Breathe</p>
-                        </div>
-                        <div class="exp-meta">
-                            <span class="exp-date"><i class="far fa-calendar"></i>Sep 2022 – Present</span>
-                            <span class="exp-location"><i class="fas fa-location-dot"></i>London, ON</span>
-                        </div>
-                    </div>
-                    <details class="exp-details">
-                        <summary><span class="exp-summary-text">Built AI-powered systems to automate the diagnosis of lung ultrasound scans.</span><i class="fas fa-chevron-down exp-chevron"></i></summary>
-                        <ul class="exp-bullets">
-                            
-                            <li>Developed AI based screening tool confirming with 96% certainty the presence of fluid in lung ultrasound scans.</li>
-                            
-                            <li>Achieved 80% accuracy (IoU) in segmenting effusions and consolidations in lung-ultrasound using TensorFlow.</li>
-                            
-                            <li>Implemented MLOps pipeline using Azure, SQL & OpenCV to process, ingest & version data for FDA approval.</li>
-                            
-                            <li>Integrated WandB into ML projects for dash-boarding and logging visuals during training and evaluation.</li>
-                            
-                            <li>Reduced dataset fetching time by 91% through cross-platform deployment of pipeline producing 7.8 million M-Mode images from 140,000 B-Mode videos per version, automated through Unix & Shell scripting.</li>
-                            
-                        </ul>
-                    </details>
-                </article>
+                <li class="xp-metric"><strong class="xp-metric__value">5x</strong> <span class="xp-metric__label">faster labeling per video (10 → 2 min) via a PyTorch annotation tracker</span></li>
                 
-                <article class="card exp-card">
-                    <div class="exp-header">
-                        <div class="exp-logo-wrap">
-                            <img src="images/kolena.webp" alt="Kolena Inc." class="exp-logo">
-                        </div>
-                        <div class="exp-header-text">
-                            <h3 class="exp-title">Machine Learning Intern</h3>
-                            <p class="exp-company">Kolena Inc.</p>
-                        </div>
-                        <div class="exp-meta">
-                            <span class="exp-date"><i class="far fa-calendar"></i>Jan 2024 – Aug 2024</span>
-                            <span class="exp-location"><i class="fas fa-location-dot"></i>San Francisco, CA</span>
-                        </div>
-                    </div>
-                    <details class="exp-details">
-                        <summary><span class="exp-summary-text">Enhancing the way Machine Learning systems are evaluated.</span><i class="fas fa-chevron-down exp-chevron"></i></summary>
-                        <ul class="exp-bullets">
-                            
-                            <li>Automated evaluation of Gen-AI by fine-tuning Vision-Language models to model human preference.</li>
-                            
-                            <li>Improved RAG Generator accuracy by 8% on finance data through improved PDF-parsing & LLM-prompting.</li>
-                            
-                            <li>Accelerated creation of textual datasets by 15x by building an LLM powered web-application using Streamlit.</li>
-                            
-                            <li>Enhanced detection of AI model errors for users by building data analysis pipeline identifying edge cases.</li>
-                            
-                        </ul>
-                    </details>
-                </article>
+                <li class="xp-metric"><strong class="xp-metric__value">500+</strong> <span class="xp-metric__label">training experiments on GCP Vertex AI and the team’s Slurm GPU server</span></li>
                 
-                <article class="card exp-card">
-                    <div class="exp-header">
-                        <div class="exp-logo-wrap">
-                            <img src="images/playfitt.png" alt="IntelliSports" class="exp-logo">
-                        </div>
-                        <div class="exp-header-text">
-                            <h3 class="exp-title">Software Engineering Intern</h3>
-                            <p class="exp-company">IntelliSports</p>
-                        </div>
-                        <div class="exp-meta">
-                            <span class="exp-date"><i class="far fa-calendar"></i>Sep 2022 – Aug 2024</span>
-                            <span class="exp-location"><i class="fas fa-location-dot"></i>Montreal, QC</span>
-                        </div>
-                    </div>
-                    <details class="exp-details">
-                        <summary><span class="exp-summary-text">Developed activity recognition pipelines and modeled user application usage.</span><i class="fas fa-chevron-down exp-chevron"></i></summary>
-                        <ul class="exp-bullets">
-                            
-                            <li>Boosted cheat-detection accuracy by 30% by feature engineering IMU Sensor data using Scikit-learn & SciPy</li>
-                            
-                            <li>Optimized inference speed on CPU machine to 1.8x original by leveraging light-weight sklearn models.</li>
-                            
-                            <li>Elevated mission count by 2.3x by deploying detection pipelines on EC2 for punch, crunch, high-knee, & jump.</li>
-                            
-                            <li>Identified onboarding flow with +50% retention by conducting decision-tree & SVM analysis on early user data.</li>
-                            
-                            <li>Built data visualization platform, showcasing user physical activity growth of 300%, employed in pitches that secured $1.4 million in funding using PHP and MySQL.</li>
-                            
-                        </ul>
-                    </details>
-                </article>
+                <li class="xp-metric"><strong class="xp-metric__value">Millions</strong> <span class="xp-metric__label">of frames labeled on V7 Darwin infrastructure built from scratch</span></li>
+                
+            </ul>
+            
+            
+            <div class="xp-foot">
+                <ul class="xp-tags" aria-label="Tools and methods">
+                    <li class="tag">PyTorch</li><li class="tag">Slurm</li><li class="tag">GCP Vertex AI</li><li class="tag">V7 Darwin</li><li class="tag">Labelbox</li><li class="tag">SQL</li>
+                </ul>
                 
             </div>
-
-            <h2>Research Experience</h2>
-
-            <div class="exp-list stagger">
+            <details class="xp-more">
+                <summary>Contributions<span class="sr-only"> as Machine Learning Engineer, Deep Breathe</span><i class="fas fa-chevron-down xp-more__chev" aria-hidden="true"></i></summary>
+                <ul class="xp-bullets">
+                    
+                    <li>Spearheading development of multiple ML models for diagnostic ultrasound that run on-device in real time.</li>
+                    
+                    <li>Set up Slurm on the team’s GPU server and ran 500+ training experiments across it and GCP Vertex AI.</li>
+                    
+                    <li>Built and led the labeling infrastructure on V7 Darwin (GCP, SQL) from scratch, used to label millions of frames.</li>
+                    
+                    <li>Automated clip ingestion into the training database, labeling-sprint setup and pre-label uploads through the V7 Darwin API.</li>
+                    
+                    <li>Built a PyTorch tracker propagating Labelbox annotations across frames, cutting labeling time per video 5x (10 to 2 min).</li>
+                    
+                </ul>
+            </details>
+        </section>
+        
+        <section class="xp-role" data-current="false">
+            <div class="xp-role-head">
+                <h4 class="xp-title">Machine Learning Developer (Co-op &amp; Part-time)</h4>
                 
-                <article class="card exp-card">
-                    <div class="exp-header">
-                        <div class="exp-logo-wrap">
-                            <img src="images/criticalml.png" alt="Critical Machine Learning Lab" class="exp-logo">
-                        </div>
-                        <div class="exp-header-text">
-                            <h3 class="exp-title">Student Researcher</h3>
-                            <p class="exp-company">Critical Machine Learning Lab</p>
-                        </div>
-                        <div class="exp-meta">
-                            <span class="exp-date"><i class="far fa-calendar"></i>Sep 2023 – Present</span>
-                            <span class="exp-location"><i class="fas fa-location-dot"></i>Waterloo, ON</span>
-                        </div>
-                    </div>
-                    <details class="exp-details">
-                        <summary><span class="exp-summary-text">Investigating ways on how AI models can adapt to new environments.</span><i class="fas fa-chevron-down exp-chevron"></i></summary>
-                        <ul class="exp-bullets">
-                            
-                            <li>Achieved State of the Art results in Domain Adaptive Semantic Segmentation using Vision-Language models.</li>
-                            
-                        </ul>
-                    </details>
-                </article>
+                <span class="xp-dates">Sep 2022 – Apr 2025</span>
+            </div>
+            <p class="xp-summary">Built AI systems and data pipelines to automate the diagnosis of lung ultrasound scans.</p>
+            <ul class="xp-metrics" aria-label="Key results">
                 
-                <article class="card exp-card">
-                    <div class="exp-header">
-                        <div class="exp-logo-wrap">
-                            <img src="images/vip.jpg" alt="Vision and Image Processing Lab" class="exp-logo">
-                        </div>
-                        <div class="exp-header-text">
-                            <h3 class="exp-title">Research Assistant</h3>
-                            <p class="exp-company">Vision and Image Processing Lab</p>
-                        </div>
-                        <div class="exp-meta">
-                            <span class="exp-date"><i class="far fa-calendar"></i>Jan 2022 – Apr 2023</span>
-                            <span class="exp-location"><i class="fas fa-location-dot"></i>Waterloo, ON</span>
-                        </div>
-                    </div>
-                    <details class="exp-details">
-                        <summary><span class="exp-summary-text">Researched ego-centric pose estimation techniques using spatio-temporal analysis.</span><i class="fas fa-chevron-down exp-chevron"></i></summary>
-                        <ul class="exp-bullets">
-                            
-                            <li>Outperformed Egocentric HPE State of the Art by 38% via insertion of spatio-temporal data using Transformers.</li>
-                            
-                        </ul>
-                    </details>
-                </article>
+                <li class="xp-metric"><strong class="xp-metric__value">0.90 / 0.89</strong> <span class="xp-metric__label">sensitivity / specificity of the effusion classifier on a 2-hospital holdout</span></li>
                 
-                <article class="card exp-card">
-                    <div class="exp-header">
-                        <div class="exp-logo-wrap">
-                            <img src="images/sirrl.png" alt="Social and intelligent Robotics Research Lab" class="exp-logo">
-                        </div>
-                        <div class="exp-header-text">
-                            <h3 class="exp-title">Research Assistant</h3>
-                            <p class="exp-company">Social and intelligent Robotics Research Lab</p>
-                        </div>
-                        <div class="exp-meta">
-                            <span class="exp-date"><i class="far fa-calendar"></i>Sep 2021 – Dec 2021</span>
-                            <span class="exp-location"><i class="fas fa-location-dot"></i>Waterloo, ON</span>
-                        </div>
-                    </div>
-                    <details class="exp-details">
-                        <summary><span class="exp-summary-text">Implemented suite of (IMU) feature extraction algorithms for Human Robot Interaction.</span><i class="fas fa-chevron-down exp-chevron"></i></summary>
-                        <ul class="exp-bullets">
-                            
-                            <li>Researched and implemented suite of feature extraction algorithms relevant to singla detection for AI.</li>
-                            
-                        </ul>
-                    </details>
-                </article>
+                <li class="xp-metric"><strong class="xp-metric__value">7.8M</strong> <span class="xp-metric__label">M-mode images from 140K B-mode videos per dataset version</span></li>
                 
-                <article class="card exp-card">
-                    <div class="exp-header">
-                        <div class="exp-logo-wrap">
-                            <img src="images/robohub.jfif" alt="Human Centered Robotics and Machine Intelligence Lab" class="exp-logo">
-                        </div>
-                        <div class="exp-header-text">
-                            <h3 class="exp-title">Research Intern</h3>
-                            <p class="exp-company">Human Centered Robotics and Machine Intelligence Lab</p>
-                        </div>
-                        <div class="exp-meta">
-                            <span class="exp-date"><i class="far fa-calendar"></i>May 2021 – Aug 2021</span>
-                            <span class="exp-location"><i class="fas fa-location-dot"></i>Waterloo, ON</span>
-                        </div>
-                    </div>
-                    <details class="exp-details">
-                        <summary><span class="exp-summary-text">Developed and deployed facial and emotion recognition pipeline on humanoid robot.</span><i class="fas fa-chevron-down exp-chevron"></i></summary>
-                        <ul class="exp-bullets">
-                            
-                            <li>Delivered 99.3% on LFW (Face ID) and 72.7% on FER2013 (Emotion) benchmarks using DLIB and Tensorflow.</li>
-                            
-                            <li>Designed multi-input Keras model using pybind11 bindings of a C++ toolkit, informed by t-SNE data analysis.</li>
-                            
-                            <li>Deployed facial identity and emotion recognition pipeline using ROS, Flask and PostgresSQL on the Reem-C robot, highlighted by researchers in International Robotics conferences.</li>
-                            
-                        </ul>
-                    </details>
-                </article>
+                <li class="xp-metric"><strong class="xp-metric__value">Minutes</strong> <span class="xp-metric__label">to build a 1K-clip dataset, down from 1–2 hours</span></li>
+                
+            </ul>
+            
+            <ul class="xp-papers" aria-label="Papers from this role">
+                
+                <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0735675725000476" target="_blank" rel="noopener" class="xp-paper"><span class="pub-venue pub-venue--journal">AJEM 2025</span><span class="xp-paper__name">Pleural-effusion classifier</span><i class="fas fa-arrow-up-right-from-square xp-paper__icon" aria-hidden="true"></i></a></li>
+                
+            </ul>
+            
+            
+            <div class="xp-foot">
+                <ul class="xp-tags" aria-label="Tools and methods">
+                    <li class="tag">Python</li><li class="tag">Azure</li><li class="tag">SQL</li><li class="tag">OpenCV</li><li class="tag">Bash</li><li class="tag">Weights &amp; Biases</li>
+                </ul>
                 
             </div>
+            <details class="xp-more">
+                <summary>Contributions<span class="sr-only"> as Machine Learning Developer (Co-op &amp; Part-time), Deep Breathe</span><i class="fas fa-chevron-down xp-more__chev" aria-hidden="true"></i></summary>
+                <ul class="xp-bullets">
+                    
+                    <li>Led development of an effusion classifier: 0.90 sensitivity, 0.89 specificity on a 239-clip holdout from 2 hospitals (AJEM ’25).</li>
+                    
+                    <li>Converted an earlier lung-ultrasound model for on-device inference in Deep Breathe’s mobile apps.</li>
+                    
+                    <li>Built Azure/SQL data pipelines (Python, Bash, OpenCV) that ingest, process and version ultrasound data, generating 7.8M M-mode images from 140K B-mode videos per version.</li>
+                    
+                    <li>Cut 1K-clip dataset builds from 1–2 hours to minutes: teams now download prebuilt, versioned datasets.</li>
+                    
+                    <li>Integrated Weights &amp; Biases into ML projects for training dashboards and evaluation logging.</li>
+                    
+                </ul>
+            </details>
+        </section>
+        
+    </div>
+</article>
+
+            
+            <article class="card xp xp--single" id="kolena">
+    <header class="xp-head">
+        <span class="xp-logo"><img src="images/kolena.webp" alt="" width="52" height="52"></span>
+        <div class="xp-head-text">
+            <h3 class="xp-company">Kolena</h3>
+            <p class="xp-where">San Francisco, CA</p>
+        </div>
+        
+    </header>
+    <div class="xp-roles">
+        
+        <section class="xp-role" data-current="false">
+            <div class="xp-role-head">
+                <h4 class="xp-title">Machine Learning Research Intern</h4>
+                
+                <span class="xp-dates">Jan 2024 – Aug 2024</span>
+            </div>
+            <p class="xp-summary">LLM evaluation, RAG and test-data tooling around Kolena’s AI Quality Platform.</p>
+            <ul class="xp-metrics" aria-label="Key results">
+                
+                <li class="xp-metric"><strong class="xp-metric__value">80% → 93%</strong> <span class="xp-metric__label">RAG answer accuracy on financial PDFs after rebuilt parsing and prompting</span></li>
+                
+                <li class="xp-metric"><strong class="xp-metric__value">3x</strong> <span class="xp-metric__label">less manual review with a fine-tuned LLM judge for Qwen-VL outputs</span></li>
+                
+                <li class="xp-metric"><strong class="xp-metric__value">5x</strong> <span class="xp-metric__label">faster text-dataset creation with a Q&amp;A-drafting tool</span></li>
+                
+            </ul>
+            
+            
+            <div class="xp-foot">
+                <ul class="xp-tags" aria-label="Tools and methods">
+                    <li class="tag">LLM fine-tuning</li><li class="tag">RAG</li><li class="tag">LangChain</li><li class="tag">OpenAI SDK</li><li class="tag">Streamlit</li><li class="tag">OpenCV</li><li class="tag">spaCy</li>
+                </ul>
+                
+                <div class="xp-links">
+                    <a href="https://www.youtube.com/watch?v=E-eTSJNgOHw" target="_blank" rel="noopener" class="link-pill"><i class="fas fa-video" aria-hidden="true"></i>Metadata webinar</a><a href="https://www.youtube.com/watch?v=SGlEoihccW0" target="_blank" rel="noopener" class="link-pill"><i class="fas fa-video" aria-hidden="true"></i>RAG webinar</a>
+                </div>
+                
+            </div>
+            <details class="xp-more">
+                <summary>Contributions<span class="sr-only"> as Machine Learning Research Intern, Kolena</span><i class="fas fa-chevron-down xp-more__chev" aria-hidden="true"></i></summary>
+                <ul class="xp-bullets">
+                    
+                    <li>Fine-tuned an LLM judge to rate Qwen-VL descriptions against human preferences, cutting manual review volume 3x.</li>
+                    
+                    <li>Raised RAG answer accuracy on financial PDFs from 80% to 93% by rebuilding parsing and prompting (LangChain).</li>
+                    
+                    <li>Built a Streamlit + OpenAI SDK tool that drafts Q&amp;A and similar test samples, making text-dataset creation 5x faster.</li>
+                    
+                    <li>Shipped CV and NLP metadata extraction (OpenCV, NLTK, spaCy) in Kolena’s AI Quality Platform so users can stratify test sets and find model errors on edge cases; presented it in a webinar.</li>
+                    
+                </ul>
+            </details>
+        </section>
+        
+    </div>
+</article>
+
+            
+            <article class="card xp xp--single" id="intellisports">
+    <header class="xp-head">
+        <span class="xp-logo"><img src="images/playfitt.png" alt="" width="52" height="52"></span>
+        <div class="xp-head-text">
+            <h3 class="xp-company">IntelliSports</h3>
+            <p class="xp-where">Montreal, QC</p>
+        </div>
+        
+    </header>
+    <div class="xp-roles">
+        
+        <section class="xp-role" data-current="false">
+            <div class="xp-role-head">
+                <h4 class="xp-title">Software Engineering Intern</h4>
+                
+                <span class="xp-dates">Jan 2022 – Apr 2022</span>
+            </div>
+            <p class="xp-summary">Shipped activity-recognition models for a fitness app and analyzed user retention.</p>
+            <ul class="xp-metrics" aria-label="Key results">
+                
+                <li class="xp-metric"><strong class="xp-metric__value">25% → 55%</strong> <span class="xp-metric__label">IMU cheat-detection sensitivity, via feature engineering</span></li>
+                
+                <li class="xp-metric"><strong class="xp-metric__value">2 → 5</strong> <span class="xp-metric__label">workout missions after deploying four motion detectors on AWS EC2</span></li>
+                
+                <li class="xp-metric"><strong class="xp-metric__value">1.8x</strong> <span class="xp-metric__label">faster CPU inference with lightweight scikit-learn models</span></li>
+                
+            </ul>
+            
+            
+            <div class="xp-foot">
+                <ul class="xp-tags" aria-label="Tools and methods">
+                    <li class="tag">scikit-learn</li><li class="tag">SciPy</li><li class="tag">AWS EC2</li><li class="tag">PHP</li><li class="tag">MySQL</li>
+                </ul>
+                
+            </div>
+            <details class="xp-more">
+                <summary>Contributions<span class="sr-only"> as Software Engineering Intern, IntelliSports</span><i class="fas fa-chevron-down xp-more__chev" aria-hidden="true"></i></summary>
+                <ul class="xp-bullets">
+                    
+                    <li>More than doubled IMU cheat-detection sensitivity (25% to 55%) via feature engineering with scikit-learn and SciPy.</li>
+                    
+                    <li>Deployed punch, crunch, high-knee and jump detection on AWS EC2, growing the app’s workout missions from 2 to 5.</li>
+                    
+                    <li>Sped up CPU inference 1.8x by switching to lightweight scikit-learn models.</li>
+                    
+                    <li>Found, via decision-tree analysis of early user data, an onboarding path whose users were 1.5x likelier to be retained.</li>
+                    
+                    <li>Built a PHP/MySQL analytics dashboard of user activity growth, used in pitches that secured $1.4M in funding.</li>
+                    
+                </ul>
+            </details>
+        </section>
+        
+    </div>
+</article>
+
+            
+        </div>
+        </section>
+
+        <section class="xp-track xp-track--research">
+        <h2>Research Experience</h2>
+
+        <div class="xp-list stagger">
+            
+            <article class="card xp xp--single xp--current" id="critical-ml-lab">
+    <header class="xp-head">
+        <span class="xp-logo"><img src="images/criticalml.png" alt="" width="52" height="52"></span>
+        <div class="xp-head-text">
+            <h3 class="xp-company">Critical ML Lab</h3>
+            <p class="xp-where">Waterloo, ON</p>
+        </div>
+        
+    </header>
+    <div class="xp-roles">
+        
+        <section class="xp-role" data-current="true">
+            <div class="xp-role-head">
+                <h4 class="xp-title">Researcher</h4>
+                <span class="xp-now">Current</span>
+                <span class="xp-dates">Sep 2023 – Present</span>
+            </div>
+            <p class="xp-summary">LLM safety under fine-tuning and domain generalization. An undergraduate research assistant until graduating in 2025, now a researcher in the lab.</p>
+            <ul class="xp-metrics" aria-label="Key results">
+                
+                <li class="xp-metric"><strong class="xp-metric__value">10K+</strong> <span class="xp-metric__label">LoRA and full fine-tuning runs for TamperBench (20K GPU-hours)</span></li>
+                
+                <li class="xp-metric"><strong class="xp-metric__value">21</strong> <span class="xp-metric__label">open-weight LLMs stress-tested; safeguards fell on all 21</span></li>
+                
+                <li class="xp-metric"><strong class="xp-metric__value">KDD '26 Oral</strong> <span class="xp-metric__label">first-authored TamperBench, top 4.5% of papers</span></li>
+                
+            </ul>
+            
+            <ul class="xp-papers" aria-label="Papers from this role">
+                
+                <li><a href="https://arxiv.org/abs/2602.06911" target="_blank" rel="noopener" class="xp-paper"><span class="pub-venue pub-venue--conference">KDD 2026</span><span class="xp-paper__name">TamperBench</span><span class="badge-note">Oral · first author</span><i class="fas fa-arrow-up-right-from-square xp-paper__icon" aria-hidden="true"></i></a></li>
+                
+                <li><a href="https://ieeexplore.ieee.org/document/11121886" target="_blank" rel="noopener" class="xp-paper"><span class="pub-venue pub-venue--journal">TPAMI 2025</span><span class="xp-paper__name">FOND</span><i class="fas fa-arrow-up-right-from-square xp-paper__icon" aria-hidden="true"></i></a></li>
+                
+                <li><a href="https://openreview.net/forum?id=yKetbTItcu" target="_blank" rel="noopener" class="xp-paper"><span class="pub-venue pub-venue--workshop">AIA @ IJCAI 2025</span><span class="xp-paper__name">SafeTuneBed</span><i class="fas fa-arrow-up-right-from-square xp-paper__icon" aria-hidden="true"></i></a></li>
+                
+                <li><a href="https://openreview.net/forum?id=iyULilaeYx" target="_blank" rel="noopener" class="xp-paper"><span class="pub-venue pub-venue--workshop">AFM @ NeurIPS 2024</span><span class="xp-paper__name">LangDA</span><i class="fas fa-arrow-up-right-from-square xp-paper__icon" aria-hidden="true"></i></a></li>
+                
+            </ul>
+            
+            
+            <div class="xp-press">
+                <p class="xp-press__label"><i class="fas fa-newspaper" aria-hidden="true"></i>In the press</p>
+                <ul class="xp-press__list">
+                    
+                    <li><a href="https://www.technologyreview.com/2026/10/13/1146366/open-models-have-real-benefits-do-they-outweigh-the-risks/" target="_blank" rel="noopener" class="xp-press__item"><span class="xp-press__outlet">MIT Technology Review</span><span class="xp-press__role">Quoted, 2026</span></a></li>
+                    
+                    <li><a href="https://uwaterloo.ca/news/media/major-security-weaknesses-found-leading-open-ai-models" target="_blank" rel="noopener" class="xp-press__item"><span class="xp-press__outlet">University of Waterloo News</span><span class="xp-press__role">Quoted, 2026</span></a></li>
+                    
+                    <li><a href="https://uwaterloo.ca/engineering/news/tests-raise-fears-open-ai-models-could-be-used-scale-harm" target="_blank" rel="noopener" class="xp-press__item"><span class="xp-press__outlet">Waterloo Engineering News</span><span class="xp-press__role">Research Featured, 2026</span></a></li>
+                    
+                </ul>
+            </div>
+            
+            <div class="xp-foot">
+                <ul class="xp-tags" aria-label="Tools and methods">
+                    <li class="tag">LoRA / full fine-tuning</li><li class="tag">Multi-GPU training</li><li class="tag">LLM safety evaluation</li><li class="tag">Domain generalization</li><li class="tag">Vision-language models</li>
+                </ul>
+                
+            </div>
+            <details class="xp-more">
+                <summary>Contributions<span class="sr-only"> as Researcher, Critical ML Lab</span><i class="fas fa-chevron-down xp-more__chev" aria-hidden="true"></i></summary>
+                <ul class="xp-bullets">
+                    
+                    <li>First-authored TamperBench with FAR.AI (KDD ’26 Oral, top 4.5%): stress-tested 21 open-weight LLMs against 9 tampering attacks in 10K+ LoRA/full fine-tuning runs (20K GPU-hours, up to 8 GPUs); safeguards fell on all 21.</li>
+                    
+                    <li>Set TamperBench’s initial roadmap and task split for an 11-author team from 5 institutions.</li>
+                    
+                    <li>Quoted in MIT Technology Review and University of Waterloo News (2026) as TamperBench’s lead author.</li>
+                    
+                    <li>Created SafeTuneBed (IJCAI ’25 workshop), an open-source toolkit benchmarking LLM safety defenses under fine-tuning.</li>
+                    
+                    <li>Built FOND’s training/eval pipelines (T-PAMI ’25); the method lifted tumor-detection accuracy 9% at unseen hospitals.</li>
+                    
+                    <li>Co-authored Apple-funded LangDA: state-of-the-art domain-adaptive semantic segmentation with vision-language models (NeurIPS ’24 workshop; Best Vision Paper, CVIS ’24).</li>
+                    
+                </ul>
+            </details>
+        </section>
+        
+    </div>
+</article>
+
+            
+
+            <section class="card xp-earlier" aria-labelledby="earlier-heading">
+                <h3 class="xp-earlier__heading" id="earlier-heading">Earlier research at Waterloo</h3>
+                <ul class="xp-earlier__list">
+                    
+                    <li class="xp-row">
+                        <span class="xp-row__logo"><img src="images/vip.jpg" alt="" width="32" height="32"></span>
+                        <div class="xp-row__body">
+                            <div class="xp-row__head">
+                                <p class="xp-row__title">Research Assistant<span class="xp-sep" aria-hidden="true">·</span><span class="xp-row__org">Vision and Image Processing Lab</span></p>
+                                <span class="xp-dates">Jan 2022 – Apr 2023</span>
+                            </div>
+                            <p class="xp-row__result">Co-developed Nissan-funded Ego-STAN, spatio-temporal Transformers for egocentric 3D pose: <b>38% lower error</b> on hardest joints with <b>22% fewer parameters</b> (KDD ’23; CVPR ’22 workshop oral).</p>
+                            
+                            <details class="xp-more xp-more--row">
+                                <summary>More<span class="sr-only"> from Vision and Image Processing Lab</span><i class="fas fa-chevron-down xp-more__chev" aria-hidden="true"></i></summary>
+                                <ul class="xp-bullets">
+                                    
+                                    <li>Co-authored Implicit Stylization for Domain Adaptation (ICLR ’23 Domain Generalization workshop).</li>
+                                    
+                                </ul>
+                            </details>
+                            
+                        </div>
+                    </li>
+                    
+                    <li class="xp-row">
+                        <span class="xp-row__logo"><img src="images/sirrl.png" alt="" width="32" height="32"></span>
+                        <div class="xp-row__body">
+                            <div class="xp-row__head">
+                                <p class="xp-row__title">Research Assistant<span class="xp-sep" aria-hidden="true">·</span><span class="xp-row__org">Social and Intelligent Robotics Research Lab</span></p>
+                                <span class="xp-dates">Sep 2021 – Dec 2021</span>
+                            </div>
+                            <p class="xp-row__result">Implemented IMU feature extraction for human-robot interaction and contributed it to the <b>HRI Physio Lib</b> toolkit.</p>
+                            
+                        </div>
+                    </li>
+                    
+                    <li class="xp-row">
+                        <span class="xp-row__logo"><img src="images/robohub.jfif" alt="" width="32" height="32"></span>
+                        <div class="xp-row__body">
+                            <div class="xp-row__head">
+                                <p class="xp-row__title">Research Intern<span class="xp-sep" aria-hidden="true">·</span><span class="xp-row__org">Human-Centred Robotics and Machine Intelligence Lab</span></p>
+                                <span class="xp-dates">May 2021 – Aug 2021</span>
+                            </div>
+                            <p class="xp-row__result">Implemented face identification (dlib, 99.3% on LFW) and emotion recognition (72.7% on FER2013) on the <b>REEM-C humanoid robot</b> with ROS, Flask and PostgreSQL.</p>
+                            
+                            <details class="xp-more xp-more--row">
+                                <summary>More<span class="sr-only"> from Human-Centred Robotics and Machine Intelligence Lab</span><i class="fas fa-chevron-down xp-more__chev" aria-hidden="true"></i></summary>
+                                <ul class="xp-bullets">
+                                    
+                                    <li>Designed a multi-input Keras model for facial emotion recognition (pybind11 bindings of a C++ toolkit; t-SNE analysis).</li>
+                                    
+                                </ul>
+                            </details>
+                            
+                        </div>
+                    </li>
+                    
+                </ul>
+            </section>
+        </div>
+        </section>
     </main>
 </body>
 </html>

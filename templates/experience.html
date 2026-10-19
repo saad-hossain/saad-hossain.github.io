@@ -2,70 +2,72 @@
 <html lang="en">
 <head>
     {{> head}}
+    <link rel="stylesheet" href="css/pages/publications.css">
     <link rel="stylesheet" href="css/pages/experience.css">
 </head>
 <body>
     {{> navbar}}
     <main class="content">
-        <h2>Professional Experience</h2>
-
-            <div class="exp-list stagger">
-                {{#each professional}}
-                <article class="card exp-card">
-                    <div class="exp-header">
-                        <div class="exp-logo-wrap">
-                            <img src="{{logo}}" alt="{{company}}" class="exp-logo">
-                        </div>
-                        <div class="exp-header-text">
-                            <h3 class="exp-title">{{title}}</h3>
-                            <p class="exp-company">{{company}}</p>
-                        </div>
-                        <div class="exp-meta">
-                            <span class="exp-date"><i class="far fa-calendar"></i>{{startDate}} – {{endDate}}</span>
-                            <span class="exp-location"><i class="fas fa-location-dot"></i>{{location}}</span>
-                        </div>
-                    </div>
-                    <details class="exp-details">
-                        <summary><span class="exp-summary-text">{{summary}}</span><i class="fas fa-chevron-down exp-chevron"></i></summary>
-                        <ul class="exp-bullets">
-                            {{#each bullets}}
-                            <li>{{this}}</li>
-                            {{/each}}
-                        </ul>
-                    </details>
-                </article>
-                {{/each}}
+        <!-- CSS-only filter: the radios must stay siblings that come before .track-bar and both sections -->
+        <input class="track-input" type="radio" name="track" id="track-all" checked>
+        <input class="track-input" type="radio" name="track" id="track-industry">
+        <input class="track-input" type="radio" name="track" id="track-research">
+        <div class="track-bar">
+            <span class="track-bar__label" aria-hidden="true">Show</span>
+            <div class="track-filter">
+                <label for="track-all">All</label>
+                <label for="track-industry">Industry</label>
+                <label for="track-research">Research</label>
             </div>
+        </div>
 
-            <h2>Research Experience</h2>
+        <section class="xp-track xp-track--industry">
+        <h2>Industry Experience</h2>
 
-            <div class="exp-list stagger">
-                {{#each research}}
-                <article class="card exp-card">
-                    <div class="exp-header">
-                        <div class="exp-logo-wrap">
-                            <img src="{{logo}}" alt="{{company}}" class="exp-logo">
+        <div class="xp-list stagger">
+            {{#each professional}}
+            {{> xpcard}}
+            {{/each}}
+        </div>
+        </section>
+
+        <section class="xp-track xp-track--research">
+        <h2>Research Experience</h2>
+
+        <div class="xp-list stagger">
+            {{#each research}}
+            {{> xpcard}}
+            {{/each}}
+
+            <section class="card xp-earlier" aria-labelledby="earlier-heading">
+                <h3 class="xp-earlier__heading" id="earlier-heading">Earlier research at Waterloo</h3>
+                <ul class="xp-earlier__list">
+                    {{#each earlierResearch}}
+                    <li class="xp-row">
+                        <span class="xp-row__logo"><img src="{{logo}}" alt="" width="32" height="32"></span>
+                        <div class="xp-row__body">
+                            <div class="xp-row__head">
+                                <p class="xp-row__title">{{title}}<span class="xp-sep" aria-hidden="true">·</span><span class="xp-row__org">{{company}}</span></p>
+                                <span class="xp-dates">{{startDate}} – {{endDate}}</span>
+                            </div>
+                            <p class="xp-row__result">{{result}}</p>
+                            {{#if more}}
+                            <details class="xp-more xp-more--row">
+                                <summary>More<span class="sr-only"> from {{company}}</span><i class="fas fa-chevron-down xp-more__chev" aria-hidden="true"></i></summary>
+                                <ul class="xp-bullets">
+                                    {{#each more}}
+                                    <li>{{this}}</li>
+                                    {{/each}}
+                                </ul>
+                            </details>
+                            {{/if}}
                         </div>
-                        <div class="exp-header-text">
-                            <h3 class="exp-title">{{title}}</h3>
-                            <p class="exp-company">{{company}}</p>
-                        </div>
-                        <div class="exp-meta">
-                            <span class="exp-date"><i class="far fa-calendar"></i>{{startDate}} – {{endDate}}</span>
-                            <span class="exp-location"><i class="fas fa-location-dot"></i>{{location}}</span>
-                        </div>
-                    </div>
-                    <details class="exp-details">
-                        <summary><span class="exp-summary-text">{{summary}}</span><i class="fas fa-chevron-down exp-chevron"></i></summary>
-                        <ul class="exp-bullets">
-                            {{#each bullets}}
-                            <li>{{this}}</li>
-                            {{/each}}
-                        </ul>
-                    </details>
-                </article>
-                {{/each}}
-            </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </section>
+        </div>
+        </section>
     </main>
 </body>
 </html>

@@ -1,0 +1,62 @@
+<article class="card xp xp--{{layout}}{{#if current}} xp--current{{/if}}" id="{{id}}">
+    <header class="xp-head">
+        <span class="xp-logo"><img src="{{logo}}" alt="" width="52" height="52"></span>
+        <div class="xp-head-text">
+            <h3 class="xp-company">{{company}}</h3>
+            <p class="xp-where">{{location}}{{#if progression}}<span class="xp-sep" aria-hidden="true">·</span>{{progression}}{{/if}}</p>
+        </div>
+        {{#if span}}<p class="xp-span">{{span}}</p>{{/if}}
+    </header>
+    <div class="xp-roles">
+        {{#each roles}}
+        <section class="xp-role" data-current="{{isCurrent}}">
+            <div class="xp-role-head">
+                <h4 class="xp-title">{{title}}</h4>
+                {{#if isCurrent}}<span class="xp-now">Current</span>{{/if}}
+                <span class="xp-dates">{{startDate}} – {{endDate}}</span>
+            </div>
+            <p class="xp-summary">{{summary}}</p>
+            <ul class="xp-metrics" aria-label="Key results">
+                {{#each highlights}}
+                <li class="xp-metric"><strong class="xp-metric__value">{{value}}</strong> <span class="xp-metric__label">{{label}}</span></li>
+                {{/each}}
+            </ul>
+            {{#if papers}}
+            <ul class="xp-papers" aria-label="Papers from this role">
+                {{#each papers}}
+                <li><a href="{{url}}" target="_blank" rel="noopener" class="xp-paper"><span class="pub-venue pub-venue--{{venueClass}}">{{venue}}</span><span class="xp-paper__name">{{name}}</span>{{#if note}}<span class="badge-note">{{note}}</span>{{/if}}<i class="fas fa-arrow-up-right-from-square xp-paper__icon" aria-hidden="true"></i></a></li>
+                {{/each}}
+            </ul>
+            {{/if}}
+            {{#if showPress}}
+            <div class="xp-press">
+                <p class="xp-press__label"><i class="fas fa-newspaper" aria-hidden="true"></i>In the press</p>
+                <ul class="xp-press__list">
+                    {{#each press}}
+                    <li><a href="{{url}}" target="_blank" rel="noopener" class="xp-press__item"><span class="xp-press__outlet">{{outlet}}</span><span class="xp-press__role">{{role}}, {{year}}</span></a></li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{/if}}
+            <div class="xp-foot">
+                <ul class="xp-tags" aria-label="Tools and methods">
+                    {{#each tags}}<li class="tag">{{this}}</li>{{/each}}
+                </ul>
+                {{#if links}}
+                <div class="xp-links">
+                    {{#each links}}<a href="{{url}}" target="_blank" rel="noopener" class="link-pill"><i class="{{icon}}" aria-hidden="true"></i>{{label}}</a>{{/each}}
+                </div>
+                {{/if}}
+            </div>
+            <details class="xp-more">
+                <summary>Contributions<span class="sr-only"> as {{title}}, {{company}}</span><i class="fas fa-chevron-down xp-more__chev" aria-hidden="true"></i></summary>
+                <ul class="xp-bullets">
+                    {{#each bullets}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </details>
+        </section>
+        {{/each}}
+    </div>
+</article>

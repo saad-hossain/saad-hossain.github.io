@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "date": "10/13/26",
+      "content": "Received a mention in an <u>MIT Technology Review</u> article on the benefits and risks of open AI models."
+    },
+    {
+      "date": "08/25/26",
+      "content": "Our work <i>TamperBench</i> is featured by <u>Waterloo Engineering News</u>."
+    },
+    {
       "date": "05/20/26",
       "content": "Our work <i>TamperBench</i> is accepted to <u>KDD 2026</u> with an oral presentation (top 4.5% of papers)."
     },
@@ -10,7 +18,7 @@
     },
     {
       "date": "07/15/25",
-      "content": "Our work <i>FOND: Domain Generalization for Domain-Linked Classes</i> is accepted to <u>TPAMI</u>."
+      "content": "Our work <i>Bringing Equity to Classification: Domain Generalization for Domain-Linked Classes</i> is accepted to <u>TPAMI</u>."
     },
     {
       "date": "05/15/25",
@@ -18,7 +26,7 @@
     },
     {
       "date": "04/15/25",
-      "content": "Received the <u>Best Design Award</u> for our final year design project, <i>Augmented Reality to Improve Ultrasound Acquisition</i>."
+      "content": "Received the <u>Best Capstone Design Project</u> award for <i>Augmented Reality to Improve Ultrasound Acquisition</i>."
     },
     {
       "date": "01/15/25",
@@ -26,7 +34,7 @@
     },
     {
       "date": "12/18/24",
-      "content": "Selected as an <i>Honourable Mention</i> for <u>CRA Outstanding Undergraduate Researcher Award</u>."
+      "content": "Selected as an <i>Honorable Mention</i> for <u>CRA Outstanding Undergraduate Researcher Award</u>."
     },
     {
       "date": "12/04/24",
@@ -34,7 +42,7 @@
     },
     {
       "date": "12/03/24",
-      "content": "Our final year design project wins the <u>Yuen Family Foundation Award for Healthy Aging</u>."
+      "content": "Our final-year design project wins the <u>Yuen Family Foundation Award for Healthy Aging</u>."
     },
     {
       "date": "10/31/24",
@@ -42,11 +50,11 @@
     },
     {
       "date": "08/30/24",
-      "content": "Completed an 8-month co-op as a Machine Learning Intern at <u>Kolena</u>."
+      "content": "Completed an 8-month co-op as a Machine Learning Research Intern at <u>Kolena</u>."
     },
     {
       "date": "08/10/23",
-      "content": "Our work <i>Spatio-Temporal Self-Attention for Egocentric 3D Pose Estimation</i> is accepted to <u>KDD 2023</u>."
+      "content": "Our work <i>Domain-Guided Spatio-Temporal Self-Attention for Egocentric 3D Pose Estimation</i> is accepted to <u>KDD 2023</u>."
     }
   ]
 }

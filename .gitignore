@@ -13,3 +13,6 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+
+# Resume sources (application version contains a phone number; never publish)
+.assets/

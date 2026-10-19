@@ -21,6 +21,14 @@
                         <a href="{{url}}" target="_blank" rel="noopener" class="social-link" aria-label="{{label}}"><i class="{{icon}}"></i><span>{{label}}</span></a>
                         {{/each}}
                     </div>
+                    <div class="press-strip">
+                        <span class="press-strip__label">Quoted in</span>
+                        <ul class="press-strip__outlets">
+                            {{#each pressQuoted}}
+                            <li><a href="{{url}}" target="_blank" rel="noopener" class="press-strip__outlet">{{outlet}}</a></li>
+                            {{/each}}
+                        </ul>
+                    </div>
                 </div>
                 <div class="hero__photo-wrapper">
                     <img src="{{profile.profileImage}}" alt="Saad Hossain" class="hero__photo">

@@ -78,6 +78,17 @@
   line-height: 1.55;
 }
 
+/* Pull quote on press cards where Saad is quoted */
+.pub-quote {
+  font-size: 0.84rem;
+  font-style: italic;
+  color: var(--color-text-secondary);
+  margin: 0.15rem 0 0;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--color-border);
+  line-height: 1.55;
+}
+
 .pub-links {
   display: flex;
   gap: 0.5rem;

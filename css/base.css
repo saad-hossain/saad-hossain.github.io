@@ -28,7 +28,8 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html, body { overflow-x: hidden; }
+/* clip (not hidden) so body is not a scroll container and the sticky nav really sticks */
+html, body { overflow-x: clip; }
 
 body {
   font-family: var(--font-sans);

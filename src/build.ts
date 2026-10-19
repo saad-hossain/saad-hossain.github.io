@@ -14,15 +14,47 @@ interface NewsItem {
   content: string;
 }
 
-interface Experience {
+// Experience is grouped by employer: one card per company, one or more roles inside
+// (e.g. Deep Breathe co-op -> full-time). Highlights are the 2-3 headline results shown
+// without clicking; bullets stay behind the "all contributions" toggle.
+interface Highlight { value: string; label: string; }
+interface RolePaper { venue: string; name: string; url: string; note?: string; }
+interface RoleLink { label: string; url: string; kind?: string; }
+
+interface Role {
   title: string;
-  company: string;
-  location: string;
   startDate: string;
   endDate: string;
-  logo: string;
+  isCurrent: boolean;
   summary: string;
+  highlights: Highlight[];
+  tags: string[];
+  papers?: RolePaper[];
+  links?: RoleLink[];
+  showPress?: boolean;
   bullets: string[];
+}
+
+interface ExperienceGroup {
+  id: string;
+  company: string;
+  logo: string;
+  location: string;
+  layout: 'single' | 'multi';
+  current: boolean;
+  span?: string;
+  progression?: string;
+  roles: Role[];
+}
+
+interface EarlierRole {
+  title: string;
+  company: string;
+  logo: string;
+  startDate: string;
+  endDate: string;
+  result: string;
+  more?: string[];
 }
 
 interface Publication {
@@ -39,6 +71,7 @@ interface PanelMedia {
   title: string;
   role: string;
   venue: string;
+  quote?: string;
   thumbnail?: string;
   links: Array<{ label: string; url: string }>;
 }
@@ -58,7 +91,7 @@ const loadJson = <T>(filename: string): T => {
 
 const profile = loadJson<Profile>('profile.json');
 const news = loadJson<{ items: NewsItem[] }>('news.json');
-const experience = loadJson<{ professional: Experience[]; research: Experience[] }>('experience.json');
+const experience = loadJson<{ professional: ExperienceGroup[]; research: ExperienceGroup[]; earlierResearch: EarlierRole[] }>('experience.json');
 const publications = loadJson<{ publications: Publication[]; panelsAndMedia: PanelMedia[] }>('publications.json');
 
 // Classify venues into badge color classes (see css/pages/publications.css):
@@ -80,6 +113,7 @@ const LINK_ICONS: Record<string, string> = {
   TALK: 'fas fa-microphone',
   WEBINAR: 'fas fa-video',
   WORKSHOP: 'fas fa-chalkboard-user',
+  PRESS: 'fas fa-newspaper',
 };
 
 const withLinkIcons = <T extends { links: Array<{ label: string; url: string }> }>(item: T) => ({
@@ -96,6 +130,31 @@ const publicationsWithClasses = publications.publications.map(pub => ({
 }));
 
 const panelsWithIcons = publications.panelsAndMedia.map(withLinkIcons);
+
+// Experience: link icons (looked up by `kind`, falling back to the label), venue badge
+// classes for the papers a role produced, and the bullet count for the toggle label.
+// Optional arrays stay undefined when absent so {{#if}} can test for them.
+const iconFor = (link: RoleLink) =>
+  LINK_ICONS[(link.kind ?? link.label).toUpperCase()] ?? 'fas fa-arrow-up-right-from-square';
+
+const prepRole = (role: Role) => ({
+  ...role,
+  bulletCount: role.bullets.length,
+  ...(role.links ? { links: role.links.map(link => ({ ...link, icon: iconFor(link) })) } : {}),
+  ...(role.papers ? { papers: role.papers.map(paper => ({ ...paper, venueClass: venueClass(paper.venue) })) } : {}),
+});
+
+const prepGroup = (group: ExperienceGroup) => ({ ...group, roles: group.roles.map(prepRole) });
+
+// Press coverage = Panels and Media entries with a PRESS link (outlet name without the year)
+const press = publications.panelsAndMedia
+  .filter(item => item.links.some(link => link.label.toUpperCase() === 'PRESS'))
+  .map(item => ({
+    ...item,
+    outlet: item.venue.replace(/,\s*\d{4}$/, ''),
+    year: item.venue.match(/(\d{4})$/)?.[1] ?? '',
+    url: item.links[0].url,
+  }));
 
 // Featured subset shown on the homepage (full list lives on publications.html)
 const featuredPublications = publicationsWithClasses.slice(0, 3);
@@ -283,8 +342,11 @@ for (const page of pages) {
   const data = {
     profile,
     news: newsFormatted,
-    professional: experience.professional,
-    research: experience.research,
+    professional: experience.professional.map(prepGroup),
+    research: experience.research.map(prepGroup),
+    earlierResearch: experience.earlierResearch,
+    press,
+    pressQuoted: press.filter(p => p.role === 'Quoted'),
     publications: publicationsWithClasses,
     featuredPublications,
     panelsAndMedia: panelsWithIcons,
