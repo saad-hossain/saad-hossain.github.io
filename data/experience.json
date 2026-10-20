@@ -19,23 +19,21 @@
           "highlights": [
             {
               "value": "5x",
-              "label": "faster labeling per video (10 → 2 min) via a PyTorch annotation tracker"
+              "label": "faster labeling per video via a PyTorch annotation tracker"
             },
             {
               "value": "500+",
-              "label": "training experiments on GCP Vertex AI and the team’s Slurm GPU server"
+              "label": "training experiments on cloud and on-prem GPUs"
             },
             {
               "value": "Millions",
-              "label": "of frames labeled via a V7 Darwin integration built from scratch"
+              "label": "of frames annotated through labeling infrastructure built from scratch"
             }
           ],
           "tags": [
             "PyTorch",
+            "Computer vision",
             "Slurm",
-            "GCP Vertex AI",
-            "V7 Darwin",
-            "Labelbox",
             "SQL"
           ],
           "bullets": [
@@ -58,8 +56,8 @@
               "label": "sensitivity / specificity of the effusion classifier on a 2-hospital holdout"
             },
             {
-              "value": "7.8M",
-              "label": "M-mode images from 140K B-mode videos per dataset version"
+              "value": "Millions",
+              "label": "of M-mode frames generated per dataset version"
             },
             {
               "value": "Minutes",
