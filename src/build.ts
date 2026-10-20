@@ -91,7 +91,7 @@ const loadJson = <T>(filename: string): T => {
 
 const profile = loadJson<Profile>('profile.json');
 const news = loadJson<{ items: NewsItem[] }>('news.json');
-const experience = loadJson<{ professional: ExperienceGroup[]; research: ExperienceGroup[]; earlierResearch: EarlierRole[] }>('experience.json');
+const experience = loadJson<{ professional: ExperienceGroup[]; research: ExperienceGroup[]; earlierResearch: EarlierRole[]; roadmap: RoadStop[] }>('experience.json');
 const publications = loadJson<{ publications: Publication[]; panelsAndMedia: PanelMedia[] }>('publications.json');
 
 // Classify venues into badge color classes (see css/pages/publications.css):
@@ -130,6 +130,10 @@ const publicationsWithClasses = publications.publications.map(pub => ({
 }));
 
 const panelsWithIcons = publications.panelsAndMedia.map(withLinkIcons);
+// Publications page: press (articles about the work) and talks (panels, webinars, workshops) in separate sections
+const isPressItem = (m: PanelMedia) => m.links.some(link => ['PRESS', 'ARTICLE'].includes(link.label.toUpperCase()));
+const pressMedia = panelsWithIcons.filter(isPressItem);
+const talkMedia = panelsWithIcons.filter(m => !isPressItem(m));
 
 // Experience: link icons (looked up by `kind`, falling back to the label), venue badge
 // classes for the papers a role produced, and the bullet count for the toggle label.
@@ -145,6 +149,9 @@ const prepRole = (role: Role) => ({
 });
 
 const prepGroup = (group: ExperienceGroup) => ({ ...group, roles: group.roles.map(prepRole) });
+
+// Roadmap: one round logo badge per place on a straight line, oldest first; each links to its card.
+interface RoadStop { id: string; company: string; dates: string; track: 'industry' | 'research'; logo: string; badge: string; current?: boolean; }
 
 // Press coverage = Panels and Media entries with a PRESS link (outlet name without the year)
 const press = publications.panelsAndMedia
@@ -345,11 +352,14 @@ for (const page of pages) {
     professional: experience.professional.map(prepGroup),
     research: experience.research.map(prepGroup),
     earlierResearch: experience.earlierResearch,
+    roadmap: experience.roadmap,
     press,
     pressQuoted: press.filter(p => p.role === 'Quoted'),
     publications: publicationsWithClasses,
     featuredPublications,
     panelsAndMedia: panelsWithIcons,
+    pressMedia,
+    talkMedia,
     navigation: navItems,
     showSocialIcons: page.showSocialIcons,
     pageTitle: page.name === 'index' ? 'Saad Hossain' : `${navigation.items.find(n => n.id === page.activeNav)?.label} - Saad Hossain`

@@ -34,10 +34,37 @@
                 {{/each}}
             </div>
 
-            <h2>Panels and Media</h2>
+            <h2 id="press">In the Press</h2>
 
             <div class="pub-list stagger">
-                {{#each panelsAndMedia}}
+                {{#each pressMedia}}
+                <article class="card pub-card pub-card--media">
+                    {{#if thumbnail}}
+                    <div class="pub-thumb-wrap">
+                        <img src="{{thumbnail}}" alt="{{title}}" class="pub-thumb" loading="lazy">
+                    </div>
+                    {{/if}}
+                    <div class="pub-body">
+                        <div class="pub-meta">
+                            <span class="pub-venue pub-venue--role">{{role}}</span>
+                        </div>
+                        <h3 class="pub-title">{{title}}</h3>
+                        <p class="pub-authors">{{venue}}</p>
+                        {{#if quote}}<blockquote class="pub-quote">“{{quote}}”</blockquote>{{/if}}
+                        <div class="pub-links">
+                            {{#each links}}
+                            <a href="{{url}}" target="_blank" rel="noopener" class="link-pill"><i class="{{icon}}"></i>{{label}}</a>
+                            {{/each}}
+                        </div>
+                    </div>
+                </article>
+                {{/each}}
+            </div>
+
+            <h2 id="talks">Talks &amp; Panels</h2>
+
+            <div class="pub-list stagger">
+                {{#each talkMedia}}
                 <article class="card pub-card pub-card--media">
                     {{#if thumbnail}}
                     <div class="pub-thumb-wrap">

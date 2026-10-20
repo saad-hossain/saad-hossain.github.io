@@ -8,18 +8,18 @@
 <body>
     {{> navbar}}
     <main class="content">
-        <!-- CSS-only filter: the radios must stay siblings that come before .track-bar and both sections -->
-        <input class="track-input" type="radio" name="track" id="track-all" checked>
-        <input class="track-input" type="radio" name="track" id="track-industry">
-        <input class="track-input" type="radio" name="track" id="track-research">
-        <div class="track-bar">
-            <span class="track-bar__label" aria-hidden="true">Show</span>
-            <div class="track-filter">
-                <label for="track-all">All</label>
-                <label for="track-industry">Industry</label>
-                <label for="track-research">Research</label>
-            </div>
-        </div>
+        <nav class="rmap" aria-label="Where I've worked, oldest first">
+            <ol class="rmap__line">
+                {{#each roadmap}}
+                <li class="rmap__stop{{#if current}} is-current{{/if}}">
+                    <a href="#{{id}}" class="rmap__link" aria-label="{{company}}, {{dates}}">
+                        <img src="{{badge}}" alt="" class="rmap__badge" width="58" height="58">
+                        <span class="rmap__tip" aria-hidden="true"><strong>{{company}}</strong> · {{dates}}</span>
+                    </a>
+                </li>
+                {{/each}}
+            </ol>
+        </nav>
 
         <section class="xp-track xp-track--industry">
         <h2>Industry Experience</h2>
@@ -43,7 +43,7 @@
                 <h3 class="xp-earlier__heading" id="earlier-heading">Earlier research at Waterloo</h3>
                 <ul class="xp-earlier__list">
                     {{#each earlierResearch}}
-                    <li class="xp-row">
+                    <li class="xp-row" id="{{id}}">
                         <span class="xp-row__logo"><img src="{{logo}}" alt="" width="32" height="32"></span>
                         <div class="xp-row__body">
                             <div class="xp-row__head">

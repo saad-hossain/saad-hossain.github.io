@@ -33,18 +33,67 @@
 </nav>
 
     <main class="content">
-        <!-- CSS-only filter: the radios must stay siblings that come before .track-bar and both sections -->
-        <input class="track-input" type="radio" name="track" id="track-all" checked>
-        <input class="track-input" type="radio" name="track" id="track-industry">
-        <input class="track-input" type="radio" name="track" id="track-research">
-        <div class="track-bar">
-            <span class="track-bar__label" aria-hidden="true">Show</span>
-            <div class="track-filter">
-                <label for="track-all">All</label>
-                <label for="track-industry">Industry</label>
-                <label for="track-research">Research</label>
-            </div>
-        </div>
+        <nav class="rmap" aria-label="Where I've worked, oldest first">
+            <ol class="rmap__line">
+                
+                <li class="rmap__stop">
+                    <a href="#hcrmi" class="rmap__link" aria-label="HCRMI Lab, May – Aug 2021">
+                        <img src="images/logos/round/hcrmi.png" alt="" class="rmap__badge" width="58" height="58">
+                        <span class="rmap__tip" aria-hidden="true"><strong>HCRMI Lab</strong> · May – Aug 2021</span>
+                    </a>
+                </li>
+                
+                <li class="rmap__stop">
+                    <a href="#sirrl" class="rmap__link" aria-label="SIRRL, Sep – Dec 2021">
+                        <img src="images/logos/round/sirrl.png" alt="" class="rmap__badge" width="58" height="58">
+                        <span class="rmap__tip" aria-hidden="true"><strong>SIRRL</strong> · Sep – Dec 2021</span>
+                    </a>
+                </li>
+                
+                <li class="rmap__stop">
+                    <a href="#intellisports" class="rmap__link" aria-label="IntelliSports, Jan – Apr 2022">
+                        <img src="images/logos/round/intellisports.png" alt="" class="rmap__badge" width="58" height="58">
+                        <span class="rmap__tip" aria-hidden="true"><strong>IntelliSports</strong> · Jan – Apr 2022</span>
+                    </a>
+                </li>
+                
+                <li class="rmap__stop">
+                    <a href="#vip-lab" class="rmap__link" aria-label="VIP Lab, 2022 – 2023">
+                        <img src="images/logos/round/vip.png" alt="" class="rmap__badge" width="58" height="58">
+                        <span class="rmap__tip" aria-hidden="true"><strong>VIP Lab</strong> · 2022 – 2023</span>
+                    </a>
+                </li>
+                
+                <li class="rmap__stop">
+                    <a href="#deep-breathe" class="rmap__link" aria-label="Deep Breathe, 2022 – 2025">
+                        <img src="images/logos/round/deepbreathe.png" alt="" class="rmap__badge" width="58" height="58">
+                        <span class="rmap__tip" aria-hidden="true"><strong>Deep Breathe</strong> · 2022 – 2025</span>
+                    </a>
+                </li>
+                
+                <li class="rmap__stop is-current">
+                    <a href="#critical-ml-lab" class="rmap__link" aria-label="Critical ML Lab, 2023 – now">
+                        <img src="images/logos/round/criticalml.png" alt="" class="rmap__badge" width="58" height="58">
+                        <span class="rmap__tip" aria-hidden="true"><strong>Critical ML Lab</strong> · 2023 – now</span>
+                    </a>
+                </li>
+                
+                <li class="rmap__stop">
+                    <a href="#kolena" class="rmap__link" aria-label="Kolena, Jan – Aug 2024">
+                        <img src="images/logos/round/kolena.png" alt="" class="rmap__badge" width="58" height="58">
+                        <span class="rmap__tip" aria-hidden="true"><strong>Kolena</strong> · Jan – Aug 2024</span>
+                    </a>
+                </li>
+                
+                <li class="rmap__stop is-current">
+                    <a href="#deep-breathe" class="rmap__link" aria-label="Deep Breathe, 2025 – now">
+                        <img src="images/logos/round/deepbreathe.png" alt="" class="rmap__badge" width="58" height="58">
+                        <span class="rmap__tip" aria-hidden="true"><strong>Deep Breathe</strong> · 2025 – now</span>
+                    </a>
+                </li>
+                
+            </ol>
+        </nav>
 
         <section class="xp-track xp-track--industry">
         <h2>Industry Experience</h2>
@@ -53,7 +102,7 @@
             
             <article class="card xp xp--multi xp--current" id="deep-breathe">
     <header class="xp-head">
-        <span class="xp-logo"><img src="images/deepbreathe.png" alt="" width="52" height="52"></span>
+        <span class="xp-logo"><img src="images/logos/deepbreathe.png" alt="" width="52" height="52"></span>
         <div class="xp-head-text">
             <h3 class="xp-company">Deep Breathe</h3>
             <p class="xp-where">London, ON<span class="xp-sep" aria-hidden="true">·</span>Co-op in 2022, full-time since May 2025</p>
@@ -75,7 +124,7 @@
                 
                 <li class="xp-metric"><strong class="xp-metric__value">500+</strong> <span class="xp-metric__label">training experiments on GCP Vertex AI and the team’s Slurm GPU server</span></li>
                 
-                <li class="xp-metric"><strong class="xp-metric__value">Millions</strong> <span class="xp-metric__label">of frames labeled on V7 Darwin infrastructure built from scratch</span></li>
+                <li class="xp-metric"><strong class="xp-metric__value">Millions</strong> <span class="xp-metric__label">of frames labeled via a V7 Darwin integration built from scratch</span></li>
                 
             </ul>
             
@@ -94,7 +143,7 @@
                     
                     <li>Set up Slurm on the team’s GPU server and ran 500+ training experiments across it and GCP Vertex AI.</li>
                     
-                    <li>Built and led the labeling infrastructure on V7 Darwin (GCP, SQL) from scratch, used to label millions of frames.</li>
+                    <li>Built and led the labeling infrastructure for V7 Darwin (GCP, SQL) from scratch, used to label millions of frames.</li>
                     
                     <li>Automated clip ingestion into the training database, labeling-sprint setup and pre-label uploads through the V7 Darwin API.</li>
                     
@@ -158,7 +207,7 @@
             
             <article class="card xp xp--single" id="kolena">
     <header class="xp-head">
-        <span class="xp-logo"><img src="images/kolena.webp" alt="" width="52" height="52"></span>
+        <span class="xp-logo"><img src="images/logos/kolena.png" alt="" width="52" height="52"></span>
         <div class="xp-head-text">
             <h3 class="xp-company">Kolena</h3>
             <p class="xp-where">San Francisco, CA</p>
@@ -217,7 +266,7 @@
             
             <article class="card xp xp--single" id="intellisports">
     <header class="xp-head">
-        <span class="xp-logo"><img src="images/playfitt.png" alt="" width="52" height="52"></span>
+        <span class="xp-logo"><img src="images/logos/intellisports.png" alt="" width="52" height="52"></span>
         <div class="xp-head-text">
             <h3 class="xp-company">IntelliSports</h3>
             <p class="xp-where">Montreal, QC</p>
@@ -282,7 +331,7 @@
             
             <article class="card xp xp--single xp--current" id="critical-ml-lab">
     <header class="xp-head">
-        <span class="xp-logo"><img src="images/criticalml.png" alt="" width="52" height="52"></span>
+        <span class="xp-logo"><img src="images/logos/criticalml.png" alt="" width="52" height="52"></span>
         <div class="xp-head-text">
             <h3 class="xp-company">Critical ML Lab</h3>
             <p class="xp-where">Waterloo, ON</p>
@@ -364,34 +413,74 @@
 </article>
 
             
+            <article class="card xp xp--single" id="vip-lab">
+    <header class="xp-head">
+        <span class="xp-logo"><img src="images/logos/vip.png" alt="" width="52" height="52"></span>
+        <div class="xp-head-text">
+            <h3 class="xp-company">Vision and Image Processing Lab</h3>
+            <p class="xp-where">Waterloo, ON</p>
+        </div>
+        
+    </header>
+    <div class="xp-roles">
+        
+        <section class="xp-role" data-current="false">
+            <div class="xp-role-head">
+                <h4 class="xp-title">Research Assistant</h4>
+                
+                <span class="xp-dates">Jan 2022 – Apr 2023</span>
+            </div>
+            <p class="xp-summary">Egocentric 3D human pose estimation with spatio-temporal Transformers, in a Nissan-funded collaboration.</p>
+            <ul class="xp-metrics" aria-label="Key results">
+                
+                <li class="xp-metric"><strong class="xp-metric__value">38%</strong> <span class="xp-metric__label">lower error on the hardest joints (Ego-STAN, co-developed)</span></li>
+                
+                <li class="xp-metric"><strong class="xp-metric__value">22%</strong> <span class="xp-metric__label">fewer trainable parameters than the prior state of the art</span></li>
+                
+                <li class="xp-metric"><strong class="xp-metric__value">KDD ’23</strong> <span class="xp-metric__label">Ego-STAN published; an earlier version was a CVPR ’22 workshop oral</span></li>
+                
+            </ul>
+            
+            <ul class="xp-papers" aria-label="Papers from this role">
+                
+                <li><a href="https://dl.acm.org/doi/10.1145/3580305.3599312" target="_blank" rel="noopener" class="xp-paper"><span class="pub-venue pub-venue--conference">KDD 2023</span><span class="xp-paper__name">Ego-STAN</span><i class="fas fa-arrow-up-right-from-square xp-paper__icon" aria-hidden="true"></i></a></li>
+                
+                <li><a href="https://arxiv.org/abs/2206.04785" target="_blank" rel="noopener" class="xp-paper"><span class="pub-venue pub-venue--workshop">Ego4D @ CVPR 2022</span><span class="xp-paper__name">Spatio-temporal Transformers</span><span class="badge-note">Oral</span><i class="fas fa-arrow-up-right-from-square xp-paper__icon" aria-hidden="true"></i></a></li>
+                
+                <li><a href="https://openreview.net/forum?id=fkFFh4fAbH" target="_blank" rel="noopener" class="xp-paper"><span class="pub-venue pub-venue--workshop">DG @ ICLR 2023</span><span class="xp-paper__name">Implicit Stylization</span><i class="fas fa-arrow-up-right-from-square xp-paper__icon" aria-hidden="true"></i></a></li>
+                
+            </ul>
+            
+            
+            <div class="xp-foot">
+                <ul class="xp-tags" aria-label="Tools and methods">
+                    <li class="tag">Transformers</li><li class="tag">PyTorch</li><li class="tag">3D pose estimation</li><li class="tag">Domain adaptation</li>
+                </ul>
+                
+            </div>
+            <details class="xp-more">
+                <summary>Contributions<span class="sr-only"> as Research Assistant, Vision and Image Processing Lab</span><i class="fas fa-chevron-down xp-more__chev" aria-hidden="true"></i></summary>
+                <ul class="xp-bullets">
+                    
+                    <li>Co-developed Nissan-funded Ego-STAN, spatio-temporal Transformers for egocentric 3D pose: 38% lower error on hardest joints with 22% fewer parameters (KDD ’23; CVPR ’22 workshop oral).</li>
+                    
+                    <li>Co-authored Implicit Stylization for Domain Adaptation (ICLR ’23 Domain Generalization workshop).</li>
+                    
+                </ul>
+            </details>
+        </section>
+        
+    </div>
+</article>
+
+            
 
             <section class="card xp-earlier" aria-labelledby="earlier-heading">
                 <h3 class="xp-earlier__heading" id="earlier-heading">Earlier research at Waterloo</h3>
                 <ul class="xp-earlier__list">
                     
-                    <li class="xp-row">
-                        <span class="xp-row__logo"><img src="images/vip.jpg" alt="" width="32" height="32"></span>
-                        <div class="xp-row__body">
-                            <div class="xp-row__head">
-                                <p class="xp-row__title">Research Assistant<span class="xp-sep" aria-hidden="true">·</span><span class="xp-row__org">Vision and Image Processing Lab</span></p>
-                                <span class="xp-dates">Jan 2022 – Apr 2023</span>
-                            </div>
-                            <p class="xp-row__result">Co-developed Nissan-funded Ego-STAN, spatio-temporal Transformers for egocentric 3D pose: <b>38% lower error</b> on hardest joints with <b>22% fewer parameters</b> (KDD ’23; CVPR ’22 workshop oral).</p>
-                            
-                            <details class="xp-more xp-more--row">
-                                <summary>More<span class="sr-only"> from Vision and Image Processing Lab</span><i class="fas fa-chevron-down xp-more__chev" aria-hidden="true"></i></summary>
-                                <ul class="xp-bullets">
-                                    
-                                    <li>Co-authored Implicit Stylization for Domain Adaptation (ICLR ’23 Domain Generalization workshop).</li>
-                                    
-                                </ul>
-                            </details>
-                            
-                        </div>
-                    </li>
-                    
-                    <li class="xp-row">
-                        <span class="xp-row__logo"><img src="images/sirrl.png" alt="" width="32" height="32"></span>
+                    <li class="xp-row" id="sirrl">
+                        <span class="xp-row__logo"><img src="images/logos/sirrl.png" alt="" width="32" height="32"></span>
                         <div class="xp-row__body">
                             <div class="xp-row__head">
                                 <p class="xp-row__title">Research Assistant<span class="xp-sep" aria-hidden="true">·</span><span class="xp-row__org">Social and Intelligent Robotics Research Lab</span></p>
@@ -402,8 +491,8 @@
                         </div>
                     </li>
                     
-                    <li class="xp-row">
-                        <span class="xp-row__logo"><img src="images/robohub.jfif" alt="" width="32" height="32"></span>
+                    <li class="xp-row" id="hcrmi">
+                        <span class="xp-row__logo"><img src="images/logos/hcrmi.png" alt="" width="32" height="32"></span>
                         <div class="xp-row__body">
                             <div class="xp-row__head">
                                 <p class="xp-row__title">Research Intern<span class="xp-sep" aria-hidden="true">·</span><span class="xp-row__org">Human-Centred Robotics and Machine Intelligence Lab</span></p>

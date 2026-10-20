@@ -3,7 +3,7 @@
     {
       "id": "deep-breathe",
       "company": "Deep Breathe",
-      "logo": "images/deepbreathe.png",
+      "logo": "images/logos/deepbreathe.png",
       "location": "London, ON",
       "layout": "multi",
       "current": true,
@@ -27,7 +27,7 @@
             },
             {
               "value": "Millions",
-              "label": "of frames labeled on V7 Darwin infrastructure built from scratch"
+              "label": "of frames labeled via a V7 Darwin integration built from scratch"
             }
           ],
           "tags": [
@@ -41,7 +41,7 @@
           "bullets": [
             "Spearheading development of multiple ML models for diagnostic ultrasound that run on-device in real time.",
             "Set up Slurm on the team’s GPU server and ran 500+ training experiments across it and GCP Vertex AI.",
-            "Built and led the labeling infrastructure on V7 Darwin (GCP, SQL) from scratch, used to label millions of frames.",
+            "Built and led the labeling infrastructure for V7 Darwin (GCP, SQL) from scratch, used to label millions of frames.",
             "Automated clip ingestion into the training database, labeling-sprint setup and pre-label uploads through the V7 Darwin API.",
             "Built a PyTorch tracker propagating Labelbox annotations across frames, cutting labeling time per video 5x (10 to 2 min)."
           ]
@@ -94,7 +94,7 @@
     {
       "id": "kolena",
       "company": "Kolena",
-      "logo": "images/kolena.webp",
+      "logo": "images/logos/kolena.png",
       "location": "San Francisco, CA",
       "layout": "single",
       "current": false,
@@ -152,7 +152,7 @@
     {
       "id": "intellisports",
       "company": "IntelliSports",
-      "logo": "images/playfitt.png",
+      "logo": "images/logos/intellisports.png",
       "location": "Montreal, QC",
       "layout": "single",
       "current": false,
@@ -199,7 +199,7 @@
     {
       "id": "critical-ml-lab",
       "company": "Critical ML Lab",
-      "logo": "images/criticalml.png",
+      "logo": "images/logos/criticalml.png",
       "location": "Waterloo, ON",
       "layout": "single",
       "current": true,
@@ -265,38 +265,164 @@
           ]
         }
       ]
+    },
+    {
+      "id": "vip-lab",
+      "company": "Vision and Image Processing Lab",
+      "logo": "images/logos/vip.png",
+      "location": "Waterloo, ON",
+      "layout": "single",
+      "current": false,
+      "roles": [
+        {
+          "title": "Research Assistant",
+          "startDate": "Jan 2022",
+          "endDate": "Apr 2023",
+          "isCurrent": false,
+          "summary": "Egocentric 3D human pose estimation with spatio-temporal Transformers, in a Nissan-funded collaboration.",
+          "highlights": [
+            {
+              "value": "38%",
+              "label": "lower error on the hardest joints (Ego-STAN, co-developed)"
+            },
+            {
+              "value": "22%",
+              "label": "fewer trainable parameters than the prior state of the art"
+            },
+            {
+              "value": "KDD ’23",
+              "label": "Ego-STAN published; an earlier version was a CVPR ’22 workshop oral"
+            }
+          ],
+          "papers": [
+            {
+              "venue": "KDD 2023",
+              "name": "Ego-STAN",
+              "url": "https://dl.acm.org/doi/10.1145/3580305.3599312"
+            },
+            {
+              "venue": "Ego4D @ CVPR 2022",
+              "note": "Oral",
+              "name": "Spatio-temporal Transformers",
+              "url": "https://arxiv.org/abs/2206.04785"
+            },
+            {
+              "venue": "DG @ ICLR 2023",
+              "name": "Implicit Stylization",
+              "url": "https://openreview.net/forum?id=fkFFh4fAbH"
+            }
+          ],
+          "tags": [
+            "Transformers",
+            "PyTorch",
+            "3D pose estimation",
+            "Domain adaptation"
+          ],
+          "bullets": [
+            "Co-developed Nissan-funded Ego-STAN, spatio-temporal Transformers for egocentric 3D pose: 38% lower error on hardest joints with 22% fewer parameters (KDD ’23; CVPR ’22 workshop oral).",
+            "Co-authored Implicit Stylization for Domain Adaptation (ICLR ’23 Domain Generalization workshop)."
+          ]
+        }
+      ]
     }
   ],
   "earlierResearch": [
     {
       "title": "Research Assistant",
-      "company": "Vision and Image Processing Lab",
-      "logo": "images/vip.jpg",
-      "startDate": "Jan 2022",
-      "endDate": "Apr 2023",
-      "result": "Co-developed Nissan-funded Ego-STAN, spatio-temporal Transformers for egocentric 3D pose: <b>38% lower error</b> on hardest joints with <b>22% fewer parameters</b> (KDD ’23; CVPR ’22 workshop oral).",
-      "more": [
-        "Co-authored Implicit Stylization for Domain Adaptation (ICLR ’23 Domain Generalization workshop)."
-      ]
-    },
-    {
-      "title": "Research Assistant",
       "company": "Social and Intelligent Robotics Research Lab",
-      "logo": "images/sirrl.png",
+      "logo": "images/logos/sirrl.png",
       "startDate": "Sep 2021",
       "endDate": "Dec 2021",
-      "result": "Implemented IMU feature extraction for human-robot interaction and contributed it to the <b>HRI Physio Lib</b> toolkit."
+      "result": "Implemented IMU feature extraction for human-robot interaction and contributed it to the <b>HRI Physio Lib</b> toolkit.",
+      "id": "sirrl"
     },
     {
       "title": "Research Intern",
       "company": "Human-Centred Robotics and Machine Intelligence Lab",
-      "logo": "images/robohub.jfif",
+      "logo": "images/logos/hcrmi.png",
       "startDate": "May 2021",
       "endDate": "Aug 2021",
       "result": "Implemented face identification (dlib, 99.3% on LFW) and emotion recognition (72.7% on FER2013) on the <b>REEM-C humanoid robot</b> with ROS, Flask and PostgreSQL.",
       "more": [
         "Designed a multi-input Keras model for facial emotion recognition (pybind11 bindings of a C++ toolkit; t-SNE analysis)."
-      ]
+      ],
+      "id": "hcrmi"
+    }
+  ],
+  "roadmap": [
+    {
+      "id": "hcrmi",
+      "company": "HCRMI Lab",
+      "role": "Research Intern",
+      "dates": "May – Aug 2021",
+      "track": "research",
+      "logo": "images/logos/hcrmi.png",
+      "badge": "images/logos/round/hcrmi.png"
+    },
+    {
+      "id": "sirrl",
+      "company": "SIRRL",
+      "role": "Research Assistant",
+      "dates": "Sep – Dec 2021",
+      "track": "research",
+      "logo": "images/logos/sirrl.png",
+      "badge": "images/logos/round/sirrl.png"
+    },
+    {
+      "id": "intellisports",
+      "company": "IntelliSports",
+      "role": "Software Engineering Intern",
+      "dates": "Jan – Apr 2022",
+      "track": "industry",
+      "logo": "images/logos/intellisports.png",
+      "badge": "images/logos/round/intellisports.png"
+    },
+    {
+      "id": "vip-lab",
+      "company": "VIP Lab",
+      "role": "Research Assistant",
+      "dates": "2022 – 2023",
+      "track": "research",
+      "logo": "images/logos/vip.png",
+      "badge": "images/logos/round/vip.png"
+    },
+    {
+      "id": "deep-breathe",
+      "company": "Deep Breathe",
+      "role": "ML Developer (co-op)",
+      "dates": "2022 – 2025",
+      "track": "industry",
+      "logo": "images/logos/deepbreathe.png",
+      "badge": "images/logos/round/deepbreathe.png"
+    },
+    {
+      "id": "critical-ml-lab",
+      "company": "Critical ML Lab",
+      "role": "Researcher",
+      "dates": "2023 – now",
+      "track": "research",
+      "logo": "images/logos/criticalml.png",
+      "current": true,
+      "badge": "images/logos/round/criticalml.png"
+    },
+    {
+      "id": "kolena",
+      "company": "Kolena",
+      "role": "ML Research Intern",
+      "dates": "Jan – Aug 2024",
+      "track": "industry",
+      "logo": "images/logos/kolena.png",
+      "badge": "images/logos/round/kolena.png"
+    },
+    {
+      "id": "deep-breathe",
+      "company": "Deep Breathe",
+      "role": "Machine Learning Engineer",
+      "dates": "2025 – now",
+      "track": "industry",
+      "current": true,
+      "logo": "images/logos/deepbreathe.png",
+      "badge": "images/logos/round/deepbreathe.png"
     }
   ]
 }
